@@ -1,0 +1,726 @@
+﻿/* =====================================================
+   Enhanced USP Online Grievance Redressal System
+   Admin Staff Management
+   File: Admin/css/AdminStaff.css
+   Bootstrap 4.4.1 Compatible
+   ===================================================== */
+
+.admin-staff-page {
+    font-family: Inter, Arial, sans-serif;
+    color: #172033;
+    padding-bottom: 24px;
+}
+
+.admin-staff-page,
+.admin-staff-page * {
+    box-sizing: border-box;
+}
+
+/* ================= PAGE HEADER ================= */
+
+.admin-staff-page .staff-page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.admin-staff-page .staff-page-header h1 {
+    color: #123a7a;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 7px;
+}
+
+.admin-staff-page .staff-page-header p {
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ================= PRIMARY BUTTON ================= */
+
+.admin-staff-page .staff-primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 10px 17px;
+    background: #2f6fed;
+    border: 1px solid #2f6fed;
+    border-radius: 8px;
+    color: #ffffff;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.admin-staff-page .staff-primary-btn:hover {
+    background: #2458c5;
+    border-color: #2458c5;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.admin-staff-page .staff-primary-btn:focus {
+    outline: 2px solid rgba(47, 111, 237, 0.35);
+    outline-offset: 3px;
+}
+
+.admin-staff-page .staff-primary-btn span {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* ================= KPI CARDS ================= */
+
+.admin-staff-page .staff-kpi-grid {
+    margin-bottom: 8px;
+}
+
+.admin-staff-page .staff-kpi-card {
+    width: 100%;
+    min-height: 112px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 21px;
+    background: #ffffff;
+    border: 1px solid #eaecf0;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(16, 24, 40, 0.04);
+    color: #172033;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.admin-staff-page .staff-kpi-card:hover {
+    border-color: #d0d5dd;
+    box-shadow: 0 5px 14px rgba(16, 24, 40, 0.08);
+    color: #172033;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.admin-staff-page .staff-kpi-card:focus {
+    outline: 2px solid #2f6fed;
+    outline-offset: 2px;
+    text-decoration: none;
+}
+
+.admin-staff-page .staff-kpi-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.admin-staff-page .staff-kpi-blue {
+    background: #eff4ff;
+    color: #123a7a;
+}
+
+.admin-staff-page .staff-kpi-green {
+    background: #ecfdf3;
+    color: #027a48;
+}
+
+.admin-staff-page .staff-kpi-red {
+    background: #fef3f2;
+    color: #b42318;
+}
+
+.admin-staff-page .staff-kpi-content {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.admin-staff-page .staff-kpi-label {
+    color: #475467;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.admin-staff-page .staff-kpi-value {
+    color: #172033;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* ================= MESSAGE ================= */
+
+.admin-staff-page .staff-message {
+    display: block;
+    margin: 0 0 16px;
+    padding: 12px 16px;
+    border: 1px solid #abefc6;
+    border-radius: 7px;
+    background-color: #ecfdf3;
+    color: #027a48;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.admin-staff-page .staff-message:empty {
+    display: none;
+}
+
+/* ================= FILTER CARD ================= */
+
+.admin-staff-page .staff-filter-card {
+    background: #ffffff;
+    border: 1px solid #eaecf0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 6px rgba(16, 24, 40, 0.03);
+}
+
+/* ================= TOOLBAR ================= */
+
+.admin-staff-page .staff-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.admin-staff-page .staff-search {
+    display: flex;
+    align-items: stretch;
+    flex: 1 1 380px;
+    min-width: 0;
+    gap: 9px;
+}
+
+.admin-staff-page .staff-search-input {
+    width: 100%;
+    min-width: 0;
+    height: 42px;
+    padding: 10px 13px;
+    background: #ffffff;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    color: #344054;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.admin-staff-page .staff-search-input::placeholder {
+    color: #98a2b3;
+    opacity: 1;
+}
+
+.admin-staff-page .staff-search-input:focus {
+    border-color: #2f6fed;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+.admin-staff-page .staff-search-btn,
+.admin-staff-page .staff-clear-btn,
+.admin-staff-page .staff-filter-toggle {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 9px 16px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                color 0.2s ease;
+}
+
+.admin-staff-page .staff-search-btn {
+    background: #2f6fed;
+    border-color: #2f6fed;
+    color: #ffffff;
+}
+
+.admin-staff-page .staff-search-btn:hover {
+    background: #2458c5;
+    border-color: #2458c5;
+}
+
+.admin-staff-page .staff-toolbar-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.admin-staff-page .staff-clear-btn {
+    background: #ffffff;
+    border-color: #d0d5dd;
+    color: #344054;
+}
+
+.admin-staff-page .staff-clear-btn:hover {
+    background: #f9fafb;
+    border-color: #98a2b3;
+}
+
+.admin-staff-page .staff-filter-toggle {
+    background: #ffffff;
+    border-color: #d0d5dd;
+    color: #344054;
+}
+
+.admin-staff-page .staff-filter-toggle:hover,
+.admin-staff-page .staff-filter-toggle.is-active {
+    background: #eff4ff;
+    border-color: #b2ccff;
+    color: #123a7a;
+}
+
+.admin-staff-page .staff-search-btn:focus,
+.admin-staff-page .staff-clear-btn:focus,
+.admin-staff-page .staff-filter-toggle:focus {
+    outline: 2px solid rgba(47, 111, 237, 0.35);
+    outline-offset: 2px;
+}
+
+.admin-staff-page .staff-filter-toggle span {
+    font-size: 12px;
+    transition: transform 0.2s ease;
+}
+
+.admin-staff-page .staff-filter-toggle.is-active span {
+    transform: rotate(180deg);
+}
+
+/* ================= ADVANCED FILTERS ================= */
+
+.admin-staff-page .staff-advanced-filters {
+    display: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    padding: 20px 0 2px;
+    margin-top: 18px;
+    border-top: 1px solid #eaecf0;
+}
+
+.admin-staff-page .staff-advanced-filters.is-open {
+    display: grid;
+}
+
+.admin-staff-page .staff-filter-field {
+    min-width: 0;
+}
+
+.admin-staff-page .staff-filter-field label {
+    display: block;
+    margin-bottom: 7px;
+    color: #475467;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.admin-staff-page .staff-filter-select {
+    width: 100%;
+    height: 42px;
+    padding: 8px 12px;
+    background-color: #ffffff;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    color: #344054;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+.admin-staff-page .staff-filter-select:focus {
+    border-color: #2f6fed;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+/* ================= TABLE CARD ================= */
+
+.admin-staff-page .staff-table-card {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #eaecf0;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 2px 6px rgba(16, 24, 40, 0.03);
+}
+
+.admin-staff-page .staff-table-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.admin-staff-page .staff-table-heading h2 {
+    margin: 0 0 6px;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.admin-staff-page .staff-table-heading p {
+    margin: 0;
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.admin-staff-page .staff-record-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 11px;
+    background: #eff4ff;
+    border: 1px solid #dbe7ff;
+    border-radius: 20px;
+    color: #123a7a;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* ================= TABLE RESPONSIVE ================= */
+
+.admin-staff-page .staff-table-responsive {
+    width: 100%;
+     max-width: 100%;
+    overflow-x: auto;
+    border: 1px solid #eaecf0;
+    border-radius: 9px;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ================= GRIDVIEW TABLE ================= */
+
+.admin-staff-page .staff-table {
+   width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed;
+    margin: 0;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+    color: #344054;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+}
+
+.admin-staff-page .staff-table th {
+    padding: 12px 10px;
+    background: #f8fafc;
+    color: #172033;
+    border: none;
+    border-bottom: 1px solid #eaecf0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.35px;
+    text-align: left;
+    text-transform: uppercase;
+    white-space: normal;
+    vertical-align: middle;
+     overflow-wrap: anywhere;
+}
+
+.admin-staff-page .staff-table td {
+    padding: 12px 10px;
+    background: #ffffff;
+    color: #344054;
+    border: none;
+    border-bottom: 1px solid #eaecf0;
+    font-size: 13px;
+    line-height: 1.5;
+    vertical-align: middle;
+     overflow-wrap: anywhere;
+     white-space: normal;
+}
+
+.admin-staff-page .staff-table tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-staff-page .staff-table tbody tr:hover td {
+    background: #f9fbff;
+}
+
+/* EmptyDataText */
+.admin-staff-page .staff-table td[colspan] {
+    padding: 32px 18px;
+    color: #667085;
+    text-align: center;
+}
+
+/* ================= STATUS BADGES ================= */
+
+.admin-staff-page .staff-status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+.admin-staff-page .staff-status-active {
+    background: #ecfdf3;
+    color: #027a48;
+}
+
+.admin-staff-page .staff-status-inactive {
+    background: #fef3f2;
+    color: #b42318;
+}
+
+/* ================= ROW ACTIONS ================= */
+
+    .admin-staff-page .staff-row-actions {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+
+.admin-staff-page .staff-edit-btn,
+.admin-staff-page .staff-status-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                color 0.2s ease;
+}
+
+/* Edit button */
+.admin-staff-page .staff-edit-btn {
+    color: #2f6fed;
+    background: #eff4ff;
+    border-color: #dbe7ff;
+}
+
+.admin-staff-page .staff-edit-btn:hover {
+    color: #123a7a;
+    background: #dbe7ff;
+    border-color: #b2ccff;
+    text-decoration: none;
+}
+/* Deactivate button */
+.admin-staff-page .staff-status-btn {
+    color: #b42318;
+    background: #fff5f4;
+    border-color: #fecdca;
+}
+
+.admin-staff-page .staff-status-btn:hover {
+    color: #912018;
+    background: #fee4e2;
+    border-color: #fda29b;
+    text-decoration: none;
+}
+
+.admin-staff-page .staff-edit-btn:hover,
+.admin-staff-page .staff-status-btn:hover {
+    text-decoration: underline;
+}
+
+.admin-staff-page .staff-edit-btn:focus,
+.admin-staff-page .staff-status-btn:focus {
+    outline: 2px solid rgba(47, 111, 237, 0.35);
+    outline-offset: 3px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1199.98px) {
+    .admin-staff-page .staff-kpi-card {
+        padding: 18px;
+    }
+
+    .admin-staff-page .staff-kpi-icon {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .admin-staff-page .staff-page-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .admin-staff-page .staff-page-header h1 {
+        font-size: 23px;
+    }
+
+    .admin-staff-page .staff-primary-btn {
+        width: 100%;
+    }
+
+    .admin-staff-page .staff-filter-card,
+    .admin-staff-page .staff-table-card {
+        padding: 16px;
+    }
+
+    .admin-staff-page .staff-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .admin-staff-page .staff-search {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    .admin-staff-page .staff-toolbar-actions {
+        width: 100%;
+    }
+
+    .admin-staff-page .staff-toolbar-actions > * {
+        flex: 1 1 0;
+    }
+
+    .admin-staff-page .staff-advanced-filters {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .admin-staff-page .staff-table-heading {
+        align-items: flex-start;
+    }
+      .admin-staff-page .staff-table-responsive {
+        overflow-x: hidden;
+    }
+      .admin-staff-page .staff-row-actions {
+        gap: 6px;
+    }
+
+    .admin-staff-page .staff-edit-btn,
+    .admin-staff-page .staff-status-btn {
+        padding: 7px 9px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .admin-staff-page .staff-search {
+        flex-direction: column;
+    }
+
+    .admin-staff-page .staff-search-btn {
+        width: 100%;
+    }
+
+    .admin-staff-page .staff-kpi-card {
+        min-height: 98px;
+        padding: 15px;
+    }
+
+    .admin-staff-page .staff-kpi-value {
+        font-size: 24px;
+    }
+
+    .admin-staff-page .staff-table-heading h2 {
+        font-size: 16px;
+    }
+}
+
+/* =========================================
+   MOBILE STAFF TABLE FIX
+   ========================================= */
+
+@media (max-width: 767.98px) {
+
+    .admin-staff-page .staff-table-responsive {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: auto !important;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .admin-staff-page .staff-table-responsive .staff-table {
+        width: 680px !important;
+        min-width: 680px !important;
+        max-width: none !important;
+        table-layout: auto !important;
+    }
+
+    .admin-staff-page .staff-table th {
+        white-space: nowrap !important;
+        padding: 12px 14px !important;
+    }
+
+    .admin-staff-page .staff-table td {
+        padding: 12px 14px !important;
+        white-space: normal;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .admin-staff-page .staff-table td:first-child {
+        white-space: nowrap;
+    }
+
+    .admin-staff-page .staff-row-actions {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 8px;
+        white-space: nowrap;
+    }
+
+    .admin-staff-page .staff-edit-btn,
+    .admin-staff-page .staff-status-btn {
+        flex-shrink: 0;
+    }
+}

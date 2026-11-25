@@ -1,0 +1,375 @@
+﻿/* =========================================
+   Register Department Head
+========================================= */
+
+.register-hod-page {
+    width: 100%;
+    min-width: 0;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+.register-hod-page,
+.register-hod-page * {
+    box-sizing: border-box;
+}
+
+/* Page Header */
+
+.register-hod-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.register-hod-header h1 {
+    margin: 0;
+    color: #172033;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.register-hod-header p {
+    margin: 7px 0 0;
+    color: #475467;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.register-hod-back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 10px 14px;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #344054 !important;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.register-hod-back-btn:hover {
+    border-color: #98a2b3;
+    background: #f8f9fb;
+}
+
+/* Registration Card */
+
+.register-hod-card {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #eaecf0;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(16, 24, 40, 0.025);
+}
+
+.register-hod-card-header {
+    padding: 22px 24px;
+    border-bottom: 1px solid #eaecf0;
+}
+
+.register-hod-card-header h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 650;
+    line-height: 1.5;
+}
+
+.register-hod-card-header p {
+    margin: 5px 0 0;
+    color: #475467;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.register-hod-form {
+    padding: 24px;
+}
+
+/* Form Sections */
+
+.register-hod-section + .register-hod-section {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid #eaecf0;
+}
+
+.register-hod-section h3 {
+    margin: 0 0 20px;
+    color: #172033;
+    font-size: 14px;
+    font-weight: 650;
+    line-height: 1.5;
+}
+
+.register-hod-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 24px;
+}
+
+.register-hod-field {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 0;
+    gap: 8px;
+}
+
+.register-hod-field > label {
+    margin: 0;
+    color: #475467;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* Inputs */
+
+.register-hod-input,
+.register-hod-select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: 43px;
+    padding: 10px 12px;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    outline: none;
+    background: #ffffff;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.register-hod-input::placeholder {
+    color: #98a2b3;
+    opacity: 1;
+}
+
+.register-hod-input:focus,
+.register-hod-select:focus {
+    border-color: #2f6fed;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+.register-hod-select {
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+/* Validation */
+
+.register-hod-validation {
+    display: block;
+    color: #b42318;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Informational Note */
+
+.register-hod-info {
+    margin-top: 22px;
+    padding: 13px 15px;
+    border: 1px solid #dbe5ff;
+    border-radius: 7px;
+    background: #f3f7ff;
+    color: #344054;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* Form Actions */
+
+.register-hod-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid #eaecf0;
+}
+
+.register-hod-cancel-btn,
+.register-hod-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 11px 16px;
+    border-radius: 7px;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.register-hod-cancel-btn {
+    border: 1px solid #d0d5dd;
+    background: #ffffff;
+    color: #344054 !important;
+}
+
+.register-hod-cancel-btn:hover {
+    border-color: #98a2b3;
+    background: #f8f9fb;
+}
+
+.register-hod-submit-btn {
+    border: 1px solid #2f6fed;
+    background: #2f6fed;
+    color: #ffffff;
+}
+
+.register-hod-submit-btn:hover {
+    border-color: #245bd0;
+    background: #245bd0;
+}
+
+.register-hod-submit-btn:focus-visible,
+.register-hod-cancel-btn:focus-visible,
+.register-hod-back-btn:focus-visible {
+    outline: 3px solid rgba(47, 111, 237, 0.2);
+    outline-offset: 2px;
+}
+
+/* Feedback Messages */
+
+.register-hod-message {
+    display: block;
+    margin-bottom: 18px;
+    padding: 12px 15px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    font-size: 12px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.register-hod-message:empty {
+    display: none;
+}
+
+.register-hod-message-success {
+    border-color: #abefc6;
+    background: #ecfdf3;
+    color: #067647;
+}
+
+.register-hod-message-error {
+    border-color: #fecdca;
+    background: #fef3f2;
+    color: #b42318;
+}
+
+/* Tablet */
+
+@media (max-width: 767.98px) {
+    .register-hod-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .register-hod-grid {
+        gap: 18px;
+    }
+
+    .register-hod-form {
+        padding: 20px;
+    }
+
+    .register-hod-card-header {
+        padding: 20px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 575.98px) {
+    .register-hod-header h1 {
+        font-size: 22px;
+    }
+
+    .register-hod-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .register-hod-form {
+        padding: 17px;
+    }
+
+    .register-hod-card-header {
+        padding: 18px 17px;
+    }
+
+    .register-hod-section + .register-hod-section {
+        margin-top: 24px;
+        padding-top: 21px;
+    }
+
+    .register-hod-actions {
+        align-items: stretch;
+        flex-direction: column-reverse;
+    }
+
+    .register-hod-cancel-btn,
+    .register-hod-submit-btn {
+        width: 100%;
+    }
+
+    .register-hod-back-btn {
+        white-space: normal;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 359.98px) {
+    .register-hod-header h1 {
+        font-size: 20px;
+    }
+
+    .register-hod-form {
+        padding: 14px;
+    }
+
+    .register-hod-card-header {
+        padding: 16px 14px;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .register-hod-page *,
+    .register-hod-page *::before,
+    .register-hod-page *::after {
+        transition: none !important;
+    }
+}

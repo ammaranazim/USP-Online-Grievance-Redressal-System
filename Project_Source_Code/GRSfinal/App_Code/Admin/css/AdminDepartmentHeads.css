@@ -1,0 +1,842 @@
+﻿/* =========================================
+   Department Heads - Page Layout
+========================================= */
+
+.admin-department-heads-page {
+    width: 100%;
+    min-width: 0;
+    font-family: "Inter", Arial, sans-serif;
+    color: #172033;
+}
+
+.admin-department-heads-page,
+.admin-department-heads-page * {
+    box-sizing: border-box;
+}
+
+/* =========================================
+   Page Header
+========================================= */
+
+.department-heads-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.department-heads-header h1 {
+    margin: 0;
+    color: #172033;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.department-heads-header p {
+    margin: 7px 0 0;
+    color: #475467;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.btn-register-department-head {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 11px 16px;
+    border: 1px solid #2f6fed;
+    border-radius: 7px;
+    background: #2f6fed;
+    color: #ffffff !important;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.btn-register-department-head span {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.btn-register-department-head:hover {
+    background: #245bd0;
+    border-color: #245bd0;
+    color: #ffffff !important;
+}
+
+.btn-register-department-head:focus-visible {
+    outline: 3px solid rgba(47, 111, 237, 0.25);
+    outline-offset: 2px;
+}
+
+/* =========================================
+   KPI CARDS
+   Consistent with AdminEscalatedGrievances
+========================================= */
+
+.department-heads-kpi-grid {
+    margin-bottom: 8px;
+}
+
+.department-heads-kpi-grid .kpi-card {
+    min-height: 116px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #ffffff;
+    border: 1px solid #e5e9f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.04);
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.department-heads-kpi-grid .kpi-card:hover {
+    border-color: #d5deed;
+    box-shadow: 0 4px 12px rgba(16, 24, 40, 0.06);
+}
+
+.department-heads-kpi-grid .kpi-icon {
+    width: 43px;
+    height: 43px;
+    min-width: 43px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.department-heads-kpi-grid .kpi-icon-blue {
+    background: #e8f0ff;
+    color: #2f6fed;
+}
+
+.department-heads-kpi-grid .kpi-icon-orange {
+    background: #fff3df;
+    color: #d88b00;
+}
+
+.department-heads-kpi-grid .kpi-content {
+    min-width: 0;
+}
+
+.department-heads-kpi-grid .kpi-label {
+    display: block;
+    margin-bottom: 0;
+    color: #667085;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.department-heads-kpi-grid .kpi-value {
+    display: block;
+    margin-top: 5px;
+    color: #172033;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+
+
+/* =========================================
+   Message
+========================================= */
+
+.department-heads-message {
+    display: block;
+    margin-bottom: 16px;
+    color: #475467;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.department-heads-message:empty {
+    display: none;
+}
+
+/* =========================================
+   Search and Filters Card
+========================================= */
+
+.department-heads-filter-card {
+    margin-bottom: 22px;
+    padding: 18px;
+    border: 1px solid #eaecf0;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(16, 24, 40, 0.025);
+}
+
+.department-heads-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.department-heads-search {
+    display: flex;
+    flex: 1 1 400px;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.department-heads-search-input {
+    display: block;
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+    height: 42px;
+    padding: 10px 13px;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    outline: none;
+    background: #ffffff;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.department-heads-search-input::placeholder {
+    color: #98a2b3;
+    opacity: 1;
+}
+
+.department-heads-search-input:focus {
+    border-color: #2f6fed;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+.department-heads-search-btn,
+.department-heads-clear-btn,
+.department-heads-filter-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 42px;
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.department-heads-search-btn {
+    flex: 0 0 auto;
+    border: 1px solid #2f6fed;
+    background: #2f6fed;
+    color: #ffffff;
+}
+
+.department-heads-search-btn:hover {
+    border-color: #245bd0;
+    background: #245bd0;
+}
+
+.department-heads-toolbar-actions {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.department-heads-clear-btn {
+    border: 1px solid #d0d5dd;
+    background: #ffffff;
+    color: #344054;
+}
+
+.department-heads-clear-btn:hover {
+    border-color: #98a2b3;
+    background: #f8f9fb;
+}
+
+.department-heads-filter-toggle {
+    border: 1px solid #d0d5dd;
+    background: #ffffff;
+    color: #344054;
+}
+
+.department-heads-filter-toggle:hover,
+.department-heads-filter-toggle.is-active {
+    border-color: #2f6fed;
+    background: #f3f7ff;
+    color: #123a7a;
+}
+
+.department-heads-search-btn:focus-visible,
+.department-heads-clear-btn:focus-visible,
+.department-heads-filter-toggle:focus-visible {
+    outline: 3px solid rgba(47, 111, 237, 0.2);
+    outline-offset: 2px;
+}
+
+/* =========================================
+   Advanced Filters
+========================================= */
+
+.department-heads-advanced-filters {
+    display: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid #eaecf0;
+}
+
+.department-heads-advanced-filters.is-open {
+    display: grid;
+}
+
+.department-heads-filter-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.department-heads-filter-field label {
+    margin: 0;
+    color: #475467;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.department-heads-filter-select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: 42px;
+    padding: 9px 32px 9px 12px;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    outline: none;
+    background-color: #ffffff;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.department-heads-filter-select:focus {
+    border-color: #2f6fed;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+/* =========================================
+   Records Table Card
+========================================= */
+
+.department-heads-table-card {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #eaecf0;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(16, 24, 40, 0.025);
+}
+
+.department-heads-table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px;
+    border-bottom: 1px solid #eaecf0;
+}
+
+.department-heads-table-header h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 16px;
+    font-weight: 650;
+    line-height: 1.5;
+}
+
+.department-heads-table-header p {
+    margin: 5px 0 0;
+    color: #475467;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.department-heads-record-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 28px;
+    padding: 5px 10px;
+    border: 1px solid #dbe5ff;
+    border-radius: 6px;
+    background: #f3f7ff;
+    color: #123a7a;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+/* =========================================
+   Table - Standard USP Styling
+========================================= */
+
+.department-heads-table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.department-heads-table {
+    width: 100%;
+    min-width: 900px;
+    margin: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background: #ffffff;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+}
+
+/* Standard table header */
+.department-heads-table th {
+    height: 44px;
+    padding: 11px 14px;
+    border: 0;
+    border-bottom: 1px solid #eaecf0;
+    background: #f8f9fb;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.2px;
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.department-heads-table td {
+    height: 54px;
+    padding: 12px 14px;
+    border: 0;
+    border-bottom: 1px solid #eaecf0;
+    background: #ffffff;
+    color: #344054;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.department-heads-table tr:last-child td {
+    border-bottom: 0;
+}
+
+.department-heads-table tbody tr:hover td {
+    background: #fafbfc;
+}
+
+/* Empty data message */
+.department-heads-table .empty-row td {
+    height: 100px;
+    padding: 24px;
+    color: #667085;
+    text-align: center;
+}
+
+/* =========================================
+   Status Badges
+   Uses shared project status colors where
+   the shared CSS defines matching classes.
+========================================= */
+
+.department-heads-table .status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.department-heads-table .status-active {
+    color: #027a48;
+    background-color: #ecfdf3;
+    border: 1px solid #abefc6;
+}
+
+.department-heads-table .status-inactive {
+    color: #b42318;
+    background-color: #fef3f2;
+    border: 1px solid #fecdca;
+}
+
+/* =========================================
+   Row Actions
+========================================= */
+
+.department-heads-row-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+}
+
+.department-heads-edit-btn,
+.department-heads-status-btn {
+    display: inline-block;
+    padding: 4px 0;
+    border: 0;
+    background: transparent;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.department-heads-edit-btn {
+    color: #2f6fed !important;
+}
+
+.department-heads-edit-btn:hover {
+    color: #123a7a !important;
+    text-decoration: underline !important;
+}
+
+.department-heads-status-btn {
+    color: #475467 !important;
+}
+
+.department-heads-status-btn:hover {
+    color: #123a7a !important;
+    text-decoration: underline !important;
+}
+
+.department-heads-edit-btn:focus-visible,
+.department-heads-status-btn:focus-visible {
+    outline: 2px solid #2f6fed;
+    outline-offset: 3px;
+}
+
+/* =========================================
+   Tablet
+========================================= */
+
+@media (max-width: 991.98px) {
+    .department-heads-header {
+        align-items: flex-start;
+    }
+
+    .department-heads-kpi-grid {
+        gap: 14px;
+    }
+
+    .department-heads-kpi-card {
+        padding: 18px;
+    }
+
+    .department-heads-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .department-heads-search {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .department-heads-toolbar-actions {
+        justify-content: flex-end;
+    }
+}
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 575.98px) {
+    .department-heads-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .department-heads-header h1 {
+        font-size: 22px;
+    }
+
+    .btn-register-department-head {
+        align-self: flex-start;
+        max-width: 100%;
+        white-space: normal;
+    }
+
+    .department-heads-kpi-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .department-heads-kpi-card {
+        min-height: 94px;
+        padding: 17px 18px;
+    }
+
+    .department-heads-kpi-card .kpi-label {
+        margin-bottom: 8px;
+    }
+
+    .department-heads-kpi-card .kpi-value {
+        font-size: 24px;
+    }
+
+    .department-heads-filter-card {
+        padding: 14px;
+    }
+
+    .department-heads-search {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .department-heads-search-input,
+    .department-heads-search-btn {
+        width: 100%;
+    }
+
+    .department-heads-toolbar-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+    }
+
+    .department-heads-clear-btn,
+    .department-heads-filter-toggle {
+        width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .department-heads-advanced-filters {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .department-heads-table-header {
+        align-items: flex-start;
+        padding: 16px;
+    }
+
+    .department-heads-table-header h2 {
+        font-size: 14px;
+    }
+
+    .department-heads-record-count {
+        flex-shrink: 0;
+    }
+
+    .department-heads-table {
+        min-width: 900px;
+    }
+}
+
+/* =========================================
+   Small Mobile
+========================================= */
+
+@media (max-width: 359.98px) {
+    .department-heads-header h1 {
+        font-size: 20px;
+    }
+
+    .department-heads-toolbar-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .department-heads-table-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* =========================================
+   Reduced Motion Accessibility
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .admin-department-heads-page *,
+    .admin-department-heads-page *::before,
+    .admin-department-heads-page *::after {
+        transition: none !important;
+    }
+}
+/* Responsive - Same breakpoint as Escalated Grievances */
+
+@media (max-width: 767.98px) {
+    .department-heads-kpi-grid {
+        margin-bottom: 4px;
+    }
+
+    .department-heads-kpi-grid .kpi-card {
+        min-height: 100px;
+        padding: 17px;
+    }
+}
+.department-heads-kpi-grid .kpi-card-clickable {
+    width: 100%;
+    font-family: "Inter", Arial, sans-serif;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.department-heads-kpi-grid .kpi-card-clickable:hover {
+    border-color: #2f6fed;
+    box-shadow: 0 4px 12px rgba(16, 24, 40, 0.08);
+    text-decoration: none;
+}
+
+.department-heads-kpi-grid .kpi-card-clickable:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.15);
+}
+
+.department-heads-kpi-grid .kpi-card-clickable:focus .kpi-label,
+.department-heads-kpi-grid .kpi-card-clickable:hover .kpi-label {
+    color: #123a7a;
+}
+/* HOD Username */
+.department-heads-username {
+    color: #172033;
+    font-weight: 600;
+}
+
+
+
+/* HOD table status badges — match the Students table */
+.department-heads-table .department-heads-status {
+    display: inline-block;
+    padding: 5px 9px;
+    border: 0;
+    border-radius: 20px;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+.department-heads-table .department-heads-status.department-heads-status-active {
+    background: #ecfdf3;
+    color: #027a48;
+}
+
+.department-heads-table .department-heads-status.department-heads-status-inactive {
+    background: #f2f4f7;
+    color: #475467;
+}
+
+/* HOD table actions — button appearance from Students table */
+.department-heads-row-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.department-heads-row-actions .department-heads-edit-btn,
+.department-heads-row-actions .department-heads-status-btn {
+    display: inline-flex;
+    min-height: 32px;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: none !important;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.department-heads-row-actions .department-heads-edit-btn {
+    border-color: #d6e4ff;
+    background: #eff4ff;
+    color: #245bd0 !important;
+}
+
+.department-heads-row-actions .department-heads-edit-btn:hover,
+.department-heads-row-actions .department-heads-edit-btn:focus {
+    border-color: #2f6fed;
+    background: #e0eaff;
+    color: #123a7a !important;
+}
+
+.department-heads-row-actions .department-heads-status-btn {
+    border-color: #fecdca;
+    background: #fef3f2;
+    color: #b42318 !important;
+}
+
+.department-heads-row-actions .department-heads-status-btn:hover,
+.department-heads-row-actions .department-heads-status-btn:focus {
+    border-color: #fda29b;
+    background: #fee4e2;
+    color: #912018 !important;
+}
+
+.department-heads-row-actions .department-heads-edit-btn:focus-visible,
+.department-heads-row-actions .department-heads-status-btn:focus-visible {
+    outline: 2px solid #2f6fed;
+    outline-offset: 2px;
+}

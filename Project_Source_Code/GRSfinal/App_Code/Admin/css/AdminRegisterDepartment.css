@@ -1,0 +1,386 @@
+﻿/* =========================================
+   Register Department Page
+   Enhanced USP Online Grievance Redressal System
+   ========================================= */
+
+.admin-register-department-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: "Inter", Arial, sans-serif;
+    color: #172033;
+    box-sizing: border-box;
+}
+
+.admin-register-department-page *,
+.admin-register-department-page *::before,
+.admin-register-department-page *::after {
+    box-sizing: border-box;
+}
+
+/* Page Header */
+
+.department-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.department-form-header h1 {
+    margin: 0 0 8px;
+    color: #172033;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.department-form-header p {
+    margin: 0;
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.department-back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 10px 16px;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #344054;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.department-back-btn:hover {
+    background: #f8f9fb;
+    border-color: #98a2b3;
+    color: #172033;
+    text-decoration: none;
+}
+
+.department-back-btn:focus-visible {
+    outline: 3px solid rgba(47, 111, 237, 0.2);
+    outline-offset: 2px;
+}
+
+/* Feedback Messages */
+
+.department-form-message {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.department-form-message:empty {
+    display: none;
+}
+
+.department-form-message.error {
+    padding: 12px 14px;
+    border: 1px solid #fecdca;
+    border-radius: 7px;
+    background: #fef3f2;
+    color: #b42318;
+}
+
+.department-form-message.success {
+    padding: 12px 14px;
+    border: 1px solid #abefc6;
+    border-radius: 7px;
+    background: #ecfdf3;
+    color: #027a48;
+}
+
+.department-validation-summary {
+    margin-bottom: 18px;
+    padding: 12px 16px;
+    border: 1px solid #fecdca;
+    border-radius: 7px;
+    background: #fef3f2;
+    color: #b42318;
+    font-size: 13px;
+}
+
+.department-validation-summary:empty {
+    display: none;
+}
+
+/* Main Form Card */
+
+.department-form-card {
+    overflow: hidden;
+    border: 1px solid #eaecf0;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.04);
+}
+
+/* Form Sections */
+
+.department-form-section {
+    padding: 24px;
+    border-bottom: 1px solid #eaecf0;
+}
+
+.department-form-section h2 {
+    margin: 0 0 6px;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 650;
+    line-height: 1.4;
+}
+
+.department-form-section > p {
+    margin: 0 0 22px;
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Form Grid */
+
+.department-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 24px;
+    row-gap: 20px;
+}
+
+.department-form-group {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.department-form-group-full {
+    grid-column: 1 / -1;
+}
+
+/* Labels */
+
+.admin-register-department-page .department-form-group > label {
+    display: block;
+    margin-bottom: 7px;
+    color: #475467;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Inputs */
+
+.admin-register-department-page .department-form-control {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    background-color: #ffffff;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    box-shadow: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-register-department-page .department-form-control::placeholder {
+    color: #98a2b3;
+    opacity: 1;
+}
+
+.admin-register-department-page .department-form-control:focus {
+    border-color: #2f6fed;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+.admin-register-department-page .department-textarea {
+    min-height: 96px;
+    resize: vertical;
+}
+
+/* Validation */
+
+.department-field-error {
+    display: block;
+    margin-top: 6px;
+    color: #b42318;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Footer Actions */
+
+.department-form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 20px 24px;
+    background: #ffffff;
+}
+
+.department-cancel-btn,
+.department-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 10px 18px;
+    border-radius: 7px;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.department-cancel-btn {
+    border: 1px solid #d0d5dd;
+    background: #ffffff;
+    color: #344054;
+}
+
+.department-cancel-btn:hover {
+    border-color: #98a2b3;
+    background: #f8f9fb;
+    color: #172033;
+    text-decoration: none;
+}
+
+.department-submit-btn {
+    border: 1px solid #2f6fed;
+    background: #2f6fed;
+    color: #ffffff;
+}
+
+.department-submit-btn:hover {
+    border-color: #245bd0;
+    background: #245bd0;
+}
+
+.department-cancel-btn:focus-visible,
+.department-submit-btn:focus-visible {
+    outline: 3px solid rgba(47, 111, 237, 0.2);
+    outline-offset: 2px;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+    .admin-register-department-page {
+        padding: 20px;
+    }
+
+    .department-form-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .department-form-header h1 {
+        font-size: 23px;
+    }
+
+    .department-form-section {
+        padding: 20px;
+    }
+
+    .department-form-grid {
+        column-gap: 18px;
+        row-gap: 18px;
+    }
+
+    .department-form-actions {
+        padding: 18px 20px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 575px) {
+    .admin-register-department-page {
+        padding: 16px;
+    }
+
+    .department-form-header {
+        margin-bottom: 20px;
+    }
+
+    .department-form-header h1 {
+        font-size: 21px;
+    }
+
+    .department-form-header p {
+        font-size: 13px;
+    }
+
+    .department-back-btn {
+        width: 100%;
+    }
+
+    .department-form-section {
+        padding: 18px 16px;
+    }
+
+    .department-form-grid {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 18px;
+    }
+
+    .department-form-group-full {
+        grid-column: auto;
+    }
+
+    .department-form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 10px;
+        padding: 16px;
+    }
+
+    .department-cancel-btn,
+    .department-submit-btn {
+        width: 100%;
+        min-height: 44px;
+    }
+}
+
+/* Narrow Mobile */
+
+@media (max-width: 360px) {
+    .admin-register-department-page {
+        padding: 12px;
+    }
+
+    .department-form-header h1 {
+        font-size: 20px;
+    }
+
+    .department-form-section {
+        padding: 16px 12px;
+    }
+
+    .department-form-actions {
+        padding: 14px 12px;
+    }
+}
