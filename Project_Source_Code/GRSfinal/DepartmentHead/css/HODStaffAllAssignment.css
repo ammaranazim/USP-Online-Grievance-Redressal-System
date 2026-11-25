@@ -1,0 +1,959 @@
+﻿
+/* ==========================================
+   HOD STAFF ASSIGNMENT OVERVIEW
+   ========================================== */
+
+.hod-assignment-page {
+    font-family: Inter, Arial, sans-serif;
+    color: #172033;
+    padding-bottom: 24px;
+}
+
+.hod-assignment-page * {
+    box-sizing: border-box;
+}
+
+/* Page Header */
+
+.hod-page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.hod-page-title {
+    margin: 0 0 8px;
+    color: #123a7a;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.hod-page-subtitle {
+    margin: 0;
+    color: #475467;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* KPI Cards */
+
+.hod-assignment-stats {
+    margin-bottom: 24px;
+}
+
+.hod-assignment-stats > div {
+    margin-bottom: 16px;
+}
+
+.hod-stat-card {
+    height: 100%;
+    min-height: 112px;
+    padding: 21px 22px;
+    background: #ffffff;
+    border: 1px solid #e4e9f1;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(18, 58, 122, 0.045);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.hod-stat-card:hover {
+    box-shadow: 0 6px 18px rgba(18, 58, 122, 0.09);
+    transform: translateY(-2px);
+}
+
+.hod-stat-label {
+    margin-bottom: 10px;
+    color: #475467;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hod-stat-value {
+    display: block;
+    color: #172033;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Feedback Message */
+
+.hod-assignment-message {
+    margin-bottom: 18px;
+    padding: 12px 16px;
+    border: 1px solid #cbd9ef;
+    border-radius: 8px;
+    background: #f4f7fc;
+    color: #123a7a;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Search Toolbar */
+
+.hod-assignment-toolbar {
+    margin-bottom: 22px;
+    padding: 17px;
+    background: #ffffff;
+    border: 1px solid #e4e9f1;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(18, 58, 122, 0.035);
+}
+
+.hod-assignment-search {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hod-search-input {
+    flex: 1 1 280px;
+    min-width: 180px;
+    height: 42px;
+    border: 1px solid #d5dce7;
+    border-radius: 7px;
+    color: #172033;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: none;
+}
+
+.hod-search-input::placeholder {
+    color: #8993a4;
+}
+
+.hod-search-input:focus,
+.hod-filter-select:focus {
+    border-color: #2f6fed;
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+.hod-btn-search,
+.hod-btn-clear,
+.hod-btn-filter {
+    min-height: 42px;
+    padding: 9px 17px;
+    border-radius: 7px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.hod-btn-search {
+    color: #ffffff;
+    background: #2f6fed;
+    border: 1px solid #2f6fed;
+}
+
+.hod-btn-search:hover,
+.hod-btn-search:focus {
+    color: #ffffff;
+    background: #245bd0;
+    border-color: #245bd0;
+}
+
+.hod-btn-clear {
+    color: #374151;
+    background: #ffffff;
+    border: 1px solid #d5dce7;
+}
+
+.hod-btn-clear:hover,
+.hod-btn-clear:focus {
+    color: #123a7a;
+    background: #f4f7fc;
+    border-color: #b9c7dc;
+}
+
+.hod-btn-filter {
+    color: #123a7a;
+    background: #f4f7fc;
+    border: 1px solid #d5e0f0;
+}
+
+.hod-btn-filter:hover,
+.hod-btn-filter:focus,
+.hod-btn-filter[aria-expanded="true"] {
+    color: #123a7a;
+    background: #eaf0fa;
+    border-color: #b8cbea;
+}
+
+.filter-icon {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+/* Advanced Filters */
+
+.hod-filter-collapse {
+    width: 100%;
+}
+
+.hod-filter-panel {
+    margin-top: 16px;
+    padding: 17px;
+    background: #f8faff;
+    border: 1px solid #e4eaf4;
+    border-radius: 9px;
+}
+
+.hod-filter-field {
+    max-width: 360px;
+    margin-bottom: 8px;
+}
+
+.hod-filter-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #475467;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hod-filter-select {
+    height: 41px;
+    border: 1px solid #d5dce7;
+    border-radius: 7px;
+    color: #172033;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: none;
+}
+
+.hod-filter-help {
+    margin: 10px 0 0;
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Table Card */
+
+.hod-assignment-table-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e4e9f1;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(18, 58, 122, 0.045);
+}
+
+.hod-table-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 20px 22px;
+    border-bottom: 1px solid #e8edf4;
+}
+
+.hod-section-title {
+    margin: 0 0 6px;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.hod-section-subtitle {
+    margin: 0;
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.hod-record-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 11px;
+    border: 1px solid #d9e5f7;
+    border-radius: 6px;
+    background: #eff5ff;
+    color: #123a7a;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.hod-record-count span {
+    font-weight: 700;
+}
+
+/* Table */
+
+.hod-table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.hod-assignment-table {
+    width: 100%;
+    min-width: 1100px;
+    margin-bottom: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: Inter, Arial, sans-serif;
+}
+
+.hod-assignment-table thead th {
+    padding: 14px 15px;
+    background: #f5f7fb;
+    border-top: 0;
+    border-bottom: 1px solid #e1e7f0;
+    color: #475467;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+    text-align: left;
+    text-transform: uppercase;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.hod-assignment-table tbody td {
+    padding: 15px;
+    border-top: 0;
+    border-bottom: 1px solid #edf0f5;
+    color: #374151;
+    font-size: 12px;
+    line-height: 1.6;
+    vertical-align: middle;
+}
+
+.hod-assignment-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.hod-assignment-table tbody tr:hover {
+    background: #f8faff;
+}
+
+/* Assignment Status Badges */
+
+.hod-assignment-status {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+.hod-assignment-status.assigned {
+    color: #166534;
+    background: #dcfce7;
+}
+
+.hod-assignment-status.unassigned {
+    color: #92400e;
+    background: #fef3c7;
+}
+
+/* Row Actions */
+
+.hod-assignment-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    min-width: 150px;
+}
+
+.hod-action-link {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.hod-view-link {
+    color: #2f6fed;
+}
+
+.hod-view-link:hover,
+.hod-view-link:focus {
+    color: #123a7a;
+}
+
+.hod-assign-link {
+    color: #123a7a;
+}
+
+.hod-assign-link:hover,
+.hod-assign-link:focus {
+    color: #2f6fed;
+}
+
+/* Empty State */
+
+.hod-empty-row td {
+    padding: 26px 15px !important;
+    color: #667085 !important;
+    text-align: center;
+}
+
+.hod-no-assignments {
+    padding: 38px 20px;
+    text-align: center;
+}
+
+.hod-no-assignments h4 {
+    margin: 0 0 9px;
+    color: #172033;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.hod-no-assignments p {
+    margin: 0;
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Keyboard Focus */
+
+.hod-action-link:focus-visible,
+.hod-assignment-page button:focus-visible {
+    outline: 2px solid #2f6fed;
+    outline-offset: 3px;
+}
+
+/* Responsive Layout */
+
+@media (max-width: 767.98px) {
+    .hod-page-header {
+        margin-bottom: 18px;
+    }
+
+    .hod-page-title {
+        font-size: 21px;
+    }
+
+    .hod-page-subtitle {
+        font-size: 13px;
+    }
+
+    .hod-assignment-toolbar {
+        padding: 13px;
+    }
+
+    .hod-assignment-search {
+        align-items: stretch;
+    }
+
+    .hod-search-input {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .hod-btn-search,
+    .hod-btn-clear,
+    .hod-btn-filter {
+        flex: 1 1 auto;
+    }
+
+    .hod-table-heading {
+        align-items: flex-start;
+        padding: 17px;
+    }
+
+    .hod-stat-card {
+        min-height: 100px;
+        padding: 18px;
+    }
+
+    .hod-stat-value {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 420px) {
+    .hod-assignment-search {
+        gap: 8px;
+    }
+
+    .hod-btn-search,
+    .hod-btn-clear,
+    .hod-btn-filter {
+        padding: 9px 11px;
+        font-size: 12px;
+    }
+
+    .hod-record-count {
+        font-size: 11px;
+    }
+}
+
+/* Ensure advanced filters work even without Bootstrap JS */
+#hodAssignmentFilters.collapse {
+    display: none;
+}
+
+#hodAssignmentFilters.collapse.show {
+    display: block;
+}
+
+/* Reference-style grievance table */
+
+.hod-assignment-table {
+    min-width: 1050px;
+    table-layout: auto;
+}
+
+.hod-assignment-table thead th {
+    padding: 15px 16px;
+    background: #f8f9fb;
+    border-bottom: 1px solid #e6eaf0;
+    color: #172033;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+    white-space: nowrap;
+}
+
+.hod-assignment-table tbody td {
+    padding: 16px;
+    border-bottom: 1px solid #e9edf3;
+    color: #344054;
+    font-size: 13px;
+    line-height: 1.6;
+    vertical-align: middle;
+}
+
+.hod-assignment-table tbody tr:hover {
+    background: #fbfcfe;
+}
+
+.hod-grievance-id {
+    color: #123a7a;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.hod-student-name {
+    color: #344054;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.hod-student-regno {
+    margin-top: 2px;
+    color: #667085;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+/* Priority badges */
+
+.hod-priority-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #eff6ff;
+    color: #2f6fed;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.hod-priority-badge.priority-high,
+.hod-priority-badge.priority-urgent,
+.hod-priority-badge.priority-critical {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.hod-priority-badge.priority-low {
+    background: #ecfdf3;
+    color: #15803d;
+}
+
+/* Grievance status */
+
+.hod-grievance-status {
+    display: inline-block;
+    padding: 6px 13px;
+    border-radius: 20px;
+    background: #fef2f2;
+    color: #dc2626;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.hod-grievance-status.status-resolved {
+    background: #ecfdf3;
+    color: #15803d;
+}
+
+.hod-grievance-status.status-in-process {
+    background: #eff6ff;
+    color: #2f6fed;
+}
+
+.hod-grievance-status.status-rejected {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+/* Assignment badges */
+
+.hod-assignment-status.assigned {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.hod-assignment-status.unassigned {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* Action links */
+
+.hod-view-details-btn {
+    display: inline-block;
+    padding: 7px 12px;
+    border: 1px solid #d4e0f5;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #2f6fed;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none !important;
+    white-space: nowrap;
+}
+
+.hod-view-details-btn:hover {
+    background: #f3f7ff;
+    border-color: #2f6fed;
+    color: #123a7a;
+}
+
+.hod-assign-link {
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.hod-assignment-actions {
+    gap: 10px;
+}
+
+/* Assigned Staff badges */
+
+.hod-staff-badge {
+    display: inline-block;
+    max-width: 160px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.hod-staff-badge.staff-assigned {
+    color: #166534;
+    background: #dcfce7;
+}
+
+.hod-staff-badge.staff-unassigned {
+    color: #475467;
+    background: #eef1f5;
+}
+
+/* Keep row actions side by side */
+
+.hod-assignment-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    min-width: 0;
+}
+
+.hod-view-details-btn,
+.hod-assign-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding: 8px 11px;
+    border-radius: 6px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    white-space: nowrap;
+    text-decoration: none !important;
+}
+
+.hod-view-details-btn {
+    color: #2f6fed;
+    background: #ffffff;
+    border: 1px solid #cbdaf7;
+}
+
+.hod-view-details-btn:hover,
+.hod-view-details-btn:focus {
+    color: #123a7a;
+    background: #f3f7ff;
+    border-color: #2f6fed;
+}
+
+.hod-assign-link {
+    color: #ffffff;
+    background: #2f6fed;
+    border: 1px solid #2f6fed;
+}
+
+.hod-assign-link:hover,
+.hod-assign-link:focus {
+    color: #ffffff;
+    background: #245bd0;
+    border-color: #245bd0;
+}
+
+.hod-assignment-table {
+    min-width: 1250px;
+}
+
+@media (max-width: 767.98px) {
+    .hod-assignment-actions {
+        flex-wrap: nowrap;
+    }
+
+    .hod-view-details-btn,
+    .hod-assign-link {
+        padding: 8px 9px;
+        font-size: 11px;
+    }
+}
+
+.hod-staff-name {
+    color: #344054;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* ==========================================
+   STAFF ASSIGNMENT TABLE
+   Matches HODGrievances.css reference
+   ========================================== */
+
+.hod-assignment-table-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #e5e9f0;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.035);
+}
+
+.hod-grievances-table-heading {
+    min-height: 72px;
+    padding: 17px 20px;
+    border-bottom: 1px solid #eaecf0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+.hod-grievances-table-heading .hod-section-title {
+    margin: 0;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 650;
+    line-height: 1.35;
+}
+
+.hod-grievances-table-heading .hod-section-subtitle {
+    margin: 4px 0 0;
+    color: #667085;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.hod-assignment-table-card .hod-record-count {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 5px 11px;
+    border: 1px solid #dbe4f0;
+    border-radius: 20px;
+    background: #f5f8fc;
+    color: #123a7a;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.hod-table-responsive {
+    width: 100%;
+    margin: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.hod-assignment-table {
+    width: 100%;
+    min-width: 1250px;
+    margin: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+.hod-assignment-table th {
+    height: 44px;
+    padding: 11px 14px;
+    border: 0;
+    border-bottom: 1px solid #eaecf0;
+    background: #f8f9fb;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.2px;
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.hod-assignment-table td {
+    height: 58px;
+    padding: 10px 14px;
+    border: 0;
+    border-bottom: 1px solid #f0f2f5;
+    background: #ffffff;
+    color: #344054;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    vertical-align: middle;
+}
+
+.hod-assignment-table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.hod-assignment-table tbody tr:hover td {
+    background: #f9fbff;
+}
+
+.hod-assignment-table tr:last-child td {
+    border-bottom: none;
+}
+
+.hod-assignment-table .hod-grievance-id {
+    color: #123a7a;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.hod-assignment-table .hod-student-name {
+    color: #344054;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+.hod-assignment-table .hod-student-regno {
+    margin-top: 3px;
+    color: #667085;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+    .hod-grievances-table-heading {
+        padding: 16px 14px;
+    }
+
+    .hod-grievances-table-heading .hod-section-title {
+        font-size: 18px;
+    }
+
+    .hod-grievances-table-heading .hod-section-subtitle {
+        font-size: 12px;
+    }
+}
+/* Fix table heading alignment */
+.hod-assignment-table-card .hod-table-heading,
+.hod-assignment-table-card .hod-grievances-table-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 15px;
+    width: 100%;
+    min-height: 72px;
+    padding: 17px 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eaecf0;
+}
+
+.hod-assignment-table-card .hod-table-heading > div:first-child {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.hod-assignment-table-card .hod-table-heading .hod-record-count {
+    flex: 0 0 auto;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+/* Keep table columns readable */
+.hod-assignment-table {
+    width: 100%;
+    min-width: 1250px;
+    table-layout: auto;
+}
+
+.hod-assignment-table th {
+    white-space: nowrap;
+}
+
+.hod-assignment-table-card .hod-section-title {
+    margin: 0 0 4px;
+}
+
+.hod-assignment-table-card .hod-section-subtitle {
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .hod-assignment-table-card .hod-table-heading,
+    .hod-assignment-table-card .hod-grievances-table-heading {
+        padding: 16px 14px;
+    }
+}

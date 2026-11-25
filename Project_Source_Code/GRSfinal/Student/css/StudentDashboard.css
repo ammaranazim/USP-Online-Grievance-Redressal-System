@@ -1,0 +1,1467 @@
+﻿/* =========================================================
+   STUDENT DASHBOARD
+   ========================================================= */
+body {
+    font-family: "Inter", Arial, sans-serif;
+}
+.dashboard-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   WELCOME
+   ========================================================= */
+
+.dashboard-welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 2px 0;
+}
+/* =========================================================
+   SHARED PAGE HEADING
+   ========================================================= */
+
+.page-heading {
+    margin-bottom: 22px;
+}
+
+.page-heading h1 {
+    margin: 0;
+    color: #123a7a;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    line-height: 1.2;
+}
+
+.page-heading p {
+    margin: 5px 0 0;
+    color: #475467;
+    font-size: 12.5px;
+    font-weight: 400;
+    line-height: 1.45;
+}
+/* =========================================================
+   SHARED CONTENT CARD
+   ========================================================= */
+
+.content-card {
+    background: #ffffff;
+
+    border: 1px solid #e7eaf0;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-bottom: 22px;
+}
+/* =========================================================
+   SHARED CARD HEADER
+   ========================================================= */
+
+.card-header {
+    background: #ffffff;
+
+    padding: 19px 21px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+.card-header h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.card-header p {
+    margin: 4px 0 0;
+    color: #475467;
+    font-size: 11.5px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+/* ==========================================
+   STUDENT NOTIFICATIONS
+   Reference: StaffNotifications.css
+   ========================================== */
+
+.student-notifications-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8px 0 28px;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+/* Header */
+
+.student-notifications-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.student-notifications-header h1 {
+    margin: 0 0 7px;
+    color: #123a7a;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.student-notifications-header p {
+    margin: 0;
+    color: #475467;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Total and unread summary */
+
+.student-notification-summary {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    min-height: 32px;
+    padding: 7px 12px;
+    border: 1px solid #e4e7ec;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #475467;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Notification card */
+
+.student-notification-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 12px;
+    padding: 20px;
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.03);
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.student-notification-card:hover {
+    background: #fafbfc;
+}
+
+.student-notification-card.unread {
+    border-left: 4px solid #2f6fed;
+    background: #f8faff;
+}
+
+/* Bell icon */
+
+.student-notification-card-icon {
+    display: flex;
+    flex: 0 0 42px;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #fff8df;
+    color: #f5b800;
+    font-size: 17px;
+}
+
+/* Content */
+
+.student-notification-card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.student-notification-card-heading {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 7px;
+}
+
+.student-notification-card-heading h3 {
+    margin: 0;
+    color: #172033;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* Unread badge */
+
+.student-read-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 20px;
+    background: #eaf2ff;
+    color: #123a7a;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Notification message */
+
+.student-notification-message {
+    margin: 0 0 12px;
+    color: #475467;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.student-notification-card.unread .student-notification-message {
+    color: #172033;
+    font-weight: 600;
+}
+
+/* Grievance ID and date */
+
+.student-notification-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin-bottom: 10px;
+    color: #667085;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.student-notification-meta span {
+    overflow-wrap: anywhere;
+}
+
+/* Mark as Read */
+
+.student-mark-read-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+    margin-top: 2px;
+    padding: 7px 11px;
+    border: 1px solid #cddcf5;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #123a7a !important;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                color 0.2s ease;
+}
+
+.student-mark-read-btn:hover,
+.student-mark-read-btn:focus {
+    border-color: #2f6fed;
+    background: #f0f5ff;
+    color: #123a7a !important;
+    text-decoration: none !important;
+    outline: none;
+}
+
+/* Empty state */
+
+.student-notifications-empty {
+    padding: 48px 20px;
+    border: 1px dashed #d0d5dd;
+    border-radius: 12px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.student-empty-icon {
+    margin-bottom: 14px;
+    color: #f5b800;
+    font-size: 32px;
+}
+
+.student-notifications-empty h3 {
+    margin: 0 0 8px;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.student-notifications-empty p {
+    margin: 0;
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Responsive */
+
+@media (max-width: 767.98px) {
+    .student-notifications-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .student-notification-card {
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .student-notification-card-icon {
+        flex-basis: 36px;
+        width: 36px;
+        height: 36px;
+        font-size: 15px;
+    }
+
+    .student-notification-card-heading h3 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .student-notifications-page {
+        padding-top: 4px;
+    }
+
+    .student-notifications-header h1 {
+        font-size: 23px;
+    }
+
+    .student-notification-card {
+        flex-wrap: wrap;
+    }
+
+    .student-notification-card-content {
+        flex-basis: calc(100% - 50px);
+    }
+
+    .student-mark-read-btn {
+        white-space: normal;
+    }
+}
+
+/* =========================================================
+   STATISTICS
+   ========================================================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e4e9f1;
+    border-radius: 10px;
+    padding: 17px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 100px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(31, 41, 55, 0.04);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(31, 41, 55, 0.08);
+}
+/* Reference-inspired status accents */
+.stat-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 3px;
+}
+
+.stat-card:nth-child(1) {
+    background: #f7f9ff;
+}
+
+.stat-card:nth-child(1)::before {
+    background: #2f6fed;
+}
+
+.stat-card:nth-child(2) {
+    background: #fffaf0;
+}
+
+.stat-card:nth-child(2)::before {
+    background: #d99000;
+}
+
+.stat-card:nth-child(3) {
+    background: #f6f9ff;
+}
+
+.stat-card:nth-child(3)::before {
+    background: #4169b1;
+}
+
+.stat-card:nth-child(4) {
+    background: #f4fbf7;
+}
+
+.stat-card:nth-child(4)::before {
+    background: #26945f;
+}
+
+.stat-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    flex-shrink: 0;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55);
+}
+
+.total-icon {
+    background: #eaf1ff;
+    color: #2f6fed;
+}
+
+
+.pending-icon {
+    background: #fff4df;
+    color: #d99000;
+}
+
+
+.process-icon {
+    background: #e9f1ff;
+    color: #4169b1;
+}
+
+
+.resolved-icon {
+    background: #e7f7ef;
+    color: #26945f;
+}
+
+
+.stat-info {
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+
+.stat-label {
+    color: #475467;
+    font-size: 11.5px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.stat-number {
+    color: #172033;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+
+/* =========================
+   RECENT GRIEVANCES
+========================= */
+
+.recent-section {
+    background: #ffffff;
+    border: 1px solid #e3e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 8px rgba(31, 41, 55, 0.035);
+}
+
+.section-header {
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5eaf1;
+}
+
+.section-header h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.section-header p {
+    margin: 4px 0 0;
+   color: #475467;
+    font-size: 11.5px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.view-all-link {
+    color: #2f6fed;
+    font-size: 11.5px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 2px;
+}
+
+.view-all-link:hover {
+    color: #245dcc;
+    text-decoration: none;
+}
+/* =========================
+   RECENT GRIEVANCES TABLE
+========================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.grievance-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.grievance-id {
+    color: #123a7a !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+}
+.grievance-table th {
+    height: 44px;
+    padding: 11px 14px;
+    border: 0;
+    border-bottom: 1px solid #eaecf0;
+    background: #f8f9fb;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.2px;
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.grievance-table td {
+    padding: 12px 16px;
+    border-top: 1px solid #eef1f5;
+    color: #475467;
+    font-size: 13px;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.grievance-table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.grievance-table tbody tr:hover td {
+    background: #fafcff;
+}
+/* =========================================================
+   HELP
+   ========================================================= */
+
+.dashboard-help {
+    background: #ffffff;
+    border: 1px solid #e3e8f0;
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    box-shadow: 0 2px 8px rgba(31, 41, 55, 0.03);
+}
+
+
+
+.help-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #eef4ff;
+
+    color: #2f6fed;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+}
+
+
+.help-content h3 {
+    margin: 0 0 4px;
+    color: #172033;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+
+.help-content p {
+    margin: 0;
+    color: #475467;
+    font-size: 11.5px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+@media (max-width: 900px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .page-heading h1 {
+        font-size: 21px;
+        letter-spacing: -0.2px;
+    }
+
+    .page-heading {
+        margin-bottom: 18px;
+    }
+
+    .card-header {
+        padding: 16px;
+    }
+
+    .card-header h2 {
+        font-size: 15px;
+    }
+    .notification-item {
+        padding: 14px 16px;
+        gap: 10px;
+    }
+
+    .notification-icon {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        font-size: 12px;
+    }
+
+    .notification-message {
+        font-size: 12.5px;
+    }
+
+    .notification-date {
+        font-size: 10.5px;
+    }
+
+    .notification-actions {
+        padding: 10px 16px 0;
+    }
+
+    .dashboard-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 14px;
+    margin-bottom: 18px;
+    padding: 0;
+}
+  .dashboard-welcome h1 {
+        font-size: 21px;
+        letter-spacing: -0.2px;
+        line-height: 1.25;
+    }
+   .dashboard-welcome p {
+    margin: 5px 0 0;
+    color: #667085;
+    font-size: 12.5px;
+    font-weight: 400;
+    line-height: 1.45;
+}
+
+
+   .dashboard-submit-btn {
+    width: 100%;
+    min-height: 42px;
+    justify-content: center;
+}
+
+
+ .stats-grid {
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .stat-card {
+        padding: 14px;
+        min-height: 88px;
+        gap: 10px;
+    }
+
+    .stat-icon {
+        width: 37px;
+        height: 37px;
+        font-size: 17px;
+    }
+
+    .stat-label {
+        font-size: 10.5px;
+    }
+  .stat-number {
+        font-size: 20px;
+    }
+
+    .section-header {
+        padding: 14px 15px;
+    }
+
+    .section-header h2 {
+        font-size: 15px;
+    }
+
+    .section-header p {
+        font-size: 11px;
+    }
+
+ .view-all-link {
+        font-size: 11px;
+    }
+ .grievance-table th,
+    .grievance-table td {
+        padding: 10px 12px;
+    }
+    .grievance-table th {
+        font-size: 10px;
+    }
+
+    .grievance-table td {
+        font-size: 12px;
+    }
+
+
+    .help-content h3 {
+        font-size: 14px;
+    }
+
+    .dashboard-help {
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grievance-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 10.5px;
+    font-weight: 600;
+    line-height: 1.3;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-header-card {
+    margin-bottom: 18px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 24px 22px;
+}
+
+.large-avatar {
+    width: 62px;
+    height: 62px;
+    min-width: 62px;
+    border-radius: 50%;
+    background: #eef4ff;
+    color: #2f6fed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 16px;
+}
+
+.profile-header-info h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.profile-header-info span {
+    display: block;
+    margin-top: 4px;
+    color: #475467;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Profile Information Grid */
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.profile-field {
+    background: #fff;
+    border: 1px solid #e7eaf0;
+    border-radius: 9px;
+    padding: 14px 16px;
+    min-height: 68px;
+}
+
+.profile-field label {
+    display: block;
+    margin: 0 0 6px;
+   color: #475467;
+    font-size: 10.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.profile-value {
+    color: #172033;
+    font-size: 13.5px;
+    font-weight: 600;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+
+    .profile-header {
+        padding: 20px 16px;
+    }
+
+    .large-avatar {
+        width: 54px;
+        height: 54px;
+        min-width: 54px;
+        font-size: 17px;
+        margin-right: 13px;
+    }
+
+    .profile-header-info h2 {
+        font-size: 16px;
+    }
+
+    .profile-header-info span {
+        font-size: 11px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .profile-field {
+        padding: 15px 16px;
+        min-height: 72px;
+    }
+
+    .profile-field label {
+        font-size: 10.5px;
+    }
+
+    .profile-value {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   TRACK GRIEVANCE — SEARCH, FILTERS, TABLE AND PAGINATION
+   Uses the class names in StudentDashboard.aspx
+   ========================================================= */
+
+.track-grievance-card {
+    width: 100%;
+    min-width: 0;
+    border: 1px solid #e4e7ec;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.03);
+}
+
+.track-grievance-card .track-card-header {
+    min-height: 72px;
+    padding: 17px 20px;
+    gap: 16px;
+}
+
+.track-grievance-card .record-count-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    min-height: 30px;
+    padding: 6px 11px;
+    border: 1px solid #dbe7ff;
+    border-radius: 7px;
+    background: #eef4ff;
+    color: #123a7a;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.grievance-toolbar {
+    padding: 15px 20px;
+    border-bottom: 1px solid #edf0f4;
+    background: #ffffff;
+}
+
+.grievance-search-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    width: 100%;
+}
+
+.grievance-search-box {
+    display: flex;
+    align-items: center;
+    flex: 1 1 280px;
+    min-width: 220px;
+    min-height: 40px;
+    gap: 9px;
+    padding: 0 12px;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #667085;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grievance-search-box:focus-within {
+    border-color: #2f6fed;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+.grievance-search-box > i {
+    flex: 0 0 auto;
+    color: #667085;
+    font-size: 13px;
+}
+
+.grievance-search-input {
+    width: 100%;
+    min-width: 0;
+    height: 38px;
+    padding: 0;
+    border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+}
+
+.grievance-search-input::placeholder {
+    color: #98a2b3;
+    opacity: 1;
+}
+
+.grievance-search-btn,
+.grievance-clear-btn,
+.grievance-filter-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 8px 14px;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #344054;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.grievance-search-btn {
+    border-color: #2f6fed;
+    background: #2f6fed;
+    color: #ffffff;
+}
+
+.grievance-search-btn:hover,
+.grievance-search-btn:focus {
+    border-color: #245dcc;
+    background: #245dcc;
+    color: #ffffff;
+}
+
+.grievance-clear-btn:hover,
+.grievance-clear-btn:focus,
+.grievance-filter-toggle:hover,
+.grievance-filter-toggle:focus {
+    border-color: #b8c8e5;
+    background: #f0f5ff;
+    color: #123a7a;
+}
+
+.grievance-search-btn:focus,
+.grievance-clear-btn:focus,
+.grievance-filter-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+.grievance-filter-panel {
+    padding: 16px 20px;
+    border-bottom: 1px solid #edf0f4;
+    background: #fafbfc;
+}
+
+.grievance-filter-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    max-width: 300px;
+}
+
+.grievance-filter-field label {
+    margin: 0;
+    color: #475467;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.grievance-status-filter {
+    width: 100%;
+    min-height: 39px;
+    padding: 8px 32px 8px 11px;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    background-color: #ffffff;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+}
+
+.grievance-status-filter:focus {
+    outline: none;
+    border-color: #2f6fed;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+.grievance-filter-help {
+    margin: 8px 0 0;
+    color: #667085;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.track-grievance-card .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.track-grievance-card .grievance-table {
+    width: 100%;
+    min-width: 760px;
+    margin: 0;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+.track-grievance-card .grievance-table th {
+    height: 44px;
+    padding: 11px 14px;
+    border: 0;
+    border-bottom: 1px solid #eaecf0;
+    background: #f8f9fb;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.1px;
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.track-grievance-card .grievance-table td {
+    padding: 12px 14px;
+    border-top: 1px solid #eef1f5;
+    color: #475467;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+
+.track-grievance-card .grievance-table tbody tr:hover td {
+    background: #fafcff;
+}
+
+.track-grievance-card .grievance-id {
+    color: #123a7a !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+}
+
+.track-grievance-card .grievance-view-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+    padding: 7px 11px;
+    border: 1px solid #2f6fed;
+    border-radius: 6px;
+    background: #2f6fed;
+    color: #ffffff !important;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.track-grievance-card .grievance-view-btn:hover,
+.track-grievance-card .grievance-view-btn:focus {
+    border-color: #245dcc;
+    background: #245dcc;
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.track-grievance-card .grievance-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 10.5px;
+    font-weight: 600;
+    line-height: 1.3;
+    white-space: nowrap;
+}
+
+/* GridView applies this class to the pager row */
+.track-grievance-card .grievance-pager td {
+    padding: 14px 18px !important;
+    border-top: 1px solid #eaecf0 !important;
+    background: #ffffff !important;
+    text-align: right;
+}
+
+.track-grievance-card .grievance-pager a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 31px;
+    min-height: 31px;
+    margin: 0 2px;
+    padding: 5px 9px;
+    border: 1px solid #d0d5dd;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #344054;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.track-grievance-card .grievance-pager a:hover {
+    border-color: #2f6fed;
+    background: #f0f5ff;
+    color: #123a7a;
+}
+
+.track-grievance-card .grievance-pager span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 31px;
+    min-height: 31px;
+    margin: 0 2px;
+    padding: 5px 9px;
+    border: 1px solid #2f6fed;
+    border-radius: 6px;
+    background: #2f6fed;
+    color: #ffffff;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.track-grievance-card .grievance-empty-state {
+    padding: 42px 20px;
+    color: #667085;
+    text-align: center;
+}
+
+.track-grievance-card .grievance-empty-state > i {
+    margin-bottom: 12px;
+    color: #98a2b3;
+    font-size: 30px;
+}
+
+.track-grievance-card .grievance-empty-state h3 {
+    margin: 0 0 7px;
+    color: #172033;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.track-grievance-card .grievance-empty-state p {
+    margin: 0;
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+@media (max-width: 767.98px) {
+    .track-grievance-card .track-card-header {
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .grievance-toolbar {
+        padding: 14px 15px;
+    }
+
+    .grievance-search-row {
+        align-items: stretch;
+    }
+
+    .grievance-search-box {
+        flex-basis: 100%;
+        min-width: 0;
+    }
+
+    .grievance-search-btn,
+    .grievance-clear-btn,
+    .grievance-filter-toggle {
+        flex: 1 1 auto;
+    }
+
+    .grievance-filter-panel {
+        padding: 14px 15px;
+    }
+
+    .grievance-filter-field {
+        max-width: none;
+    }
+
+    .track-grievance-card .grievance-table th,
+    .track-grievance-card .grievance-table td {
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .track-grievance-card .track-card-header {
+        flex-direction: column;
+    }
+
+    .track-grievance-card .record-count-badge {
+        align-self: flex-start;
+    }
+
+    .grievance-search-btn,
+    .grievance-clear-btn,
+    .grievance-filter-toggle {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+}
+
+/* =========================================================
+   TRACK GRIEVANCE - FIX GRIDVIEW PAGINATION ALIGNMENT
+   ========================================================= */
+.track-grievance-card .grievance-table tr.grievance-pager,
+.track-grievance-card .grievance-table tr.grievance-pager:hover {
+    background: #ffffff !important;
+}
+
+.track-grievance-card .grievance-table tr.grievance-pager td {
+    display: table-cell !important;
+    width: 100% !important;
+    padding: 14px 18px !important;
+    border-top: 1px solid #eaecf0 !important;
+    background: #ffffff !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    box-sizing: border-box !important;
+}
+
+.track-grievance-card .grievance-table tr.grievance-pager td table {
+    width: auto !important;
+    margin: 0 auto !important;
+    border: 0 !important;
+    border-collapse: separate !important;
+    border-spacing: 4px 0 !important;
+}
+
+.track-grievance-card .grievance-table tr.grievance-pager td table td {
+    width: auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+}
+
+.track-grievance-card .grievance-table tr.grievance-pager a,
+.track-grievance-card .grievance-table tr.grievance-pager span {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 34px !important;
+    height: 34px !important;
+    margin: 0 !important;
+    padding: 0 10px !important;
+    border: 1px solid #d0d5dd !important;
+    border-radius: 7px !important;
+    background: #ffffff !important;
+    color: #344054 !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+}
+
+.track-grievance-card .grievance-table tr.grievance-pager span {
+    border-color: #2f6fed !important;
+    background: #2f6fed !important;
+    color: #ffffff !important;
+}
+
+.track-grievance-card .grievance-table tr.grievance-pager a:hover,
+.track-grievance-card .grievance-table tr.grievance-pager a:focus {
+    border-color: #2f6fed !important;
+    background: #f0f5ff !important;
+    color: #123a7a !important;
+    outline: none;
+}
+/* Track Grievance - Right Aligned Pagination */
+.track-grievance-card .grievance-pager {
+    text-align: right !important;
+}
+
+.track-grievance-card .grievance-pager table {
+    width: auto !important;
+    margin-left: auto !important;
+    margin-right: 16px !important;
+    float: right !important;
+}
+
+.track-grievance-card .grievance-pager tr {
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 6px;
+}
+
+.track-grievance-card .grievance-pager td {
+    padding: 0 !important;
+    border: none !important;
+}

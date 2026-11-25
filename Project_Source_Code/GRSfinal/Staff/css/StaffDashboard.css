@@ -1,0 +1,229 @@
+﻿
+.staff-dashboard {
+    font-family: Inter, Arial, sans-serif;
+    color: #172033;
+    padding: 8px 0 24px;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.dashboard-header h1 {
+    margin: 0 0 7px;
+    color: #172033;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.dashboard-header p,
+.panel-header p {
+    margin: 0;
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.dashboard-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 26px;
+}
+
+.dashboard-kpi-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 0;
+    padding: 22px 18px;
+    background: #fff;
+    border: 1px solid #e7ebf2;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(18, 58, 122, 0.04);
+}
+
+.kpi-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 11px;
+    font-size: 19px;
+}
+
+.kpi-total .kpi-icon {
+    background: #eaf1ff;
+    color: #2f6fed;
+}
+
+.kpi-pending .kpi-icon {
+    background: #fff4df;
+    color: #b7791f;
+}
+
+.kpi-progress .kpi-icon {
+    background: #e9f5ff;
+    color: #1673b8;
+}
+
+.kpi-resolved .kpi-icon {
+    background: #e7f7ee;
+    color: #16834a;
+}
+
+.kpi-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 5px;
+}
+
+.kpi-label {
+    color: #667085;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.kpi-value {
+    color: #172033;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.dashboard-panel {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e7ebf2;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(18, 58, 122, 0.04);
+}
+
+.panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 21px 22px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.panel-header h2 {
+    margin: 0 0 6px;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.view-all-link {
+    flex-shrink: 0;
+    color: #2f6fed;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.view-all-link:hover,
+.view-all-link:focus {
+    color: #123a7a;
+    text-decoration: none;
+}
+
+.view-all-link i {
+    margin-left: 5px;
+}
+
+.dashboard-table-wrap {
+    padding: 0 18px 12px;
+}
+
+.staff-dashboard-table {
+    margin: 0;
+    color: #344054;
+    font-size: 12px;
+}
+.grievance-id {
+    color: #123a7a !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+}
+.staff-dashboard-table thead th {
+    padding: 15px 12px;
+    background: #f8f9fb;
+    color: #172033;
+    border-top: none;
+    border-bottom: 1px solid #e7ebf2;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.staff-dashboard-table tbody td {
+    padding: 15px 12px;
+    border-top: 1px solid #edf0f5;
+    vertical-align: middle;
+}
+
+.staff-dashboard-table tbody tr:hover {
+    background: #f9fbff;
+}
+
+.staff-dashboard-table tbody tr:last-child td {
+    border-bottom: 1px solid #edf0f5;
+}
+
+.staff-dashboard-table tbody td[colspan] {
+    padding: 30px 12px;
+    color: #667085;
+    text-align: center;
+}
+
+@media (max-width: 1100px) {
+    .dashboard-kpi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .dashboard-header h1 {
+        font-size: 22px;
+    }
+
+    .dashboard-kpi-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .dashboard-kpi-card {
+        padding: 17px;
+    }
+
+    .panel-header {
+        align-items: flex-start;
+        padding: 17px;
+    }
+
+    .dashboard-table-wrap {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+/* Priority and Status Badge Layout */
+.staff-dashboard-table .priority-badge,
+.staff-dashboard-table .status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+}

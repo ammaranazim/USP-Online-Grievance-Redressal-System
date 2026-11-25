@@ -1,0 +1,234 @@
+﻿/* ==========================================
+   STAFF PROFILE
+   Enhanced USP Online Grievance Redressal System
+   ========================================== */
+
+.staff-profile-page {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 4px 0 30px;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+.staff-profile-header {
+    margin-bottom: 20px;
+}
+
+.staff-profile-header h1 {
+    margin: 0;
+    color: #172033;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.4px;
+}
+
+.staff-profile-header p {
+    margin: 5px 0 0;
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Main profile card */
+
+.staff-profile-card {
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e4e7ec;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.04);
+}
+
+/* Identity banner */
+
+.staff-profile-banner {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 25px 24px;
+    border-bottom: 1px solid #eaecf0;
+    background: #f8fafc;
+}
+
+.staff-profile-avatar {
+    display: flex;
+    flex: 0 0 70px;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #d5e1f7;
+    border-radius: 50%;
+    background: #eaf1ff;
+    color: #123a7a;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.staff-profile-identity {
+    min-width: 0;
+}
+
+.staff-profile-identity h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.staff-profile-identity p {
+    margin: 4px 0 10px;
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.staff-profile-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 25px;
+    padding: 4px 10px;
+    border: 1px solid #dbe4f0;
+    border-radius: 14px;
+    background: #f5f8fc;
+    color: #123a7a;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+/* Profile sections */
+
+.staff-profile-section {
+    padding: 24px;
+}
+
+.staff-profile-section + .staff-profile-section {
+    border-top: 1px solid #eaecf0;
+}
+
+.staff-profile-section h3 {
+    margin: 0 0 20px;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 650;
+    line-height: 1.4;
+}
+
+/* Information grid */
+
+.staff-profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 28px;
+}
+
+.staff-profile-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.staff-profile-label {
+    color: #475467;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.staff-profile-value {
+    display: block;
+    min-width: 0;
+    color: #172033;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* Department section */
+
+.staff-profile-department {
+    background: #ffffff;
+}
+
+.staff-profile-department .staff-profile-field {
+    max-width: 480px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 767.98px) {
+    .staff-profile-page {
+        padding: 4px 0 24px;
+    }
+
+    .staff-profile-header {
+        margin-bottom: 16px;
+    }
+
+    .staff-profile-header h1 {
+        font-size: 26px;
+    }
+
+    .staff-profile-banner {
+        gap: 14px;
+        padding: 20px;
+    }
+
+    .staff-profile-avatar {
+        flex-basis: 58px;
+        width: 58px;
+        height: 58px;
+        font-size: 20px;
+    }
+
+    .staff-profile-identity h2 {
+        font-size: 18px;
+    }
+
+    .staff-profile-section {
+        padding: 20px;
+    }
+
+    .staff-profile-grid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .staff-profile-banner {
+        align-items: flex-start;
+        gap: 12px;
+        padding: 17px;
+    }
+
+    .staff-profile-avatar {
+        flex-basis: 48px;
+        width: 48px;
+        height: 48px;
+        font-size: 17px;
+    }
+
+    .staff-profile-identity h2 {
+        font-size: 17px;
+    }
+
+    .staff-profile-section {
+        padding: 17px;
+    }
+
+    .staff-profile-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+}

@@ -1,0 +1,234 @@
+﻿
+.hod-notifications-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8px 0 28px;
+    font-family: "Inter", Arial, sans-serif;
+    color: #172033;
+}
+
+.hod-notifications-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.hod-notifications-header h2 {
+    margin: 0 0 7px;
+    color: #123a7a;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.hod-notifications-header p {
+    margin: 0;
+    color: #475467;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.hod-notification-summary {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    border: 1px solid #e4e7ec;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #475467;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.hod-notification-feedback {
+    display: block;
+    margin-bottom: 14px;
+    color: #123a7a;
+    font-size: 13px;
+}
+
+.hod-notification-feedback:empty {
+    display: none;
+}
+
+.hod-notification-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 12px;
+    padding: 20px;
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.03);
+}
+
+.hod-notification-card.unread {
+    border-left: 4px solid #2f6fed;
+    background: #f8faff;
+}
+
+.hod-notification-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #edf3ff;
+    color: #123a7a;
+    font-size: 18px;
+}
+
+.hod-notification-card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.hod-notification-card-heading {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 7px;
+}
+
+.hod-notification-card-heading h3 {
+    margin: 0;
+    color: #172033;
+    font-size: 15px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.hod-read-status {
+    padding: 4px 8px;
+    border-radius: 20px;
+    background: #eaf2ff;
+    color: #123a7a;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.hod-notification-message {
+    margin: 0 0 12px;
+    color: #475467;
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.hod-notification-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    color: #667085;
+    font-size: 11px;
+}
+
+.hod-notification-card-action {
+    flex-shrink: 0;
+}
+
+.hod-mark-read-btn {
+    display: inline-block;
+    padding: 8px 11px;
+    border: 1px solid #cddcf5;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #123a7a;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.hod-mark-read-btn:hover,
+.hod-mark-read-btn:focus {
+    border-color: #2f6fed;
+    background: #f0f5ff;
+    color: #123a7a;
+    text-decoration: none;
+}
+
+.hod-notifications-empty {
+    padding: 48px 20px;
+    border: 1px dashed #d0d5dd;
+    border-radius: 12px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.hod-empty-icon {
+    margin-bottom: 14px;
+    color: #667085;
+    font-size: 32px;
+}
+
+.hod-notifications-empty h3 {
+    margin: 0 0 8px;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.hod-notifications-empty p {
+    margin: 0;
+    color: #667085;
+    font-size: 13px;
+}
+
+@media (max-width: 767.98px) {
+    .hod-notifications-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hod-notification-card {
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .hod-notification-card-icon {
+        flex-basis: 36px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .hod-notification-card-action {
+        align-self: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hod-notification-card {
+        flex-wrap: wrap;
+    }
+
+    .hod-notification-card-content {
+        flex-basis: calc(100% - 50px);
+    }
+
+    .hod-notification-card-action {
+        margin-left: 48px;
+    }
+
+    .hod-mark-read-btn {
+        white-space: normal;
+    }
+}
+
+/* Simple notification layout without notification-type titles */
+.hod-notification-card-heading:empty {
+    display: none;
+}
+
+.hod-notification-card-heading {
+    margin-bottom: 0;
+}
+
+.hod-notification-message {
+    margin-top: 0;
+}

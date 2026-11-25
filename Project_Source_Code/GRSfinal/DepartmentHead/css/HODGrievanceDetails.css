@@ -1,0 +1,1402 @@
+﻿
+/* ==========================================
+   HOD GRIEVANCE DETAILS
+   Enhanced USP Online Grievance Redressal
+========================================== */
+
+.hod-grievance-details-page {
+    font-family: Inter, Arial, sans-serif;
+    color: #172033;
+    padding-bottom: 28px;
+    min-width: 0;
+}
+
+.hod-details-page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.hod-details-page-header h1 {
+    color: #123a7a;
+    font-size: 30px;
+    line-height: 1.3;
+    font-weight: 700;
+    margin: 0 0 6px;
+}
+
+.hod-details-page-header p {
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.hod-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 9px 15px;
+    border-radius: 7px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: background-color .2s ease, border-color .2s ease;
+}
+
+.hod-btn-secondary {
+    color: #344054;
+    background: #fff;
+    border: 1px solid #d0d5dd;
+}
+
+.hod-btn-secondary:hover,
+.hod-btn-secondary:focus {
+    color: #123a7a;
+    background: #f8fafc;
+    border-color: #98a2b3;
+}
+
+/* Overview + Progress container */
+
+.hod-overview-progress-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(270px, .95fr);
+    background: #fff;
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, .035);
+}
+
+.hod-overview-panel {
+    min-width: 0;
+    padding: 25px 28px;
+}
+
+.hod-overview-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eaecf0;
+    margin-bottom: 4px;
+}
+
+.hod-overview-heading h2,
+.hod-details-card-heading h2,
+.hod-progress-panel h2 {
+    color: #172033;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 700;
+    margin: 0;
+}
+
+.hod-overview-heading p,
+.hod-details-card-heading p {
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 5px 0 0;
+}
+
+.hod-overview-badges {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Shared status and priority colors remain in
+   StatusColors.css and PriorityColors.css. */
+
+.hod-information-rows {
+    width: 100%;
+}
+
+.hod-information-row {
+    display: grid;
+    grid-template-columns: minmax(125px, 30%) 12px minmax(0, 1fr);
+    align-items: start;
+    gap: 8px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eaecf0;
+}
+
+.hod-information-row-last {
+    border-bottom: none;
+    padding-bottom: 2px;
+}
+
+.hod-information-label {
+    color: #475467;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.hod-information-separator {
+    color: #98a2b3;
+    font-size: 13px;
+    text-align: center;
+}
+
+.hod-information-value {
+    color: #172033;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+    min-width: 0;
+}
+
+/* Progress panel */
+
+.hod-progress-panel {
+    min-width: 0;
+    padding: 26px 22px;
+    background: #fcfcfd;
+    border-left: 1px solid #e4e7ec;
+}
+
+.hod-progress-subtitle {
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 5px 0 25px;
+}
+
+.hod-progress-timeline {
+    position: relative;
+}
+
+.hod-progress-step {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    min-height: 78px;
+}
+
+.hod-progress-step:not(.hod-progress-step-last)::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 32px;
+    bottom: 0;
+    width: 2px;
+    background: #e4e7ec;
+}
+
+.hod-progress-marker {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 31px;
+    width: 31px;
+    height: 31px;
+    color: #667085;
+    background: #fff;
+    border: 1px solid #d0d5dd;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.hod-progress-content {
+    min-width: 0;
+    padding-top: 4px;
+}
+
+.hod-progress-content h3 {
+    color: #344054;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0 0 4px;
+}
+
+.hod-progress-description {
+    display: block;
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* Description and evidence card */
+
+.hod-details-card {
+    background: #fff;
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+    padding: 25px 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, .035);
+}
+
+.hod-details-card-heading {
+    padding-bottom: 17px;
+    border-bottom: 1px solid #eaecf0;
+    margin-bottom: 18px;
+}
+
+.hod-detail-label {
+    display: block;
+    color: #475467;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.hod-description-section {
+    margin-bottom: 20px;
+}
+
+.hod-description-box {
+    min-height: 90px;
+    padding: 15px 16px;
+    background: #f8fafc;
+    border: 1px solid #eaecf0;
+    border-radius: 8px;
+}
+
+.hod-description-text {
+    display: block;
+    color: #344054;
+    font-size: 13px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.hod-evidence-section {
+    padding-top: 18px;
+    border-top: 1px solid #eaecf0;
+}
+
+.hod-evidence-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hod-evidence-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    min-width: 0;
+    padding: 12px 14px;
+    background: #f8fafc;
+    border: 1px solid #eaecf0;
+    border-radius: 8px;
+    margin-bottom: 9px;
+}
+
+.hod-evidence-file {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.hod-evidence-icon {
+    flex: 0 0 auto;
+    font-size: 15px;
+}
+
+.hod-evidence-name {
+    color: #344054;
+    font-size: 13px;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+.hod-evidence-link {
+    flex: 0 0 auto;
+    color: #2f6fed;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hod-evidence-link:hover,
+.hod-evidence-link:focus {
+    color: #123a7a;
+    text-decoration: underline;
+}
+
+.hod-empty-message {
+    padding: 14px 16px;
+    color: #667085;
+    background: #f8fafc;
+    border: 1px dashed #d0d5dd;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 991.98px) {
+    .hod-overview-progress-card {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hod-progress-panel {
+        border-left: none;
+        border-top: 1px solid #e4e7ec;
+    }
+
+    .hod-progress-timeline {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hod-details-page-header h1 {
+        font-size: 25px;
+    }
+
+    .hod-overview-panel,
+    .hod-progress-panel {
+        padding: 20px;
+    }
+
+    .hod-details-card {
+        padding: 20px;
+    }
+
+    .hod-information-row {
+        grid-template-columns: minmax(105px, 34%) 8px minmax(0, 1fr);
+        gap: 6px;
+    }
+
+    .hod-overview-heading {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .hod-details-page-header {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .hod-btn {
+        align-self: flex-start;
+        white-space: normal;
+    }
+
+    .hod-overview-panel,
+    .hod-progress-panel,
+    .hod-details-card {
+        padding: 16px;
+    }
+
+    .hod-information-row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 3px;
+        padding: 12px 0;
+    }
+
+    .hod-information-separator {
+        display: none;
+    }
+
+    .hod-information-value {
+        font-size: 13px;
+    }
+
+    .hod-evidence-item {
+        align-items: flex-start;
+    }
+}
+
+.hod-evidence-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 14px;
+    background: #f8fafc;
+    border: 1px solid #e4e7ec;
+    border-radius: 10px;
+}
+
+.hod-evidence-file {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    color: #2f6fed;
+}
+
+.hod-evidence-name {
+    color: #172033;
+    font-size: 14px;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+.hod-evidence-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.hod-evidence-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 8px 13px;
+    border: 1px solid #2f6fed;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.hod-evidence-open {
+    color: #2f6fed;
+    background: #fff;
+}
+
+.hod-evidence-open:hover,
+.hod-evidence-open:focus {
+    color: #123a7a;
+    background: #eff6ff;
+}
+
+.hod-evidence-download {
+    color: #fff;
+    background: #2f6fed;
+}
+
+.hod-evidence-download:hover,
+.hod-evidence-download:focus {
+    color: #fff;
+    background: #123a7a;
+}
+
+@media (max-width: 576px) {
+    .hod-evidence-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hod-evidence-actions {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+/* Overview status and priority badges */
+.hod-overview-badges .status-badge,
+.hod-overview-badges .priority-badge {
+   display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 25px;
+    padding: 4px 10px;
+    border-radius: 14px;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+/* Keep spacing between badges */
+.hod-overview-badges {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.hod-assignment-action {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 16px;
+    padding: 0 2px;
+}
+
+.hod-assignment-action .hod-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background-color: #2f6fed;
+    border: 1px solid #2f6fed;
+    color: #fff;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(18, 58, 122, 0.12);
+    transition: background-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.hod-assignment-action .hod-btn-primary:hover {
+    background-color: #123a7a;
+    border-color: #123a7a;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(18, 58, 122, 0.16);
+}
+
+@media (max-width: 576px) {
+    .hod-assignment-action {
+        margin-top: 12px;
+    }
+
+    .hod-assignment-action .hod-btn-primary {
+        width: 100%;
+    }
+}
+.hod-assignment-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.hod-priority-deadline-card {
+    margin-top: 22px;
+}
+
+.hod-priority-deadline-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.hod-deadline-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.hod-deadline-field label,
+.hod-deadline-label {
+    color: #475467;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hod-priority-select {
+    width: 100%;
+    max-width: 340px;
+    min-height: 42px;
+    padding: 9px 12px;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    background: #fff;
+    color: #172033;
+    font-family: Inter, Arial, sans-serif;
+}
+
+.hod-deadline-value {
+    color: #172033;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hod-deadline-overdue {
+    color: #b42318;
+}
+
+.hod-priority-message {
+    margin-bottom: 16px;
+    color: #123a7a;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .hod-priority-deadline-content {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .hod-priority-select {
+        max-width: 100%;
+    }
+}
+/* Priority & Resolution Deadline */
+.hod-priority-deadline-card {
+    margin-top: 22px;
+}
+
+.hod-priority-deadline-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 32px;
+    row-gap: 24px;
+    margin-bottom: 22px;
+}
+
+.hod-deadline-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.hod-deadline-field label,
+.hod-deadline-label {
+    color: #475467;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hod-priority-select {
+    width: 100%;
+    max-width: 375px;
+    min-height: 46px;
+    padding: 10px 14px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #172033;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hod-priority-select:focus {
+    outline: none;
+    border-color: #2f6fed;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+.hod-deadline-value {
+    color: #172033;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.hod-deadline-overdue {
+    color: #b42318;
+}
+
+.hod-priority-message {
+    margin: 0 0 16px;
+    color: #123a7a;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .hod-priority-deadline-content {
+        grid-template-columns: 1fr;
+        row-gap: 18px;
+    }
+
+    .hod-priority-select {
+        max-width: 100%;
+    }
+}
+
+/* Priority Save Button - USP Action Blue */
+.hod-btn.hod-btn-primary {
+    background-color: #2f6fed;
+    border: 1px solid #2f6fed;
+    color: #ffffff;
+    font-family: Inter, Arial, sans-serif;
+    font-weight: 600;
+}
+
+.hod-btn.hod-btn-primary:hover {
+    background-color: #2458c5;
+    border-color: #2458c5;
+    color: #ffffff;
+}
+
+.hod-btn.hod-btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.2);
+}
+/* Grievance progress timeline — aligned with Student design */
+
+.tracking-timeline {
+    position: relative;
+}
+
+.tracking-step {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    min-height: 70px;
+}
+
+.tracking-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 13px;
+    top: 28px;
+    width: 1px;
+    height: 42px;
+    background: #d0d5dd;
+}
+
+.step-circle {
+    position: relative;
+    z-index: 2;
+    width: 27px;
+    height: 27px;
+    min-width: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d0d5dd;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #98a2b3;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.step-circle span,
+.step-circle label {
+    margin: 0;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1;
+}
+
+.step-content {
+    min-width: 0;
+    padding-top: 2px;
+}
+
+.step-content strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #667085;
+    font-size: 11.5px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.step-content span,
+.step-content label {
+    display: block;
+    color: #98a2b3;
+    font-size: 10.5px;
+    line-height: 1.5;
+}
+
+/* Active stage */
+.tracking-step.active .step-circle {
+    border-color: #2f6fed;
+    background: #2f6fed;
+    color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.10);
+}
+
+.tracking-step.active .step-content strong {
+    color: #172033;
+}
+
+.tracking-step.active .step-content span,
+.tracking-step.active .step-content label {
+    color: #667085;
+}
+
+/* Completed stages */
+.tracking-step.completed .step-circle {
+    border-color: #123a7a;
+    background: #123a7a;
+    color: #ffffff;
+}
+
+.tracking-step.completed .step-content strong {
+    color: #172033;
+}
+
+.tracking-step.completed .step-content span,
+.tracking-step.completed .step-content label {
+    color: #667085;
+}
+
+.tracking-step.completed:not(:last-child)::after {
+    background: #123a7a;
+}
+
+/* Rejected outcome */
+.tracking-step.rejected-step .step-circle {
+    border-color: #d92d20;
+    background: #d92d20;
+    color: #ffffff;
+}
+
+.tracking-step.rejected-step .step-content strong {
+    color: #b42318;
+}
+
+/* Final timeline layout override - v3 */
+.hod-grievance-details-page .hod-progress-panel .tracking-timeline {
+    display: block !important;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step {
+    display: flex !important;
+    position: relative;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    min-height: 72px;
+    margin: 0;
+    padding: 0 0 17px;
+    box-sizing: border-box;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step:last-child {
+    min-height: 30px;
+    padding-bottom: 0;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step:not(:last-child)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    left: 13px;
+    top: 29px;
+    width: 2px;
+    height: calc(100% - 20px);
+    background: #d0d5dd;
+}
+
+.hod-grievance-details-page .hod-progress-panel .step-circle {
+    display: flex !important;
+    flex: 0 0 28px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid #d0d5dd;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #667085;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.hod-grievance-details-page .hod-progress-panel .step-circle span,
+.hod-grievance-details-page .hod-progress-panel .step-circle label {
+    display: inline !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1 !important;
+    text-align: center;
+}
+
+.hod-grievance-details-page .hod-progress-panel .step-content {
+    display: block;
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;
+    padding: 2px 0 0;
+}
+
+.hod-grievance-details-page .hod-progress-panel .step-content strong {
+    display: block;
+    margin: 0 0 4px;
+    color: #344054;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.hod-grievance-details-page .hod-progress-panel .step-content span,
+.hod-grievance-details-page .hod-progress-panel .step-content label {
+    display: block;
+    margin: 0;
+    color: #667085;
+    font-size: 11px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step.active .step-circle {
+    border-color: #2f6fed;
+    background: #2f6fed;
+    color: #ffffff;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step.completed .step-circle {
+    border-color: #123a7a;
+    background: #123a7a;
+    color: #ffffff;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step.completed:not(:last-child)::after {
+    background: #123a7a;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step.rejected-step .step-circle {
+    border-color: #d92d20;
+    background: #d92d20;
+    color: #ffffff;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step.rejected-step .step-content strong {
+    color: #b42318;
+}
+
+
+/* Student-matched progress timeline overrides */
+.hod-progress-panel .hod-progress-subtitle {
+    margin-bottom: 17px;
+}
+
+.hod-progress-panel .tracking-timeline {
+    position: relative;
+    padding-top: 2px;
+}
+
+.hod-progress-panel .tracking-step {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    min-height: 82px;
+}
+
+.hod-progress-panel .tracking-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 36px;
+    bottom: 0;
+    width: 2px;
+    height: auto;
+    background: #d0d5dd;
+}
+
+.hod-progress-panel .step-circle {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    box-sizing: border-box;
+    border: 1px solid #d0d5dd;
+    border-radius: 50%;
+    background: #f2f4f7;
+    color: #667085;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.hod-progress-panel .step-circle span,
+.hod-progress-panel .step-circle label {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1;
+}
+
+.hod-progress-panel .step-content {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding-top: 3px;
+}
+
+.hod-progress-panel .step-content strong {
+    display: block;
+    margin: 0 0 5px;
+    color: #344054;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.hod-progress-panel .step-content span,
+.hod-progress-panel .step-content label {
+    display: block;
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.hod-progress-panel .tracking-step.active .step-circle {
+    border-color: #2f6fed;
+    background: #2f6fed;
+    color: #fff;
+    box-shadow: 0 0 0 4px rgba(47, 111, 237, .12);
+}
+
+.hod-progress-panel .tracking-step.completed .step-circle {
+    border-color: #2f6fed;
+    background: #2f6fed;
+    color: #fff;
+    box-shadow: 0 0 0 4px rgba(47, 111, 237, .10);
+}
+
+.hod-progress-panel .tracking-step.completed:not(:last-child)::after {
+    background: #2f6fed;
+}
+
+.hod-progress-panel .tracking-step.active .step-content strong,
+.hod-progress-panel .tracking-step.completed .step-content strong {
+    color: #123a7a;
+}
+
+.hod-progress-panel .tracking-step.active .step-content span,
+.hod-progress-panel .tracking-step.active .step-content label,
+.hod-progress-panel .tracking-step.completed .step-content span,
+.hod-progress-panel .tracking-step.completed .step-content label {
+    color: #475467;
+}
+
+.hod-progress-panel .tracking-step.rejected-step .step-circle {
+    border-color: #d92d20;
+    background: #d92d20;
+    color: #fff;
+}
+
+@media (max-width: 767.98px) {
+    .hod-progress-panel .tracking-step {
+        min-height: 78px;
+        gap: 12px;
+    }
+
+    .hod-progress-panel .tracking-step:not(:last-child)::after {
+        left: 17px;
+    }
+}
+
+
+/* =========================================================
+   FINAL TIMELINE MATCH — based on Student GrievanceDetails.css
+   Scoped to HOD page to avoid changing other page components.
+   ========================================================= */
+.hod-grievance-details-page .hod-progress-panel .tracking-timeline {
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0 0 24px;
+    margin: 0;
+    gap: 0;
+    min-height: 0;
+    overflow-wrap: anywhere;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step:last-child {
+    padding-bottom: 0;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 32px;
+    bottom: 0;
+    width: 2px;
+    height: auto;
+    background: #dfe4eb;
+    z-index: 0;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step.completed:not(:last-child)::after {
+    background: #2f6fed;
+}
+
+.hod-grievance-details-page .hod-progress-panel .step-circle {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    flex: 0 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid #d0d5dd;
+    border-radius: 50%;
+    background: #eef0f3;
+    color: #667085;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    z-index: 1;
+    box-shadow: none;
+}
+
+.hod-grievance-details-page .hod-progress-panel .step-circle span,
+.hod-grievance-details-page .hod-progress-panel .step-circle label {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step.active .step-circle,
+.hod-grievance-details-page .hod-progress-panel .tracking-step.completed .step-circle {
+    background: #2f6fed;
+    border: 2px solid #2f6fed;
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.10);
+}
+
+.hod-grievance-details-page .hod-progress-panel .step-content {
+    flex: 1;
+    min-width: 0;
+    margin-left: 13px;
+    padding-top: 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hod-grievance-details-page .hod-progress-panel .step-content strong {
+    display: block;
+    margin: 0;
+    color: #667085;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.hod-grievance-details-page .hod-progress-panel .step-content span,
+.hod-grievance-details-page .hod-progress-panel .step-content label {
+    display: block;
+    margin-top: 3px;
+    color: #98a2b3;
+    font-size: 11.5px;
+    font-weight: 400;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step.active .step-content strong,
+.hod-grievance-details-page .hod-progress-panel .tracking-step.completed .step-content strong {
+    color: #123a7a;
+    font-weight: 700;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step.active .step-content span,
+.hod-grievance-details-page .hod-progress-panel .tracking-step.active .step-content label,
+.hod-grievance-details-page .hod-progress-panel .tracking-step.completed .step-content span,
+.hod-grievance-details-page .hod-progress-panel .tracking-step.completed .step-content label {
+    color: #475467;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step:not(.completed):not(.active):not(.rejected-step) .step-circle {
+    background: #f2f4f7;
+    border: 1px solid #d0d5dd;
+    color: #667085;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step:not(.completed):not(.active):not(.rejected-step) .step-content strong {
+    color: #667085;
+    font-weight: 500;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step:not(.completed):not(.active):not(.rejected-step) .step-content span,
+.hod-grievance-details-page .hod-progress-panel .tracking-step:not(.completed):not(.active):not(.rejected-step) .step-content label {
+    color: #98a2b3;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step.rejected-step .step-circle {
+    background: #fee4e2;
+    color: #b42318;
+    border: 1px solid #fda29b;
+    box-shadow: none;
+}
+
+.hod-grievance-details-page .hod-progress-panel .tracking-step.rejected-step .step-content strong {
+    color: #b42318;
+}
+
+@media (max-width: 767px) {
+    .hod-grievance-details-page .hod-progress-panel .tracking-step {
+        padding-bottom: 22px;
+    }
+}
+
+/* Reject Grievance */
+.hod-rejection-card {
+    margin-top: 24px;
+}
+
+.hod-rejection-field {
+    margin-bottom: 18px;
+}
+
+.hod-rejection-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #475467;
+    font-weight: 600;
+}
+
+.hod-rejection-textarea {
+    display: block;
+    width: 100%;
+    min-height: 110px;
+    padding: 12px 14px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 14px;
+    color: #172033;
+    resize: vertical;
+}
+
+.hod-rejection-textarea:focus {
+    outline: none;
+    border-color: #2f6fed;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+.required-mark,
+.hod-validation-error {
+    color: #b42318;
+}
+
+.hod-validation-error {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+.hod-btn-danger {
+    background-color: #b42318;
+    border: 1px solid #b42318;
+    color: #fff;
+}
+
+.hod-btn-danger:hover {
+    background-color: #912018;
+    border-color: #912018;
+}
+
+/* Reject Grievance Section */
+.hod-rejection-card .hod-rejection-field {
+    width: 100%;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+.hod-rejection-card .hod-rejection-textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-height: 120px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    padding: 12px 14px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #172033;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    resize: vertical;
+}
+
+.hod-rejection-card .hod-rejection-textarea:focus {
+    outline: none;
+    border-color: #2f6fed;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+.hod-rejection-card .hod-btn-danger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 10px 20px;
+    border: 1px solid #b42318;
+    border-radius: 8px;
+    background-color: #b42318;
+    color: #fff;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.hod-rejection-card .hod-btn-danger:hover {
+    background-color: #912018;
+    border-color: #912018;
+}
+
+.hod-rejection-card .hod-btn-danger:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(180, 35, 24, 0.15);
+}
+
+.hod-rejection-card .hod-validation-error {
+    display: block;
+    margin-top: 6px;
+    color: #b42318;
+    font-size: 13px;
+}

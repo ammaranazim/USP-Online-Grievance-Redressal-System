@@ -1,0 +1,860 @@
+﻿/* Enhanced USP Online Grievance Redressal System
+   HOD Progress & Resolution Details
+   External stylesheet — Bootstrap 4 compatible
+*/
+
+.hod-prd-page {
+    font-family: Inter, Arial, sans-serif;
+    color: #172033;
+    padding-bottom: 28px;
+    min-width: 0;
+}
+
+.hod-prd-page *,
+.hod-prd-page *::before,
+.hod-prd-page *::after {
+    box-sizing: border-box;
+}
+
+.hod-prd-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.hod-prd-header h1 {
+    margin: 0 0 5px;
+    color: #123a7a;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.hod-prd-header p,
+.hod-prd-card-heading p {
+    margin: 0;
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.hod-prd-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 8px 13px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none !important;
+    white-space: normal;
+    transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+
+.hod-prd-button-secondary {
+    color: #344054 !important;
+    background: #fff;
+    border: 1px solid #d0d5dd;
+}
+
+.hod-prd-button-secondary:hover,
+.hod-prd-button-secondary:focus {
+    color: #123a7a !important;
+    background: #f8fafc;
+    border-color: #98a2b3;
+    text-decoration: none;
+}
+
+/* Cards */
+.hod-prd-page .hod-prd-card {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    margin: 0 0 16px;
+    padding: 20px 22px;
+    background: #fff;
+    border: 1px solid #e4e7ec;
+    border-radius: 11px;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, .035);
+}
+
+/* Compact first card: grievance overview */
+.hod-prd-page .hod-prd-card:first-of-type {
+    padding: 16px 20px;
+}
+
+.hod-prd-card-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eaecf0;
+}
+
+.hod-prd-card-heading h2 {
+    margin: 0 0 3px;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.hod-prd-badges {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.hod-prd-badges .status-badge,
+.hod-prd-badges .priority-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 25px;
+    padding: 4px 10px;
+    border-radius: 14px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+/* Compact information grid */
+.hod-prd-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 22px;
+    row-gap: 8px;
+}
+
+.hod-prd-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.hod-prd-info-item span,
+.hod-prd-label {
+    color: #475467;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.hod-prd-info-item strong {
+    color: #172033;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.hod-prd-info-item-wide {
+    grid-column: 1 / -1;
+}
+
+/* Timeline */
+.hod-prd-timeline {
+    position: relative;
+    width: 100%;
+    max-width: 760px;
+    padding: 2px 0;
+}
+
+.hod-prd-step {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    min-width: 0;
+    padding: 0 0 23px;
+}
+
+.hod-prd-step:not(.hod-prd-step-last)::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 15px;
+    top: 33px;
+    bottom: 0;
+    width: 2px;
+    background: #dfe4eb;
+}
+
+.hod-prd-step.completed:not(.hod-prd-step-last)::after {
+    background: #2f6fed;
+}
+
+.hod-prd-step-circle {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border: 1px solid #d0d5dd;
+    border-radius: 50%;
+    background: #f2f4f7;
+    color: #667085;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.hod-prd-step-circle span,
+.hod-prd-step-circle label {
+    margin: 0;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1;
+}
+
+.hod-prd-step-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0;
+    padding-top: 2px;
+}
+
+.hod-prd-step-content strong {
+    margin: 0;
+    color: #667085;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.hod-prd-step-content span,
+.hod-prd-step-content label {
+    display: block;
+    margin-top: 4px;
+    color: #98a2b3;
+    font-size: 12px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.hod-prd-step.active .hod-prd-step-circle,
+.hod-prd-step.completed .hod-prd-step-circle {
+    border: 2px solid #2f6fed;
+    background: #2f6fed;
+    color: #fff;
+}
+
+.hod-prd-step.active .hod-prd-step-content strong,
+.hod-prd-step.completed .hod-prd-step-content strong {
+    color: #123a7a;
+    font-weight: 700;
+}
+
+.hod-prd-step.active .hod-prd-step-content span,
+.hod-prd-step.active .hod-prd-step-content label,
+.hod-prd-step.completed .hod-prd-step-content span,
+.hod-prd-step.completed .hod-prd-step-content label {
+    color: #475467;
+}
+
+.hod-prd-step.rejected-step .hod-prd-step-circle {
+    border: 1px solid #fda29b;
+    background: #fee4e2;
+    color: #b42318;
+}
+
+.hod-prd-step.rejected-step .hod-prd-step-content strong {
+    color: #b42318;
+}
+
+/* Resolution review */
+.hod-prd-resolution-state {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 27px;
+    padding: 5px 11px;
+    color: #475467;
+    background: #f2f4f7;
+    border-radius: 14px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.hod-prd-resolution-state.resolution-submitted {
+    color: #175cd3;
+    background: #eff8ff;
+}
+
+.hod-prd-resolution-state.resolution-complete {
+    color: #027a48;
+    background: #ecfdf3;
+}
+
+.hod-prd-resolution-state.resolution-rejected {
+    color: #b42318;
+    background: #fef3f2;
+}
+
+.hod-prd-pending-panel {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+    background: #f8fafc;
+    border: 1px dashed #d0d5dd;
+    border-radius: 9px;
+}
+
+.hod-prd-pending-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: #475467;
+    background: #eaecf0;
+    font-size: 16px;
+}
+
+.hod-prd-pending-panel h3 {
+    margin: 1px 0 5px;
+    color: #172033;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.hod-prd-pending-panel p,
+.hod-prd-resolution-placeholder p {
+    margin: 0;
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.hod-prd-resolution-placeholder {
+    padding: 14px 15px;
+    background: #eff8ff;
+    border: 1px solid #b2ddff;
+    border-radius: 8px;
+}
+
+.hod-prd-empty {
+    padding: 14px 16px;
+    color: #667085;
+    background: #f8fafc;
+    border: 1px dashed #d0d5dd;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+/* Evidence */
+.hod-prd-evidence-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    min-width: 0;
+    padding: 11px 13px;
+    margin-bottom: 9px;
+    background: #f8fafc;
+    border: 1px solid #e4e7ec;
+    border-radius: 8px;
+}
+
+.hod-prd-evidence-name {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+    color: #344054;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.hod-prd-evidence-name .fa {
+    color: #2f6fed;
+    flex: 0 0 auto;
+}
+
+.hod-prd-evidence-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    flex: 0 0 auto;
+}
+
+.hod-prd-evidence-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 33px;
+    padding: 7px 11px;
+    color: #2f6fed !important;
+    background: #fff;
+    border: 1px solid #2f6fed;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none !important;
+}
+
+.hod-prd-evidence-button:hover,
+.hod-prd-evidence-button:focus {
+    color: #123a7a !important;
+    background: #eff6ff;
+    text-decoration: none;
+}
+
+.hod-prd-evidence-button-primary {
+    color: #fff !important;
+    background: #2f6fed;
+}
+
+.hod-prd-evidence-button-primary:hover,
+.hod-prd-evidence-button-primary:focus {
+    color: #fff !important;
+    background: #123a7a;
+    border-color: #123a7a;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+    .hod-prd-header h1 {
+        font-size: 23px;
+    }
+
+    .hod-prd-page .hod-prd-card,
+    .hod-prd-page .hod-prd-card:first-of-type {
+        padding: 16px;
+    }
+
+    .hod-prd-info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 15px;
+        row-gap: 8px;
+    }
+}
+
+@media (max-width: 520px) {
+    .hod-prd-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hod-prd-button {
+        align-self: flex-start;
+    }
+
+    .hod-prd-info-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hod-prd-card-heading {
+        align-items: flex-start;
+    }
+
+    .hod-prd-evidence-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hod-prd-evidence-actions {
+        width: 100%;
+    }
+}
+.hod-prd-review-message {
+    margin: 16px 0;
+    padding: 12px 16px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    font-family: Inter, Arial, sans-serif;
+}
+
+.hod-prd-review-message.success {
+    color: #166534;
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+}
+
+.hod-prd-review-message.error {
+    color: #b42318;
+    background: #fef3f2;
+    border-color: #fecdca;
+}
+
+.hod-prd-resolution-text {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+/* HOD Resolution Review Form */
+.hod-prd-review-actions {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #eaecf0;
+}
+
+.hod-prd-review-actions .hod-prd-label {
+    display: block;
+    margin-bottom: 7px;
+    color: #475467;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.hod-prd-review-actions textarea {
+    display: block;
+    width: 100%;
+    min-height: 110px;
+    padding: 11px 12px;
+    color: #172033;
+    background: #fff;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    resize: vertical;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.hod-prd-review-actions textarea:focus {
+    border-color: #2f6fed;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, .12);
+}
+
+.hod-prd-review-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.hod-prd-button-primary {
+    color: #fff !important;
+    background: #2f6fed;
+    border: 1px solid #2f6fed;
+    cursor: pointer;
+}
+
+.hod-prd-button-primary:hover,
+.hod-prd-button-primary:focus {
+    color: #fff !important;
+    background: #123a7a;
+    border-color: #123a7a;
+}
+
+.hod-prd-button-danger {
+    color: #b42318 !important;
+    background: #fff;
+    border: 1px solid #fda29b;
+    cursor: pointer;
+}
+
+.hod-prd-button-danger:hover,
+.hod-prd-button-danger:focus {
+    color: #912018 !important;
+    background: #fef3f2;
+    border-color: #f97066;
+}
+
+@media (max-width: 520px) {
+    .hod-prd-review-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hod-prd-review-buttons .hod-prd-button {
+        width: 100%;
+    }
+}
+
+/* =========================================
+   HOD Resolution Review Controls
+   ========================================= */
+
+/* HOD Remarks label */
+.hod-prd-review-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #475467;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* HOD Remarks textbox */
+.hod-prd-review-textarea {
+    display: block;
+    width: 100%;
+    min-height: 110px;
+    padding: 12px 14px;
+    color: #172033;
+    background-color: #fff;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    resize: vertical;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hod-prd-review-textarea:focus {
+    outline: none;
+    border-color: #2f6fed;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+.hod-prd-review-textarea::placeholder {
+    color: #98a2b3;
+}
+
+/* Approve and Return buttons wrapper */
+.hod-prd-review-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+/* Shared button sizing */
+.hod-prd-review-actions .hod-prd-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 10px 16px;
+    border-radius: 7px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+/* Approve Resolution */
+.hod-prd-review-actions .hod-prd-button-primary {
+    color: #fff !important;
+    background-color: #2f6fed;
+    border: 1px solid #2f6fed;
+    cursor: pointer;
+}
+
+.hod-prd-review-actions .hod-prd-button-primary:hover {
+    color: #fff !important;
+    background-color: #123a7a;
+    border-color: #123a7a;
+}
+
+/* Return to Staff */
+.hod-prd-review-actions .hod-prd-button-danger {
+    color: #b42318 !important;
+    background-color: #fff;
+    border: 1px solid #fda29b;
+    cursor: pointer;
+}
+
+.hod-prd-review-actions .hod-prd-button-danger:hover {
+    color: #912018 !important;
+    background-color: #fef3f2;
+    border-color: #f97066;
+}
+
+/* Keyboard focus */
+.hod-prd-review-actions .hod-prd-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.15);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 520px) {
+    .hod-prd-review-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hod-prd-review-actions .hod-prd-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* =========================================
+   Resolution Review - UI Refinement
+   ========================================= */
+
+/* Remove the large blue box around all content */
+.hod-prd-resolution-placeholder {
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin-top: 12px;
+}
+
+/* Separate resolution details into readable sections */
+.hod-prd-resolution-field {
+    margin-bottom: 22px;
+    min-width: 0;
+}
+
+.hod-prd-resolution-field > label {
+    display: block;
+    margin-bottom: 9px;
+    color: #475467;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Proposed resolution and staff remarks */
+.hod-prd-resolution-text {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    background: #f8fafc;
+    border: 1px solid #eaecf0;
+    border-radius: 8px;
+    color: #172033;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.75;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* Supporting documents area */
+.hod-prd-resolution-field .hod-prd-empty {
+    padding: 14px 16px;
+    background: #f8fafc;
+    border: 1px dashed #d0d5dd;
+    border-radius: 8px;
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* HOD review section */
+.hod-prd-review-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+    padding-top: 22px;
+    border-top: 1px solid #eaecf0;
+}
+
+/* Remarks textbox */
+.hod-prd-review-textarea {
+    display: block;
+    width: 100%;
+    min-height: 110px;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    background: #fff;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    color: #172033;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    resize: vertical;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hod-prd-review-textarea:focus {
+    outline: none;
+    border-color: #2f6fed;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+.hod-prd-review-textarea::placeholder {
+    color: #98a2b3;
+}
+
+/* Review buttons */
+.hod-prd-review-actions .hod-prd-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 10px 17px;
+    border-radius: 7px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+/* Approve - primary action */
+.hod-prd-review-actions .hod-prd-button-primary {
+    color: #fff !important;
+    background: #2f6fed;
+    border: 1px solid #2f6fed;
+}
+
+.hod-prd-review-actions .hod-prd-button-primary:hover {
+    background: #123a7a;
+    border-color: #123a7a;
+}
+
+/* Return - secondary/destructive action */
+.hod-prd-review-actions .hod-prd-button-danger {
+    color: #b42318 !important;
+    background: #fff;
+    border: 1px solid #fda29b;
+}
+
+.hod-prd-review-actions .hod-prd-button-danger:hover {
+    background: #fef3f2;
+    border-color: #f97066;
+}
+
+/* Responsive layout */
+@media (max-width: 520px) {
+    .hod-prd-resolution-field {
+        margin-bottom: 18px;
+    }
+
+    .hod-prd-review-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hod-prd-review-actions .hod-prd-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

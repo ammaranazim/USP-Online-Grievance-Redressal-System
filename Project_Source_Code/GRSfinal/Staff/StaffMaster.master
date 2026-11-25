@@ -1,0 +1,237 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"
+    CodeFile="StaffMaster.master.cs"
+    Inherits="Staff_StaffMaster" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>USP Grievance | Staff Portal</title>
+
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Bootstrap 4.4.1 -->
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- Staff Master CSS -->
+    <link href="<%= ResolveUrl("~/Staff/css/StaffMaster.css") %>" rel="stylesheet" />
+
+    <!-- Shared Grievance Styles -->
+    <link href="<%= ResolveUrl("~/CSS/StatusColors.css") %>" rel="stylesheet" />
+    <link href="<%= ResolveUrl("~/CSS/PriorityColors.css") %>" rel="stylesheet" />
+    <link href="<%= ResolveUrl("~/CSS/EscalationStatusColors.css") %>" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+<form id="form1" runat="server">
+
+    <div class="container-fluid p-0 staff-application">
+
+        <!-- Staff Sidebar -->
+        <aside id="staffSidebar"
+            class="staff-sidebar d-flex flex-column">
+
+            <!-- Brand -->
+            <div class="staff-sidebar-brand d-flex align-items-center">
+                <div class="staff-brand-logo">
+                    <img src="../Images/usp-logo.png"
+                        alt="University of Southern Punjab"
+                        class="staff-brand-logo-img" />
+                </div>
+
+                <div class="staff-brand-text">
+                    <strong>USP Grievance</strong>
+                    <span>Staff Portal</span>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="staff-navigation w-100">
+
+                <a href="<%= ResolveUrl("~/Staff/StaffDashboard.aspx") %>"
+                    class="staff-nav-link d-flex align-items-center">
+                    <span class="staff-nav-icon" aria-hidden="true">&#9633;</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="<%= ResolveUrl("~/Staff/StaffAssignedGrievances.aspx") %>"
+                    class="staff-nav-link d-flex align-items-center">
+                    <span class="staff-nav-icon" aria-hidden="true">&#9776;</span>
+                    <span>My Assigned Grievances</span>
+                </a>
+
+    <a href="<%= ResolveUrl("~/Staff/MyEscalatedRequests.aspx") %>"
+    class="staff-nav-link d-flex align-items-center">
+    <span class="staff-nav-icon" aria-hidden="true">
+        <i class="fa-solid fa-arrow-trend-up"></i>
+    </span>
+    <span>My Escalated Requests</span>
+</a>
+                
+<a href="<%= ResolveUrl("~/Staff/StaffNotifications.aspx") %>"
+    class="staff-nav-link d-flex align-items-center">
+    <span class="hod-nav-icon">
+                        <i class="fa-regular fa-bell"></i>
+                    </span>
+    <span>Notifications</span>
+
+    <asp:Label ID="lblStaffSidebarUnreadCount"
+        runat="server"
+        CssClass="staff-sidebar-notification-count"
+        Visible="false" />
+</a>
+
+                <a href="<%= ResolveUrl("~/Staff/StaffProfile.aspx") %>"
+                    class="staff-nav-link d-flex align-items-center">
+                    <span class="staff-nav-icon" aria-hidden="true">&#9818;</span>
+                    <span>My Profile</span>
+                </a>
+
+            </nav>
+
+            <!-- Sidebar Bottom -->
+            <div class="staff-sidebar-bottom w-100">
+                <asp:LinkButton ID="btnLogout"
+                    runat="server"
+                    CssClass="staff-logout d-flex align-items-center"
+                    CausesValidation="false"
+                    OnClick="btnLogout_Click">
+                    <span class="staff-nav-icon" aria-hidden="true">&#8618;</span>
+                    <span>Logout</span>
+                </asp:LinkButton>
+            </div>
+
+        </aside>
+
+        <!-- Mobile Sidebar Overlay -->
+        <div id="staffSidebarOverlay"
+            class="staff-sidebar-overlay"
+            onclick="closeStaffSidebar()">
+        </div>
+
+        <!-- Main Area -->
+        <div class="staff-main container-fluid p-0">
+
+            <!-- Topbar -->
+            <header class="staff-topbar d-flex align-items-center justify-content-between">
+
+                <div class="staff-topbar-left d-flex align-items-center">
+                    <button type="button"
+                        class="staff-mobile-menu-btn"
+                        onclick="toggleStaffSidebar()"
+                        aria-label="Open navigation"
+                        aria-controls="staffSidebar">
+                        &#9776;
+                    </button>
+
+                    <span class="staff-welcome">Welcome,</span>
+
+                    <asp:Label ID="lblStaffName"
+                        runat="server"
+                        CssClass="staff-name"
+                        Text="Staff Member">
+                    </asp:Label>
+                </div>
+
+                <div class="staff-topbar-right d-flex align-items-center">
+                    
+<asp:HyperLink ID="lnkStaffNotifications"
+    runat="server"
+    NavigateUrl="~/Staff/StaffNotifications.aspx"
+    CssClass="staff-notification-link"
+    ToolTip="Notifications"
+    aria-label="Notifications">
+
+    <i class="fa-solid fa-bell staff-golden-bell"
+       aria-hidden="true"></i>
+
+    <asp:Label ID="lblStaffUnreadCount"
+        runat="server"
+        CssClass="staff-notification-count"
+        Visible="false" />
+
+</asp:HyperLink>
+
+                    <div class="staff-avatar d-flex align-items-center justify-content-center">
+                        <asp:Label ID="lblStaffInitial"
+                            runat="server"
+                            Text="S">
+                        </asp:Label>
+                    </div>
+                </div>
+
+            </header>
+
+            <!-- Page Content -->
+            <main class="staff-content container-fluid">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </main>
+
+        </div>
+    </div>
+
+    <!-- Sidebar and Active Navigation -->
+    <script type="text/javascript">
+        function toggleStaffSidebar() {
+            var sidebar = document.getElementById("staffSidebar");
+            var overlay = document.getElementById("staffSidebarOverlay");
+
+            if (sidebar && overlay) {
+                sidebar.classList.toggle("mobile-open");
+                overlay.classList.toggle("mobile-visible");
+            }
+        }
+
+        function closeStaffSidebar() {
+            var sidebar = document.getElementById("staffSidebar");
+            var overlay = document.getElementById("staffSidebarOverlay");
+
+            if (sidebar && overlay) {
+                sidebar.classList.remove("mobile-open");
+                overlay.classList.remove("mobile-visible");
+            }
+        }
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeStaffSidebar();
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var currentPage = window.location.pathname.split("/").pop();
+
+            var detailPageLinks = {
+                "StaffGrievanceDetails.aspx": "StaffAssignedGrievances.aspx"
+            };
+
+            var targetPage = detailPageLinks[currentPage] || currentPage;
+            var links = document.querySelectorAll(".staff-nav-link");
+
+            links.forEach(function (link) {
+                var href = link.getAttribute("href") || "";
+                var linkPage = href.split("?")[0].split("/").pop();
+
+                if (linkPage.toLowerCase() === targetPage.toLowerCase()) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,468 @@
+﻿
+/* ==========================================
+   HOD Escalations
+   Enhanced USP Online Grievance Redressal System
+   Bootstrap 4.4.1 compatible
+   ========================================== */
+
+.hod-escalations-page {
+    font-family: Inter, Arial, sans-serif;
+    color: #172033;
+    padding-bottom: 28px;
+}
+
+.hod-escalations-page *,
+.hod-escalations-page *::before,
+.hod-escalations-page *::after {
+    box-sizing: border-box;
+}
+
+/* Page heading */
+
+.hod-escalations-page .hod-page-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.hod-escalations-page .hod-page-heading h2 {
+    margin: 0 0 7px;
+    color: #123a7a;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.hod-escalations-page .hod-page-heading p {
+    margin: 0;
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Alerts */
+
+.hod-escalations-page .hod-alert {
+    margin-bottom: 18px;
+    padding: 13px 16px;
+    border: 1px solid #fecdca;
+    border-radius: 8px;
+    color: #b42318;
+    background: #fef3f2;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Main panel */
+
+.hod-escalations-page .hod-panel {
+    min-width: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e4e7ec;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(16, 24, 40, 0.04);
+}
+
+.hod-escalations-page .hod-panel-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 20px 16px;
+}
+
+.hod-escalations-page .hod-panel-heading h3 {
+    margin: 0 0 6px;
+    color: #172033;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.hod-escalations-page .hod-panel-heading p {
+    margin: 0;
+    color: #667085;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Record count */
+
+.hod-escalations-page .hod-record-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    min-height: 28px;
+    padding: 5px 11px;
+    color: #123a7a;
+    background: #edf3ff;
+    border: 1px solid #d8e5ff;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Search toolbar */
+
+.hod-escalations-page .hod-toolbar {
+    padding: 0 20px 16px;
+}
+
+.hod-escalations-page .hod-search-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.hod-escalations-page .hod-search-group .form-control {
+    flex: 1 1 260px;
+    width: auto;
+    min-width: 180px;
+    height: 42px;
+    padding: 9px 13px;
+    color: #172033;
+    background: #fff;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    box-shadow: none;
+}
+
+.hod-escalations-page .hod-search-group .form-control::placeholder {
+    color: #98a2b3;
+}
+
+.hod-escalations-page .hod-search-group .form-control:focus {
+    border-color: #2f6fed;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+/* Toolbar buttons */
+
+.hod-escalations-page .hod-search-group .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 40px;
+    padding: 9px 15px;
+    border-radius: 7px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.hod-escalations-page .hod-search-group .hod-btn-primary {
+    color: #fff;
+    background: #2f6fed;
+    border: 1px solid #2f6fed;
+}
+
+.hod-escalations-page .hod-search-group .hod-btn-primary:hover {
+    color: #fff;
+    background: #245bd0;
+    border-color: #245bd0;
+}
+
+.hod-escalations-page .hod-search-group .hod-btn-outline {
+    color: #344054;
+    background: #fff;
+    border: 1px solid #d0d5dd;
+}
+
+.hod-escalations-page .hod-search-group .hod-btn-outline:hover {
+    color: #123a7a;
+    background: #f3f7fd;
+    border-color: #b9c9e0;
+}
+
+.hod-escalations-page .hod-search-group .btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.14);
+}
+
+/* Filter panel */
+
+.hod-escalations-page .hod-filter-panel {
+    margin: 0 20px 18px;
+    padding: 16px;
+    background: #f8fafc;
+    border: 1px solid #e4e7ec;
+    border-radius: 8px;
+}
+
+.hod-escalations-page .hod-filter-panel[hidden] {
+    display: none !important;
+}
+
+.hod-escalations-page .hod-filter-field {
+    max-width: 380px;
+}
+
+.hod-escalations-page .hod-filter-field label {
+    display: block;
+    margin-bottom: 7px;
+    color: #475467;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.hod-escalations-page .hod-filter-field .form-control {
+    width: 100%;
+    height: 40px;
+    padding: 8px 11px;
+    color: #172033;
+    background: #fff;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+}
+
+.hod-escalations-page .hod-filter-field .form-control:focus {
+    border-color: #2f6fed;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+.hod-escalations-page .hod-filter-hint {
+    margin: 9px 0 0;
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Table */
+
+.hod-escalations-page .hod-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border-top: 1px solid #eaecf0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.hod-escalations-page .hod-data-table {
+    width: 100%;
+    min-width: 1050px;
+    margin: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: #344054;
+    background: #fff;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 12px;
+
+}
+
+.hod-escalations-page .hod-data-table thead th {
+    padding: 13px 14px;
+    color: #475467;
+    background: #f8fafc;
+    border: 0;
+    border-bottom: 1px solid #e4e7ec;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+    text-align: left;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.hod-escalations-page .hod-data-table tbody td {
+    padding: 14px;
+    color: #344054;
+    border: 0;
+    border-bottom: 1px solid #eaecf0;
+    vertical-align: middle;
+    line-height: 1.55;
+}
+
+.hod-escalations-page .hod-data-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.hod-escalations-page .hod-data-table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.hod-escalations-page .hod-data-table tbody tr:hover {
+    background: #f8fbff;
+}
+
+/* Table content */
+
+.hod-escalations-page .hod-id {
+    display: inline-block;
+    color: #123a7a;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.hod-escalations-page .hod-primary-cell {
+    color: #172033;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.hod-escalations-page .hod-secondary-cell {
+    margin-top: 4px;
+    color: #667085;
+    font-size: 11px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   Escalation Status Badge Shape
+   Colors are managed by CSS/EscalationStatusColors.css
+   ========================================================= */
+
+.hod-escalations-page .escalation-status {
+    display: inline-block;
+    max-width: 190px;
+    padding: 5px 9px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.45;
+    white-space: normal;
+}
+
+
+/* View details link */
+
+.hod-escalations-page .hod-view-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #2f6fed;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.hod-escalations-page .hod-view-link:hover {
+    color: #123a7a;
+    text-decoration: underline;
+}
+
+.hod-escalations-page .hod-view-link:focus {
+    outline: 2px solid rgba(47, 111, 237, 0.5);
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+/* Empty GridView message */
+
+.hod-escalations-page .hod-data-table tbody tr td[colspan] {
+    padding: 24px 16px;
+    color: #667085;
+    background: #fff;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Responsive */
+
+@media (max-width: 767.98px) {
+    .hod-escalations-page .hod-page-heading h2 {
+        font-size: 23px;
+    }
+
+    .hod-escalations-page .hod-panel-heading {
+        padding: 16px;
+    }
+
+    .hod-escalations-page .hod-toolbar {
+        padding: 0 16px 16px;
+    }
+
+    .hod-escalations-page .hod-search-group {
+        align-items: stretch;
+    }
+
+    .hod-escalations-page .hod-search-group .form-control {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .hod-escalations-page .hod-search-group .btn {
+        flex: 1 1 auto;
+    }
+
+    .hod-escalations-page .hod-filter-panel {
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+
+    .hod-escalations-page .hod-filter-field {
+        max-width: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .hod-escalations-page .hod-page-heading h2 {
+        font-size: 21px;
+    }
+
+    .hod-escalations-page .hod-panel-heading h3 {
+        font-size: 17px;
+    }
+
+    .hod-escalations-page .hod-record-count {
+        font-size: 11px;
+    }
+
+    .hod-escalations-page .hod-search-group .btn {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+/* Escalation View Details Button */
+.hod-escalation-view-details {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding: 8px 11px;
+    border: 1px solid #cbdaf7;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #2f6fed;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.hod-escalation-view-details:hover,
+.hod-escalation-view-details:focus {
+    color: #123a7a;
+    background: #f3f7ff;
+    border-color: #2f6fed;
+    text-decoration: none;
+}

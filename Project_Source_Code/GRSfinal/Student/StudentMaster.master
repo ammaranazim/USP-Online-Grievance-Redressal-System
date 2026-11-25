@@ -1,0 +1,463 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="StudentMaster.master.cs" Inherits="Student_StudentMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head id="Head1" runat="server">
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1" />
+    
+<!-- Inter Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+
+
+    <title>USP Student Portal</title>
+     <!-- Bootstrap 4.4.1 -->
+    <link href="<%= ResolveUrl("~/bootstrap/css/bootstrap.min.css") %>"
+          rel="stylesheet"
+          type="text/css" />
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- Master Page CSS -->
+    <link href="<%= ResolveUrl("~/Student/css/StudentMaster.css") %>"
+          rel="stylesheet"
+          type="text/css" />
+    <link href="<%= ResolveUrl("~/CSS/StatusColors.css") %>"
+      rel="stylesheet"
+      type="text/css" />
+    
+<link href="<%= ResolveUrl("~/CSS/PriorityColors.css") %>"
+      rel="stylesheet"
+      type="text/css" />
+
+
+    <asp:ContentPlaceHolder
+        ID="HeadContent"
+        runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+
+<body>
+
+<form id="form1" runat="server">
+
+<div class="app-wrapper">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar" id="sidebarEl">
+
+        <!-- BRAND -->
+        
+        <div class="sidebar-brand">
+
+            <img src="../Images/usp-logo.png" 
+                 alt="University of Southern Punjab"
+                 class="sidebar-logo" />
+
+            <div class="brand-text">
+
+                <strong>USP Grievance</strong>
+
+                <span>Student Portal</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-nav">
+
+            <!-- Dashboard -->
+
+            <asp:HyperLink
+                ID="lnkOverview"
+                runat="server"
+                CssClass="nav-link"
+                NavigateUrl="~/Student/StudentDashboard.aspx?view=Overview">
+
+                <span class="nav-icon">
+
+                    <svg viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2"
+                        aria-hidden="true">
+
+                        <rect x="3" y="3"
+                              width="7"
+                              height="9"></rect>
+
+                        <rect x="14" y="3"
+                              width="7"
+                              height="5"></rect>
+
+                        <rect x="14" y="12"
+                              width="7"
+                              height="9"></rect>
+
+                        <rect x="3" y="16"
+                              width="7"
+                              height="5"></rect>
+
+                    </svg>
+
+                </span>
+
+                <span>Dashboard</span>
+
+            </asp:HyperLink>
+
+
+            <!-- Submit Grievance -->
+
+            <asp:HyperLink
+                ID="lnkSubmit"
+                runat="server"
+                CssClass="nav-link"
+                NavigateUrl="~/Student/SubmitGrievance.aspx?view=SubmitGrievance">
+
+                <span class="nav-icon">
+
+                    <svg viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2"
+                        aria-hidden="true">
+
+                        <path d="M12 20h9"></path>
+
+                        <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path>
+
+                    </svg>
+
+                </span>
+
+                <span>Submit Grievance</span>
+
+            </asp:HyperLink>
+
+
+            <!-- Track -->
+
+            <asp:HyperLink
+                ID="lnkTrack"
+                runat="server"
+                CssClass="nav-link"
+                NavigateUrl="~/Student/StudentDashboard.aspx?view=TrackGrievance">
+
+                <span class="nav-icon">
+
+                    <svg viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2"
+                         aria-hidden="true">
+
+                        <path d="M9 11l3 3L22 4"></path>
+
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+
+                    </svg>
+
+                </span>
+
+                <span>Track Grievance</span>
+
+            </asp:HyperLink>
+
+
+<!-- Notifications -->
+
+<asp:HyperLink
+    ID="lnkNotifications"
+    runat="server"
+    CssClass="nav-link"
+    NavigateUrl="~/Student/StudentDashboard.aspx?view=Notifications">
+
+    <span class="nav-icon">
+
+        <svg viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             aria-hidden="true">
+
+            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path>
+
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+
+        </svg>
+
+    </span>
+
+    <span>Notifications</span>
+
+    <asp:Label
+        ID="lblNavBadge"
+        runat="server"
+        CssClass="nav-badge"
+        Visible="false">
+    </asp:Label>
+
+</asp:HyperLink>
+
+            <!-- Profile -->
+
+            <asp:HyperLink
+                ID="lnkProfile"
+                runat="server"
+                CssClass="nav-link"
+                NavigateUrl="~/Student/StudentDashboard.aspx?view=Profile">
+
+                <span class="nav-icon">
+
+                    <svg viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2"
+                        aria-hidden="true">
+
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+
+                        <circle cx="12"
+                                cy="7"
+                                r="4"></circle>
+
+                    </svg>
+
+                </span>
+
+                <span>My Profile</span>
+
+            </asp:HyperLink>
+
+
+        </nav>
+
+
+      
+<!-- LOGOUT -->
+<div class="sidebar-bottom">
+
+    <asp:LinkButton ID="lnkLogout" runat="server"
+        CssClass="nav-link logout"
+        OnClick="lnkLogout_Click"
+        CausesValidation="false">
+
+        <span class="nav-icon">
+            <svg viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 aria-hidden="true">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+        </span>
+
+        <span>Logout</span>
+
+    </asp:LinkButton>
+
+</div>
+
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN AREA
+         ===================================================== -->
+
+    <div class="main-area">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <!-- MOBILE MENU -->
+
+                <button
+                    type="button"
+                    class="menu-toggle"
+                    onclick="toggleSidebar();"
+                    aria-label="Open navigation menu">
+
+                    <svg viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2"
+                        aria-hidden="true">
+
+                        <line x1="3"
+                              y1="6"
+                              x2="21"
+                              y2="6"></line>
+
+                        <line x1="3"
+                              y1="12"
+                              x2="21"
+                              y2="12"></line>
+
+                        <line x1="3"
+                              y1="18"
+                              x2="21"
+                              y2="18"></line>
+
+                    </svg>
+
+                </button>
+
+
+                <!-- WELCOME -->
+
+                <div class="topbar-welcome">
+
+                    <div class="welcome-name">
+
+                        Welcome,
+                        <asp:Label
+                            ID="lblStdName"
+                            runat="server">
+                        </asp:Label>
+
+                    </div>
+
+                    <div class="welcome-subtitle">
+                        Student Grievance Portal
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TOP RIGHT -->
+
+            <div class="topbar-right">
+
+
+               <!-- NOTIFICATION -->
+
+<div class="bell-wrap">
+
+    <asp:HyperLink
+        ID="lnkTopNotification"
+        runat="server"
+        CssClass="bell-link"
+        NavigateUrl="~/Student/StudentDashboard.aspx?view=Notifications"
+        ToolTip="Notifications"
+        aria-label="Notifications">
+
+        <i class="fas fa-bell student-golden-bell"
+           aria-hidden="true"></i>
+
+    </asp:HyperLink>
+
+    <asp:Label
+        ID="lblBellDot"
+        runat="server"
+        CssClass="student-notification-count"
+        Visible="false">
+    </asp:Label>
+
+</div>
+
+                <!-- AVATAR -->
+
+                <div class="avatar-circle">
+
+                    <asp:Label
+                        ID="lblAvatarInitials"
+                        runat="server">
+                        ST
+                    </asp:Label>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             CONTENT
+             ===================================================== -->
+
+        <main class="content-area">
+
+            <asp:ContentPlaceHolder
+                ID="MainContent"
+                runat="server">
+            </asp:ContentPlaceHolder>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+<!-- MOBILE OVERLAY -->
+
+<div
+    id="sidebarOverlay"
+    class="sidebar-overlay"
+    onclick="closeSidebar();">
+</div>
+
+
+</form>
+
+
+<!-- SIDEBAR SCRIPT -->
+
+<script type="text/javascript">
+
+    function toggleSidebar() {
+
+        var sidebar = document.getElementById("sidebarEl");
+        var overlay = document.getElementById("sidebarOverlay");
+
+        sidebar.classList.toggle("open");
+        overlay.classList.toggle("show");
+
+    }
+
+
+    function closeSidebar() {
+
+        var sidebar = document.getElementById("sidebarEl");
+        var overlay = document.getElementById("sidebarOverlay");
+
+        sidebar.classList.remove("open");
+        overlay.classList.remove("show");
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

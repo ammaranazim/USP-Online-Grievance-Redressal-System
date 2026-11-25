@@ -1,0 +1,251 @@
+﻿
+<%@ Master Language="C#" AutoEventWireup="true"
+    CodeFile="HODMaster.master.cs"
+    Inherits="DepartmentHead_HODMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server">
+            HOD Portal
+        </asp:ContentPlaceHolder>
+    </title>
+
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Bootstrap 4.4.1 -->
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- Shared Status and Priority Colors -->
+    <link href="../CSS/StatusColors.css" rel="stylesheet" />
+    <link href="../CSS/PriorityColors.css" rel="stylesheet" />
+    <link href="<%= ResolveUrl("~/CSS/EscalationStatusColors.css") %>" rel="stylesheet" />
+
+    <!-- HOD Master CSS -->
+    <link rel="stylesheet"
+        href="<%= ResolveUrl("~/DepartmentHead/css/HODMaster.css") %>" />
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+<form id="form1" runat="server">
+
+    <div class="hod-layout" id="hodLayout">
+
+        <!-- Sidebar -->
+        <aside class="hod-sidebar" id="hodSidebar">
+
+            <!-- Brand -->
+            <div class="hod-brand">
+               <div class="hod-brand-logo">
+
+    <img src="../Images/usp-logo.png"
+         alt="University of Southern Punjab"
+         class="hod-brand-logo-img" />
+
+
+</div>
+
+                <div class="hod-brand-text">
+                    <h2>USP Portal</h2>
+                    <span>Department Head</span>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="hod-navigation">
+
+                <span class="hod-nav-heading">WORKSPACE</span>
+
+                <!-- Dashboard -->
+                <a href="<%= ResolveUrl("~/DepartmentHead/HODDashboard.aspx") %>"
+                   class="hod-nav-link <%= GetNavActiveClass("HODDashboard.aspx") %>">
+                    <span class="hod-nav-icon">&#9632;</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <!-- Grievances -->
+                <a href="<%= ResolveUrl("~/DepartmentHead/HODGrievances.aspx") %>"
+                   class="hod-nav-link <%= GetNavActiveClass("HODGrievances.aspx") %>">
+                    <span class="hod-nav-icon">&#9776;</span>
+                    <span>Grievances</span>
+                </a>
+
+                <!-- Staff Assignment -->
+                <a href="<%= ResolveUrl("~/DepartmentHead/HODStaffAllAssignment.aspx") %>"
+                   class="hod-nav-link <%= GetNavActiveClass("HODStaffAllAssignment.aspx") %>">
+                    <span class="hod-nav-icon">&#9823;</span>
+                    <span>Staff Assignment</span>
+                </a>
+
+                <!-- Progress and Resolution Review -->
+                <a href="<%= ResolveUrl("~/DepartmentHead/HODProgressResolutionReview.aspx") %>"
+                   class="hod-nav-link <%= GetNavActiveClass("HODProgressResolutionReview.aspx") %>">
+                    <span class="hod-nav-icon">&#10003;</span>
+                    <span>Progress &amp; Resolution Review</span>
+                </a>
+
+                <!-- Escalations -->
+                <a href="<%= ResolveUrl("~/DepartmentHead/HODEscalations.aspx") %>"
+                   class="hod-nav-link <%= GetNavActiveClass("HODEscalations.aspx") %>">
+                    <span class="hod-nav-icon">&#8593;</span>
+                    <span>Escalations</span>
+                </a>
+
+                
+               
+
+                <!-- Notifications -->
+                <a href="<%= ResolveUrl("~/DepartmentHead/HODNotifications.aspx") %>"
+                   class="hod-nav-link <%= GetNavActiveClass("HODNotifications.aspx") %>">
+
+                    <span class="hod-nav-icon">
+                        <i class="fa-regular fa-bell"></i>
+                    </span>
+
+                    <span>Notifications</span>
+
+                    <asp:Label ID="lblHODSidebarUnreadCount"
+                        runat="server"
+                        CssClass="hod-sidebar-notification-count"
+                        Visible="false" />
+                </a>
+
+            </nav>
+
+            <!-- Sidebar Footer -->
+            <div class="hod-sidebar-footer">
+
+                <asp:LinkButton ID="btnLogout"
+                    runat="server"
+                    CssClass="hod-sidebar-logout"
+                    CausesValidation="false"
+                    OnClick="btnLogout_Click">
+
+                    <span class="hod-logout-icon">&#10162;</span>
+                    <span>Logout</span>
+
+                </asp:LinkButton>
+
+            </div>
+
+        </aside>
+
+        <!-- Main Area -->
+        <div class="hod-main">
+
+            <!-- Topbar -->
+            <header class="hod-topbar">
+
+                <div class="hod-topbar-left">
+
+                    <button type="button"
+                        id="btnSidebarToggle"
+                        class="hod-sidebar-toggle"
+                        aria-label="Toggle navigation"
+                        aria-controls="hodSidebar"
+                        aria-expanded="false">
+                        &#9776;
+                    </button>
+
+                    <div class="hod-topbar-title">
+                        <span class="hod-portal-label">
+                            DEPARTMENT HEAD PORTAL
+                        </span>
+
+                        <h1>Welcome Back</h1>
+                    </div>
+
+                </div>
+
+                <!-- User Area -->
+                <div class="hod-user-area">
+
+                    <asp:HyperLink ID="lnkHODNotifications"
+                        runat="server"
+                        NavigateUrl="~/DepartmentHead/HODNotifications.aspx"
+                        CssClass="hod-notification-link"
+                        ToolTip="Notifications"
+                        aria-label="Notifications">
+
+                        <i class="fa-solid fa-bell"
+                            style="color: #f5b800;"
+                            aria-hidden="true"></i>
+
+                        <asp:Label ID="lblHODUnreadCount"
+                            runat="server"
+                            CssClass="hod-notification-count"
+                            Visible="false" />
+
+                    </asp:HyperLink>
+
+                    <div class="hod-user-avatar">
+                        <asp:Label ID="lblUserInitials"
+                            runat="server"
+                            Text="H" />
+                    </div>
+
+                    <div class="hod-user-info">
+                        <asp:Label ID="lblHodName"
+                            runat="server"
+                            CssClass="hod-user-name"
+                            Text="Department Head" />
+
+                        <span class="hod-user-role">Department Head</span>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!-- Page Content -->
+            <main class="hod-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </main>
+
+        </div>
+
+    </div>
+
+    <!-- Sidebar Toggle -->
+    <script type="text/javascript">
+        (function () {
+            var toggleButton =
+                document.getElementById("btnSidebarToggle");
+
+            var layout =
+                document.getElementById("hodLayout");
+
+            if (!toggleButton || !layout) {
+                return;
+            }
+
+            toggleButton.addEventListener("click", function () {
+                var isOpen =
+                    layout.classList.toggle("hod-sidebar-open");
+
+                toggleButton.setAttribute(
+                    "aria-expanded",
+                    isOpen ? "true" : "false"
+                );
+            });
+        })();
+    </script>
+
+</form>
+</body>
+</html>

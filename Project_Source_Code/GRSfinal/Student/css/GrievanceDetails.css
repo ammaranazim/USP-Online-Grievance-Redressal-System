@@ -1,0 +1,653 @@
+﻿/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+.grievance-details-page {
+    font-family: "Inter", Arial, sans-serif;
+}
+
+.details-page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.grievance-details-page h1 {
+    margin: 0;
+    color: #123a7a;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    line-height: 1.2;
+}
+
+.grievance-details-page .page-subtitle {
+    margin: 5px 0 0;
+    color: #667085;
+    font-size: 11.5px;
+    font-weight: 400;
+    line-height: 1.45;
+}
+
+.back-btn {
+    font-size: 12px;
+    font-weight: 500;
+    color: #475467;
+    border-radius: 6px;
+}
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+.grievance-details-card {
+    background: #ffffff;
+    border: 1px solid #e3e8f0;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(31, 41, 55, 0.04);
+}
+
+/* =========================================================
+   MAIN TWO-COLUMN AREA
+   ========================================================= */
+.details-main-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(300px, 0.95fr);
+    min-height: 420px;
+}
+
+/* =========================================================
+   INFORMATION AND PROGRESS PANELS
+   ========================================================= */
+.details-info-panel {
+    padding: 20px 22px 22px;
+}
+
+.details-progress-panel {
+    min-width: 0;
+    padding: 20px 22px 22px;
+    border-left: 1px solid #e7ebf1;
+}
+
+/* =========================================================
+   PANEL HEADINGS
+   ========================================================= */
+.details-panel-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e7ebf1;
+}
+
+.details-panel-heading h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.details-panel-heading p {
+    margin: 4px 0 0;
+    color: #667085;
+    font-size: 11.5px;
+    font-weight: 400;
+    line-height: 1.45;
+}
+
+/* =========================================================
+   DETAIL FIELDS
+   ========================================================= */
+.details-fields {
+    margin-top: 18px;
+}
+
+.detail-field {
+    display: grid;
+    grid-template-columns: 125px 12px minmax(0, 1fr);
+    align-items: start;
+    column-gap: 6px;
+    min-height: 30px;
+}
+
+.detail-label {
+    color: #475467;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.detail-separator {
+    color: #98a2b3;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.45;
+    text-align: center;
+}
+
+.detail-value {
+    min-width: 0;
+    color: #475467;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   PRIORITY
+   ========================================================= */
+.priority-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 9px;
+    border-radius: 5px;
+    background: #fff4d6;
+    color: #8a6200;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+.grievance-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 10.5px;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+/* =========================================================
+   SUBSECTIONS
+   ========================================================= */
+.details-subsection {
+    margin-top: 20px;
+}
+
+.details-subsection h3 {
+    margin: 0 0 9px;
+    color: #172033;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+/* =========================================================
+   EVIDENCE
+   ========================================================= */
+.evidence-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.evidence-icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 7px;
+    background: #eef4ff;
+    color: #2f6fed;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+.evidence-link {
+    color: #2f6fed;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.evidence-link:hover {
+    color: #245dcc;
+    text-decoration: underline;
+}
+
+.pnl-no-evidence {
+    color: #667085;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+.description-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+    padding: 13px 14px;
+    min-height: 90px;
+    color: #475467;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   PROGRESS HEADING
+   ========================================================= */
+.progress-panel-heading {
+    margin-bottom: 20px;
+}
+
+/* =========================================================
+   PROGRESS TIMELINE
+   ========================================================= */
+.tracking-step {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0 0 24px;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.tracking-step:last-child {
+    padding-bottom: 0;
+}
+
+.tracking-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 32px;
+    bottom: 0;
+    width: 2px;
+    background: #dfe4eb;
+    z-index: 0;
+}
+
+.tracking-step.completed:not(:last-child)::after {
+    background: #b9d2f7;
+}
+
+/* =========================================================
+   STEP CIRCLE
+   ========================================================= */
+.step-circle {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid #d0d5dd;
+    border-radius: 50%;
+    background: #eef0f3;
+    color: #667085;
+    font-size: 12px;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.tracking-step.active .step-circle {
+    background: #2f6fed;
+    border-color: #2f6fed;
+    color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.10);
+}
+
+.tracking-step.completed .step-circle {
+    background: #e8f1ff;
+    border-color: #b9d2f7;
+    color: #2463b5;
+}
+
+/* =========================================================
+   STEP CONTENT
+   ========================================================= */
+.step-content {
+    flex: 1;
+    min-width: 0;
+    margin-left: 13px;
+    padding-top: 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+.step-content strong {
+    display: block;
+    margin: 0;
+    color: #667085;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.step-content span {
+    display: block;
+    margin-top: 3px;
+    color: #98a2b3;
+    font-size: 11.5px;
+    font-weight: 400;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.tracking-step.active .step-content strong {
+    color: #172033;
+}
+
+.tracking-step.active .step-content span {
+    color: #667085;
+}
+
+.tracking-step.completed .step-content strong {
+    color: #344054;
+}
+
+.tracking-step.completed .step-content span {
+    color: #667085;
+}
+
+/* =========================================================
+   REJECTED OUTCOME
+   ========================================================= */
+.grievance-details-page .rejected-step .step-circle {
+    background-color: #fee4e2;
+    color: #b42318;
+    border: 1px solid #fda29b;
+}
+
+.grievance-details-page .rejected-step .step-content strong {
+    color: #b42318;
+}
+
+.grievance-details-page .rejected-step .step-content span {
+    color: #667085;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 991px) {
+    .details-main-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .details-progress-panel {
+        border-left: 0;
+        border-top: 1px solid #e7ebf1;
+    }
+}
+
+@media (max-width: 767px) {
+    .grievance-details-page {
+        padding-top: 20px;
+    }
+
+    .details-page-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .grievance-details-page h1 {
+        font-size: 21px;
+        letter-spacing: -0.2px;
+    }
+
+    .back-btn {
+        width: auto;
+    }
+
+    .details-info-panel,
+    .details-progress-panel {
+        padding: 17px 16px;
+    }
+
+    .details-panel-heading {
+        gap: 10px;
+    }
+
+    .detail-field {
+        grid-template-columns: 110px 10px minmax(0, 1fr);
+    }
+
+    .detail-label {
+        font-size: 11.5px;
+    }
+
+    .detail-value {
+        font-size: 12.5px;
+    }
+
+    .details-subsection {
+        margin-top: 18px;
+    }
+}
+/* =========================================================
+   PROMINENT TIMELINE STATES
+   ========================================================= */
+
+/* Completed stages: stronger blue indicators and connecting line */
+.tracking-step.completed .step-circle {
+    background: #2f6fed;
+    border: 2px solid #2f6fed;
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.10);
+}
+
+.tracking-step.completed:not(:last-child)::after {
+    background: #2f6fed;
+    width: 2px;
+}
+
+/* Completed stage headings */
+.tracking-step.completed .step-content strong {
+    color: #123a7a;
+    font-weight: 700;
+}
+
+.tracking-step.completed .step-content span {
+    color: #475467;
+}
+
+/* Current stage */
+.tracking-step.active .step-circle {
+    background: #2f6fed;
+    border: 2px solid #2f6fed;
+    color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(47, 111, 237, 0.16);
+}
+
+.tracking-step.active .step-content strong {
+    color: #123a7a;
+    font-weight: 700;
+}
+
+.tracking-step.active .step-content span {
+    color: #344054;
+}
+
+/* Future stages remain visually muted */
+.tracking-step:not(.completed):not(.active):not(.rejected-step) .step-circle {
+    background: #f2f4f7;
+    border: 1px solid #d0d5dd;
+    color: #667085;
+}
+
+.tracking-step:not(.completed):not(.active):not(.rejected-step) .step-content strong {
+    color: #667085;
+    font-weight: 500;
+}
+
+.tracking-step:not(.completed):not(.active):not(.rejected-step) .step-content span {
+    color: #98a2b3;
+}
+
+/* =========================================
+   GRIEVANCE FEEDBACK CARD
+   ========================================= */
+
+.feedback-card {
+    width: 100%;
+    margin-top: 24px;
+    padding: 28px 30px;
+    background: #ffffff;
+    border: 1px solid #e4eaf2;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(18, 58, 122, 0.06);
+    font-family: Inter, Arial, sans-serif;
+}
+
+.feedback-card h3 {
+    margin: 0 0 10px;
+    color: #172033;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.feedback-card .feedback-description {
+    margin: 0 0 24px;
+    color: #475467;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.feedback-card .feedback-field {
+    margin-bottom: 22px;
+}
+
+.feedback-card .feedback-field > label {
+    display: block;
+    margin-bottom: 10px;
+    color: #475467;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.feedback-card .feedback-rating {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.feedback-card .feedback-rating label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0;
+    padding: 10px 15px;
+    color: #172033;
+    background: #f8faff;
+    border: 1px solid #e1e8f3;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.feedback-card .feedback-rating label:hover {
+    background: #eef4ff;
+    border-color: #2f6fed;
+}
+
+.feedback-card .feedback-rating input[type="radio"] {
+    margin: 0;
+    accent-color: #2f6fed;
+}
+
+.feedback-card textarea.form-control {
+    width: 100%;
+    min-height: 120px;
+    padding: 13px 15px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    color: #172033;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.feedback-card textarea.form-control:focus {
+    border-color: #2f6fed;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+    outline: none;
+}
+
+.feedback-card .btn-primary {
+    min-height: 44px;
+    padding: 11px 22px;
+    color: #ffffff;
+    background: #2f6fed;
+    border: 1px solid #2f6fed;
+    border-radius: 7px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.feedback-card .btn-primary:hover,
+.feedback-card .btn-primary:focus {
+    background: #123a7a;
+    border-color: #123a7a;
+}
+
+.feedback-card .feedback-validation,
+.feedback-card .feedback-message {
+    display: block;
+    margin: 8px 0 12px;
+    color: #b42318;
+    font-size: 13px;
+}
+
+.feedback-card .feedback-success {
+    padding: 13px 15px;
+    background: #ecfdf3;
+    border: 1px solid #abefc6;
+    border-radius: 8px;
+    color: #027a48;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+    .feedback-card {
+        margin-top: 18px;
+        padding: 20px 16px;
+    }
+
+    .feedback-card h3 {
+        font-size: 19px;
+    }
+
+    .feedback-card .feedback-rating {
+        gap: 8px;
+    }
+
+    .feedback-card .feedback-rating label {
+        padding: 9px 11px;
+    }
+
+    .feedback-card .btn-primary {
+        width: 100%;
+    }
+}

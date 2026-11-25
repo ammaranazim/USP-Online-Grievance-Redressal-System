@@ -1,0 +1,629 @@
+﻿
+/* =========================================
+   HOD Master Layout
+   Enhanced USP Online Grievance Redressal
+========================================= */
+
+:root {
+    --hod-primary: #123a7a;
+    --hod-action: #2f6fed;
+    --hod-heading: #172033;
+    --hod-label: #475467;
+    --hod-border: #eaecf0;
+    --hod-background: #f5f7fb;
+    --hod-white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    color: var(--hod-heading);
+    background: var(--hod-background);
+    font-size: 14px;
+}
+
+.hod-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+:root {
+    --hod-sidebar-bg: #173f7a;
+    --hod-sidebar-hover: #2b5088;
+    --hod-sidebar-active: #385d91;
+    --hod-sidebar-text: #ffffff;
+    --hod-sidebar-muted: #dce6f5;
+}
+
+.hod-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: var(--hod-sidebar-bg);
+    border-right: none;
+    color: var(--hod-sidebar-text);
+    transition: transform 0.25s ease;
+}
+.hod-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    min-height: 77px;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hod-brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #173f7a;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.hod-brand-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.hod-brand-text h2 {
+    margin: 0 0 4px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.hod-brand-text span {
+    color: #dce6f5;
+    font-size: 10px;
+    line-height: 1.4;
+}
+/* Navigation */
+
+.hod-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 17px 10px;
+}
+
+.hod-nav-heading {
+    display: block;
+    margin: 0 10px 8px;
+    color: #bdcde5;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+.hod-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 39px;
+    margin: 0;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    background: transparent;
+    color: var(--hod-sidebar-text);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.hod-nav-link:hover {
+    background: var(--hod-sidebar-hover);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.hod-nav-link:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: -2px;
+}
+
+
+.hod-nav-link.active {
+    background: var(--hod-sidebar-active);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.hod-nav-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 16px;
+    color: #e0e9f7;
+    font-size: 15px;
+}
+
+.hod-nav-link:hover .hod-nav-icon,
+.hod-nav-link.active .hod-nav-icon {
+    color: #ffffff;
+}
+
+/* Sidebar footer and Logout */
+
+.hod-sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: auto;
+    padding: 17px 10px 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hod-sidebar-branding {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 10px;
+    color: var(--hod-sidebar-muted);
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.hod-sidebar-logout {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 39px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    background: transparent;
+    color: #ffffff;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.hod-sidebar-logout:hover {
+    background: var(--hod-sidebar-hover);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.hod-sidebar-logout:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: -2px;
+}
+
+.hod-logout-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 16px;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+/* Main Area */
+
+.hod-main {
+    width: calc(100% - 250px);
+    min-width: 0;
+    min-height: 100vh;
+    margin-left: 250px;
+}
+
+.hod-topbar {
+ 
+    top: 0;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 84px;
+    padding: 16px 30px;
+    background: var(--hod-white);
+    border-bottom: 1px solid var(--hod-border);
+}
+
+.hod-topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.hod-topbar-title {
+    min-width: 0;
+}
+
+.hod-portal-label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--hod-label);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.hod-topbar-title h1 {
+    margin: 0;
+    color: var(--hod-heading);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* Mobile Sidebar Toggle */
+
+.hod-sidebar-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 1px solid var(--hod-border);
+    border-radius: 8px;
+    background: var(--hod-white);
+    color: var(--hod-primary);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.hod-sidebar-toggle:hover {
+    background: #f2f5fb;
+}
+
+.hod-sidebar-toggle:focus-visible {
+    outline: 2px solid var(--hod-action);
+    outline-offset: 2px;
+}
+
+/* User Area */
+
+.hod-user-area {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.hod-user-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #eaf0ff;
+    color: var(--hod-primary);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.hod-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.hod-user-name {
+    display: block;
+    max-width: 180px;
+    overflow: hidden;
+    color: var(--hod-heading);
+    font-size: 13px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.hod-user-role {
+    color: var(--hod-label);
+    font-size: 11px;
+}
+
+.hod-logout-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    margin-left: 8px;
+    padding: 8px 13px;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    background: var(--hod-white);
+    color: var(--hod-label);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: border-color 0.2s ease,
+                background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+.hod-logout-button:hover {
+    border-color: var(--hod-primary);
+    background: #f5f8ff;
+    color: var(--hod-primary);
+    text-decoration: none;
+}
+
+.hod-logout-button:focus-visible {
+    outline: 2px solid var(--hod-action);
+    outline-offset: 2px;
+}
+
+/* Page Content */
+
+.hod-content {
+    width: 100%;
+    min-width: 0;
+    padding: 28px 30px;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+   .hod-sidebar {
+        width: 250px;
+    }
+
+    .hod-main {
+        width: calc(100% - 250px);
+        margin-left: 250px;
+    }
+
+    .hod-topbar {
+        gap: 14px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .hod-content {
+        padding: 24px 20px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+     .hod-sidebar {
+        width: min(280px, 85vw);
+        transform: translateX(-100%);
+        box-shadow: none;
+    }
+
+    .hod-layout.hod-sidebar-open .hod-sidebar {
+        transform: translateX(0);
+        box-shadow: 8px 0 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .hod-main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .hod-topbar {
+        position: sticky;
+        align-items: center;
+        flex-direction: row;
+        gap: 12px;
+        min-height: 76px;
+        padding: 14px 16px;
+    }
+
+    .hod-topbar-left {
+        gap: 10px;
+    }
+
+    .hod-sidebar-toggle {
+        display: inline-flex;
+    }
+
+    .hod-portal-label {
+        font-size: 9px;
+        letter-spacing: 0.6px;
+    }
+
+    .hod-topbar-title h1 {
+        font-size: 18px;
+    }
+
+    .hod-user-area {
+        gap: 8px;
+    }
+
+    .hod-user-info {
+        display: none;
+    }
+
+    .hod-logout-button {
+        margin-left: 0;
+        padding: 8px 10px;
+    }
+
+    .hod-content {
+        padding: 20px 16px;
+    }
+}
+
+/* Small Mobile */
+
+@media (max-width: 400px) {
+    .hod-topbar {
+        gap: 8px;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .hod-topbar-left {
+        gap: 8px;
+    }
+
+    .hod-sidebar-toggle {
+        width: 34px;
+        height: 34px;
+    }
+
+    .hod-topbar-title h1 {
+        font-size: 16px;
+    }
+
+    .hod-portal-label {
+        font-size: 8px;
+    }
+
+    .hod-user-avatar {
+        width: 34px;
+        height: 34px;
+    }
+
+    .hod-content {
+        padding: 16px 12px;
+    }
+}
+
+/* =========================================
+   HOD TOPBAR NOTIFICATIONS
+   ========================================= */
+
+.hod-notification-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+    border: 1px solid #e4e7ec;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #123a7a;
+    text-decoration: none;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.hod-notification-link:hover,
+.hod-notification-link:focus {
+    background: #f2f6fc;
+    border-color: #c8d7ee;
+    color: #123a7a;
+    text-decoration: none;
+    outline: none;
+}
+
+.hod-notification-link i {
+    font-size: 18px;
+}
+
+.hod-notification-count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    background: #d92d20;
+    color: #ffffff;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 14px;
+    text-align: center;
+}
+
+@media (max-width: 575.98px) {
+    .hod-notification-link {
+        flex-basis: 36px;
+        width: 36px;
+        height: 36px;
+        margin-right: 8px;
+    }
+}
+.hod-notification-link {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.hod-notification-link:hover,
+.hod-notification-link:focus {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+}
+
+/* HOD Sidebar - Logo without outer box */
+.hod-brand-logo {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+}
+
+.hod-brand-logo-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.hod-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
