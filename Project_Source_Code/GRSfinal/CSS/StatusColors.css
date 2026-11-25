@@ -1,0 +1,26 @@
+﻿/* =========================================================
+   SYSTEM-WIDE GRIEVANCE STATUS COLORS
+   ========================================================= */
+
+/* Pending */
+.status-pending {
+    background-color: #fef3f2 !important;
+    color: #d92d20 !important;
+}
+
+/* In Process */
+.status-in-process {
+    background-color: #eff8ff !important;
+    color: #175cd3 !important;
+}
+
+/* Resolved */
+.status-resolved {
+    background-color: #ecfdf3 !important;
+    color: #027a48 !important;
+}
+/* Rejected */
+.status-rejected {
+    background-color: #fef3f2 !important;
+    color: #b42318 !important;
+}

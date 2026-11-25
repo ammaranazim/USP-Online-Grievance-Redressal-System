@@ -1,0 +1,35 @@
+﻿
+/* =========================================================
+   SYSTEM-WIDE ESCALATION STATUS COLORS
+   Enhanced USP Online Grievance Redressal System
+   ========================================================= */
+
+/* Pending HOD Review and Pending Admin Review */
+.escalation-pending {
+    background-color: #fff7ed !important;
+    color: #c2410c !important;
+}
+
+/* Action Required */
+.escalation-action {
+    background-color: #eff8ff !important;
+    color: #175cd3 !important;
+}
+
+/* Action Taken */
+.escalation-taken {
+    background-color: #ecfdf3 !important;
+    color: #027a48 !important;
+}
+
+/* Closed */
+.escalation-closed {
+    background-color: #f2f4f7 !important;
+    color: #475467 !important;
+}
+
+/* Rejected by HOD */
+.escalation-rejected {
+    background-color: #fef3f2 !important;
+    color: #b42318 !important;
+}

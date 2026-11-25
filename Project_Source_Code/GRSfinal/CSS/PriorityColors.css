@@ -1,0 +1,23 @@
+﻿/* =========================================================
+   SYSTEM-WIDE GRIEVANCE PRIORITY COLORS
+   ========================================================= */
+
+.priority-low {
+    background-color: #f2f4f7 !important;
+    color: #475467 !important;
+}
+
+.priority-medium {
+    background-color: #eff8ff !important;
+    color: #175cd3 !important;
+}
+
+.priority-high {
+    background-color: #fff7ed !important;
+    color: #c2410c !important;
+}
+
+.priority-urgent {
+    background-color: #fef3f2 !important;
+    color: #d92d20 !important;
+}
