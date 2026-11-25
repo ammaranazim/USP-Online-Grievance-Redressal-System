@@ -1,0 +1,923 @@
+﻿/* =========================================================
+   ADMIN GRIEVANCE DETAILS
+   ========================================================= */
+
+.admin-grievance-details-page {
+    padding: 28px 30px 40px;
+    font-family: "Inter", sans-serif;
+    color: #172033;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.details-page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.details-page-header h1 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+.page-subtitle {
+    margin: 6px 0 0;
+
+    color: #667085;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.back-btn {
+    min-height: 38px;
+
+    padding: 8px 15px;
+
+    border: 1px solid #d0d5dd !important;
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #344054;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    text-decoration: none !important;
+}
+
+.back-btn:hover {
+    background: #f8fafc;
+
+    border-color: #b8c0cc !important;
+
+    color: #123a7a;
+
+    text-decoration: none !important;
+}
+
+
+/* =========================================================
+   MAIN OVERVIEW + PROGRESS CARD
+   ========================================================= */
+
+.main-details-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) 300px;
+
+    width: 100%;
+
+    margin-bottom: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #eaecf0;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(16, 24, 40, 0.04);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   OVERVIEW
+   ========================================================= */
+
+.overview-panel {
+    min-width: 0;
+
+    padding: 26px 28px;
+
+    border-right: 1px solid #eaecf0;
+}
+
+
+/* =========================================================
+   PANEL HEADING
+   ========================================================= */
+
+.panel-heading {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #eaecf0;
+}
+
+.panel-heading h2,
+.section-heading h2 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+.panel-heading p,
+.section-heading p {
+    margin: 5px 0 0;
+
+    color: #667085;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+
+.overview-badges {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+}
+
+.grievance-status {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 76px;
+    min-height: 25px;
+
+    padding: 4px 10px;
+
+    border-radius: 14px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+.status-pending {
+    background-color: #fef3f2 !important;
+    color: #d92d20 !important;
+}
+
+.status-in-process {
+    background-color: #eff8ff !important;
+    color: #175cd3 !important;
+}
+
+.status-resolved {
+    background-color: #ecfdf3 !important;
+    color: #027a48 !important;
+}
+
+
+.priority-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 76px;
+    min-height: 25px;
+
+    padding: 4px 10px;
+
+    border-radius: 14px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+.priority-low {
+    background-color: #f2f4f7 !important;
+    color: #475467 !important;
+}
+
+.priority-medium {
+    background-color: #eff8ff !important;
+    color: #175cd3 !important;
+}
+
+.priority-high {
+    background-color: #fff7ed !important;
+    color: #c2410c !important;
+}
+
+.priority-urgent {
+    background-color: #fef3f2 !important;
+    color: #d92d20 !important;
+}
+
+
+/* =========================================================
+   DETAILS FIELDS
+   ========================================================= */
+
+.details-fields {
+    padding-top: 6px;
+}
+
+.detail-field {
+    display: grid;
+
+    grid-template-columns:
+        145px 24px minmax(0, 1fr);
+
+    align-items: start;
+
+    min-height: 43px;
+
+    padding: 11px 0;
+
+    border-bottom: 1px solid #f2f4f7;
+}
+
+.detail-field:last-child {
+    border-bottom: 0;
+}
+
+.detail-field-full {
+    grid-column: 1 / -1;
+}
+
+.detail-label {
+    display: block;
+
+    color: #475467;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+.detail-separator {
+    display: block;
+
+    color: #667085;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+.detail-value {
+    min-width: 0;
+
+    color: #172033;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   PROGRESS PANEL
+   ========================================================= */
+
+.progress-panel {
+    min-width: 0;
+
+    padding: 26px 22px;
+
+    background: #fcfcfd;
+}
+
+.progress-heading {
+    margin-bottom: 25px;
+}
+
+.progress-heading h2 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+.progress-heading p {
+    margin: 5px 0 0;
+
+    color: #667085;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.tracking-timeline {
+    position: relative;
+}
+
+.tracking-step {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    min-height: 70px;
+}
+
+.tracking-step:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    left: 16px;
+
+    top: 34px;
+
+    width: 1px;
+
+    height: 42px;
+
+    background: #d0d5dd;
+}
+
+.step-circle {
+    position: relative;
+
+    z-index: 2;
+
+    width: 27px;
+    height: 27px;
+
+    min-width: 27px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #d0d5dd;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #667085;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+.step-content {
+    min-width: 0;
+
+    padding-top: 2px;
+}
+
+.step-content strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #667085;
+
+    font-size: 11.5px;
+    font-weight: 600;
+
+    line-height: 1.45;
+}
+
+.step-content span,
+.step-content label {
+    display: block;
+
+    color: #667085;
+
+    font-size: 10.5px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ACTIVE STEP
+   ========================================================= */
+
+.tracking-step.active .step-circle {
+    border-color: #2f6fed;
+
+    background: #2f6fed;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(47, 111, 237, 0.10);
+}
+
+.tracking-step.active .step-content strong {
+    color: #172033;
+}
+
+.tracking-step.active .step-content span,
+.tracking-step.active .step-content label {
+    color: #667085;
+}
+/* =========================================================
+   COMPLETED STEPS
+   ========================================================= */
+
+.tracking-step.completed .step-circle {
+    border-color: #123a7a;
+    background: #2F5FED;
+    color: #ffffff;
+}
+
+.tracking-step.completed .step-content strong {
+    color: #172033;
+}
+
+.tracking-step.completed .step-content span,
+.tracking-step.completed .step-content label {
+    color: #667085;
+}
+
+.tracking-step.completed:not(:last-child)::after {
+    background: #2F6FED;
+}
+
+
+
+
+/* =========================================================
+   NORMAL CARD
+   ========================================================= */
+
+.details-card {
+    width: 100%;
+
+    margin-bottom: 18px;
+
+    padding: 24px 26px;
+
+    background: #ffffff;
+
+    border: 1px solid #eaecf0;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(16, 24, 40, 0.04);
+}
+
+.section-heading {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.description-section {
+    margin-bottom: 10px;
+}
+
+.description-box {
+    display: flex !important;
+
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+
+    width: 100%;
+
+    min-height: 105px;
+
+    padding: 14px 15px !important;
+
+    background: #f8fafc;
+
+    border: 1px solid #eaecf0;
+
+    border-radius: 7px;
+
+    color: #475467;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    text-align: left !important;
+
+    white-space: pre-wrap;
+
+    word-break: break-word;
+
+    box-sizing: border-box;
+}
+
+.description-box > span {
+    display: block !important;
+
+    width: 100%;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #475467;
+
+    text-align: left !important;
+}
+
+
+/* =========================================================
+   EVIDENCE
+   ========================================================= */
+
+.evidence-section {
+    padding-top: 0;
+
+    border-top: none;
+}
+
+.evidence-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.evidence-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-height: 40px;
+
+    padding: 9px 12px;
+
+    background: #f8fafc;
+
+    border: 1px solid #eaecf0;
+
+    border-radius: 7px;
+
+    text-decoration: none !important;
+}
+
+.evidence-item:hover {
+    background: #f2f4f7;
+
+    border-color: #d0d5dd;
+
+    text-decoration: none !important;
+}
+
+.evidence-icon {
+    font-size: 14px;
+
+    line-height: 1;
+}
+
+.evidence-name {
+    flex: 1;
+
+    min-width: 0;
+
+    color: #2f6fed;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    word-break: break-all;
+}
+
+.evidence-view {
+    color: #667085;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+.no-evidence {
+    padding: 13px 14px;
+
+    background: #f8fafc;
+
+    border: 1px dashed #d0d5dd;
+
+    border-radius: 7px;
+
+    color: #667085;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ASSIGNMENT
+   ========================================================= */
+
+.assignment-grid,
+.resolution-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    column-gap: 24px;
+}
+
+.handling-stage {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+    justify-self: start;
+
+    width: fit-content;
+    min-height: 28px;
+
+    padding: 5px 12px;
+
+    background: #eff8ff;
+
+    color: #175cd3;
+
+    border-radius: 14px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   HANDLING STAGE ROW
+   ========================================================= */
+
+.handling-stage-row {
+    display: grid;
+
+    grid-template-columns:
+        145px 15px minmax(0, 1fr);
+
+    align-items: center;
+
+    min-height: 43px;
+
+    padding: 11px 0;
+}
+
+
+/* =========================================================
+   RESOLUTION
+   ========================================================= */
+
+.resolution-note {
+    margin-top: 18px;
+
+    padding: 13px 14px;
+
+    background: #f8fafc;
+
+    border: 1px solid #eaecf0;
+
+    border-radius: 7px;
+
+    color: #667085;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+.resolution-grid .detail-field {
+    border-bottom: none;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .admin-grievance-details-page {
+        padding: 24px 22px 35px;
+    }
+
+   .main-details-card {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+    .overview-panel {
+    border-right: none;
+    border-bottom: 1px solid #eaecf0;
+}
+
+.assignment-grid,
+.resolution-grid {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+    .progress-panel {
+        padding: 24px 18px;
+    }
+
+    .details-card {
+        padding: 22px;
+    }
+
+    .detail-field,
+    .handling-stage-row {
+        grid-template-columns:
+            125px 24px minmax(0, 1fr);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .admin-grievance-details-page {
+        padding: 20px 16px 30px;
+    }
+
+    .details-page-header {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .back-btn {
+        align-self: flex-start;
+    }
+
+    .main-details-card {
+        display: block;
+    }
+
+    .overview-panel {
+        border-right: 0;
+
+        border-bottom: 1px solid #eaecf0;
+
+        padding: 22px 18px;
+    }
+
+    .progress-panel {
+        padding: 22px 18px;
+    }
+
+    .details-card {
+        padding: 20px 18px;
+    }
+
+    .panel-heading {
+        gap: 12px;
+    }
+
+    .overview-badges {
+        align-self: flex-start;
+    }
+
+    .assignment-grid,
+    .resolution-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-field-full {
+        grid-column: auto;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .admin-grievance-details-page {
+        padding: 16px 12px 25px;
+    }
+
+    .details-page-header h1 {
+        font-size: 23px;
+    }
+
+    .page-subtitle {
+        font-size: 12px;
+    }
+
+    .overview-panel,
+    .progress-panel,
+    .details-card {
+        padding: 18px 15px;
+    }
+
+    .panel-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .overview-badges {
+        flex-wrap: wrap;
+    }
+
+    .detail-field,
+    .handling-stage-row {
+        grid-template-columns: 1fr;
+
+        gap: 4px;
+
+        padding: 11px 0;
+    }
+
+    .detail-separator {
+        display: none;
+    }
+}
+.resolution-status-badge {
+    display: inline-flex;
+    width: fit-content;
+    min-height: 28px;
+    padding: 5px 12px;
+    border-radius: 14px;
+     background: #eff8ff;
+    color: #175cd3;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+}

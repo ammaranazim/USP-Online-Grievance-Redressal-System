@@ -1,0 +1,464 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"
+    CodeFile="AdminMaster.master.cs"
+    Inherits="Admin_AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1" runat="server">
+
+    <title>USP Grievance | Admin Portal</title>
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Bootstrap 4.4.1 -->
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    
+    <!-- Admin Master Custom CSS -->
+    <link href="css/AdminMaster.css?v=6" rel="stylesheet" />
+    <link href="../CSS/StatusColors.css" rel="stylesheet" />
+    <link href="../CSS/PriorityColors.css" rel="stylesheet" />
+    <link href="<%= ResolveUrl("~/CSS/EscalationStatusColors.css") %>" rel="stylesheet" />
+
+
+    <asp:ContentPlaceHolder
+        ID="HeadContent"
+        runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+
+    <form id="form1" runat="server">
+        <asp:ScriptManager
+    ID="ScriptManager1"
+    runat="server" />
+
+        <!-- =========================================
+             ADMIN APPLICATION WRAPPER
+             Bootstrap: container-fluid + p-0
+             ========================================= -->
+
+        <div class="container-fluid p-0 admin-application">
+
+            <!-- =========================================
+                 ADMIN SIDEBAR
+                 ========================================= -->
+
+           <aside id="adminSidebar"
+       class="admin-sidebar d-flex flex-column">
+
+                <!-- BRAND -->
+
+                <div class="admin-sidebar-brand d-flex align-items-center">
+
+                   <div class="admin-brand-logo">
+    <img src="../Images/usp-logo.png"
+         alt="University of Southern Punjab"
+         class="admin-brand-logo-img" />
+</div>
+
+                    <div class="admin-brand-text">
+
+                        <strong>
+                            USP Grievance
+                        </strong>
+
+                        <span>
+                            Admin Portal
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================================
+                     NAVIGATION
+                     ========================================= -->
+
+                <nav class="admin-navigation w-100">
+
+                    <!-- Dashboard -->
+
+                    <a href="AdminDashboard.aspx"
+                       class="admin-nav-link d-flex align-items-center">
+
+                        <span class="nav-icon">
+                            ▦
+                        </span>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+
+                    <!-- =====================================
+                         GRIEVANCES
+                         ===================================== -->
+
+                    <div class="admin-nav-section">
+
+                        <div class="admin-nav-section-title d-flex align-items-center"
+                             onclick="toggleAdminSubmenu(this)">
+
+                            <span class="nav-icon">
+                                ▤
+                            </span>
+
+                            <span>
+                                Grievances
+                            </span>
+
+                            <span class="nav-chevron">
+                                ▾
+                            </span>
+
+                        </div>
+
+
+                        <div class="admin-nav-submenu">
+
+                            <a href="AllGrievances.aspx"
+                               class="admin-nav-sublink d-flex align-items-center">
+
+                                All Grievances
+
+                            </a>
+
+
+                          <a href="<%= ResolveUrl("~/Admin/AdminEscalatedGrievances.aspx") %>"
+   class="admin-nav-sublink d-flex align-items-center">
+
+    Escalated Grievances
+
+</a>
+
+                          
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =====================================
+                         USERS
+                         ===================================== -->
+
+                    <div class="admin-nav-section">
+
+                        <div class="admin-nav-section-title d-flex align-items-center"
+                             onclick="toggleAdminSubmenu(this)">
+
+                            <span class="nav-icon">
+                                ♙
+                            </span>
+
+                            <span>
+                                Users
+                            </span>
+
+                            <span class="nav-chevron">
+                                ▾
+                            </span>
+
+                        </div>
+
+
+                        <div class="admin-nav-submenu">
+
+                            <a href="AdminStudents.aspx"
+class="admin-nav-sublink d-flex align-items-center">
+
+Students
+
+</a>
+
+
+                           <a href="AdminDepartmentHeads.aspx"
+   class="admin-nav-sublink d-flex align-items-center">
+    Department Heads
+</a>
+
+ <a href="AdminStaff.aspx"
+   class="admin-nav-sublink d-flex align-items-center">
+    Staff
+</a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =====================================
+                         DEPARTMENTS
+                         ===================================== -->
+
+                    <a href="AdminDepartments.aspx"
+                       class="admin-nav-link d-flex align-items-center">
+
+                        <span class="nav-icon">
+                            ◫
+                        </span>
+
+                        <span>
+                            Departments
+                        </span>
+                        
+                    </a>
+
+
+                  
+
+
+                    <!-- =====================================
+                         REPORTS
+                         ===================================== -->
+
+                    <a href="AdminReports.aspx"
+                       class="admin-nav-link d-flex align-items-center">
+
+                        <span class="nav-icon">
+                            ▣
+                        </span>
+
+                        <span>
+                            Reports
+                        </span>
+
+                    </a>
+
+
+                   <!-- Notifications -->
+<a href="<%= ResolveUrl("~/Admin/AdminNotifications.aspx") %>"
+   class="admin-nav-link d-flex align-items-center">
+
+    <span class="admin-nav-icon" aria-hidden="true">
+        <i class="fa-regular fa-bell"></i>
+    </span>
+
+    <span>Notifications</span>
+</a>
+                </nav>
+
+
+                <!-- =========================================
+                     SIDEBAR BOTTOM
+                     ========================================= -->
+
+                <div class="admin-sidebar-bottom w-100">
+
+                    <asp:LinkButton
+                        ID="btnLogout"
+                        runat="server"
+                        CssClass="admin-logout d-flex align-items-center"
+                        OnClick="btnLogout_Click">
+
+                        <span class="nav-icon">
+                            ↪
+                        </span>
+
+                        <span>
+                            Logout
+                        </span>
+
+                    </asp:LinkButton>
+
+                </div>
+
+            </aside>
+            <!-- Mobile Sidebar Overlay -->
+<div id="adminSidebarOverlay"
+     class="admin-sidebar-overlay"
+     onclick="closeAdminSidebar()">
+</div>
+
+            <!-- =========================================
+                 MAIN AREA
+                 Bootstrap: container-fluid + p-0
+                 ========================================= -->
+
+            <div class="admin-main container-fluid p-0">
+
+
+                <!-- =====================================
+                     TOPBAR
+                     Bootstrap flex utilities
+                     ===================================== -->
+
+               <header class="admin-topbar d-flex align-items-center justify-content-between">
+
+    <div class="admin-topbar-left d-flex align-items-center">
+
+        <button type="button"
+                class="admin-mobile-menu-btn"
+                onclick="toggleAdminSidebar()"
+                aria-label="Open navigation">
+            ☰
+        </button>
+
+        <span class="admin-welcome">
+            Welcome,
+        </span>
+
+        <asp:Label
+            ID="lblAdminName"
+            runat="server"
+            CssClass="admin-name">
+        </asp:Label>
+  </div>
+
+
+    <div class="admin-topbar-right d-flex align-items-center">
+
+       
+<a href="<%= ResolveUrl("~/Admin/AdminNotifications.aspx") %>"
+   class="admin-notification-link"
+   aria-label="Notifications"
+   title="Notifications">
+
+    <span class="admin-notification-icon">
+        🔔
+    </span>
+
+    <asp:Label ID="lblAdminUnreadCount" runat="server"
+        CssClass="admin-notification-count"
+        Visible="false" />
+
+</a>
+
+
+
+        <!-- Admin Avatar -->
+        <div class="admin-avatar d-flex align-items-center justify-content-center">
+    <asp:Label ID="lblAdminInitial" runat="server"></asp:Label>
+</div>
+
+    </div>
+
+</header>
+
+
+                <!-- =====================================
+                     PAGE CONTENT
+                     Bootstrap: container-fluid
+                     ===================================== -->
+
+                <main class="admin-content container-fluid">
+
+                    <asp:ContentPlaceHolder
+                        ID="MainContent"
+                        runat="server">
+                    </asp:ContentPlaceHolder>
+
+                </main>
+
+            </div>
+
+        </div>
+
+
+    </form>
+
+
+    <!-- =========================================
+         ADMIN SUBMENU JAVASCRIPT
+         Behavior only
+         ========================================= -->
+
+    <script type="text/javascript">
+        
+        function toggleAdminSidebar() {
+
+            var sidebar = document.getElementById("adminSidebar");
+            var overlay = document.getElementById("adminSidebarOverlay");
+
+            sidebar.classList.toggle("mobile-open");
+            overlay.classList.toggle("mobile-visible");
+
+        }
+
+
+        function closeAdminSidebar() {
+
+            var sidebar = document.getElementById("adminSidebar");
+            var overlay = document.getElementById("adminSidebarOverlay");
+
+            sidebar.classList.remove("mobile-open");
+            overlay.classList.remove("mobile-visible");
+
+        }
+
+
+        document.addEventListener("keydown", function (event) {
+
+            if (event.key === "Escape") {
+
+                closeAdminSidebar();
+
+            }
+
+        });
+
+        window.toggleAdminSubmenu = function (element) {
+
+            var section = element.parentElement;
+
+            section.classList.toggle("open");
+
+        };
+
+     
+        document.addEventListener("DOMContentLoaded", function () {
+
+            
+            var currentPage = window.location.pathname.split("/").pop();
+
+            
+            var detailPageLinks = {
+                "AdminGrievanceDetails.aspx": "AllGrievances.aspx",
+                "AdminEscalationDetails.aspx": "AdminEscalatedGrievances.aspx",
+               
+            };
+
+            var targetPage = detailPageLinks[currentPage] || currentPage;
+            var allLinks = document.querySelectorAll(
+                ".admin-nav-link, .admin-nav-sublink"
+            );
+
+            allLinks.forEach(function (link) {
+                var href = link.getAttribute("href") || "";
+                var linkPage = href.split("?")[0].split("/").pop();
+
+                if (linkPage.toLowerCase() === targetPage.toLowerCase()) {
+                    link.classList.add("active");
+
+                    var section = link.closest(".admin-nav-section");
+                    if (section) {
+                        section.classList.add("open");
+                    }
+                }
+            });
+
+        });
+
+
+
+       
+    </script>
+
+</body>
+
+</html>

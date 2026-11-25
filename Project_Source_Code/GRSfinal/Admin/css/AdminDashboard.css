@@ -1,0 +1,722 @@
+﻿/* =========================================
+   ADMIN DASHBOARD
+   ========================================= */
+
+.dashboard-header {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.dashboard-heading h1 {
+    margin: 0;
+    color: #172033;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.dashboard-heading p {
+    margin: 6px 0 0;
+    color: #667085;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.dashboard-date {
+    min-height: 38px;
+    padding: 0 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #d9dee7;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #475467;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.date-icon {
+    color: #2f6fed;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   KPI CARDS
+   ========================================= */
+
+.dashboard-kpi-grid {
+    margin-bottom: 10px;
+}
+
+.kpi-card {
+    min-height: 116px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #ffffff;
+    border: 1px solid #e5e9f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.04);
+}
+
+.kpi-icon {
+    width: 43px;
+    height: 43px;
+    min-width: 43px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.kpi-icon-blue {
+    background: #e8f0ff;
+    color: #2f6fed;
+}
+
+.kpi-icon-orange {
+    background: #fff3df;
+    color: #d88b00;
+}
+
+.kpi-icon-purple {
+    background: #eee9ff;
+    color: #7357d8;
+}
+
+.kpi-icon-green {
+    background: #e5f7ed;
+    color: #23945a;
+}
+
+.kpi-content {
+    min-width: 0;
+}
+
+.kpi-label {
+    display: block;
+    color: #667085;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.kpi-value {
+    display: block;
+    margin-top: 5px;
+    color: #172033;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+
+/* =========================================
+   GENERAL SECTION
+   ========================================= */
+
+.dashboard-section {
+    margin-bottom: 26px;
+}
+
+.section-heading {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.section-heading p {
+    margin: 4px 0 0;
+    color:#667085;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.section-action {
+    color: #2f6fed;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.section-action:hover {
+    color: #123a7a;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   REQUIRES ATTENTION
+   ========================================= */
+
+.attention-grid {
+    margin-bottom: 0;
+}
+
+.attention-card {
+    min-height: 84px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    background: #ffffff;
+    border: 1px solid #e5e9f0;
+    border-radius: 9px;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.035);
+}
+
+.attention-card-link {
+    display: flex;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.attention-card-link:hover {
+    color: inherit;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(16, 24, 40, 0.08);
+    transform: translateY(-2px);
+}
+
+.attention-card-link:focus {
+    outline: 2px solid #2F6FED;
+    outline-offset: 2px;
+}
+
+.attention-icon {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.attention-red {
+    background: #feeceb;
+    color: #d64545;
+}
+
+.attention-purple {
+    background: #eee9ff;
+    color: #7357d8;
+}
+
+.attention-orange {
+    background: #fff3df;
+    color: #d88b00;
+}
+
+.attention-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.attention-content > span {
+    display: block;
+    color: #475467;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.attention-value {
+    display: block;
+    margin-top: 4px;
+    color: #172033;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.attention-arrow {
+    color: #98a2b3;
+    font-size: 15px;
+}
+
+/* Blue arrows on Requires Attention cards */
+.attention-card-link .attention-arrow {
+    color: #2F6FED;
+}
+
+
+
+/* =========================================
+   CHARTS
+   ========================================= */
+
+.dashboard-chart-grid {
+    margin-bottom: 10px;
+}
+
+.dashboard-panel {
+    min-height: 300px;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e5e9f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.035);
+}
+
+.panel-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.panel-header h2 {
+    margin: 0;
+    color: #172033;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.panel-header p {
+    margin: 4px 0 0;
+    color: #98a2b3;
+    font-size: 10px;
+}
+
+.panel-filter {
+    padding: 5px 9px;
+    border: 1px solid #e4e7ec;
+    border-radius: 5px;
+    color: #667085;
+    font-size: 9.5px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   CHART PLACEHOLDER
+   ========================================= */
+
+.chart-placeholder {
+    position: relative;
+    width: 100%;
+    height: 215px;
+    background: transparent;
+}
+#grievanceTrendChart {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.chart-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    color: #98a2b3;
+    font-size: 10px;
+}
+
+.chart-empty-icon {
+    font-size: 22px;
+    color: #c2c8d0;
+}
+
+
+/* =========================================
+   CATEGORY DONUT CHART - FINAL RESPONSIVE
+   ========================================= */
+/* Grievances by Category - final alignment */
+.category-placeholder {
+    display: grid;
+    grid-template-columns: 145px minmax(0, 1fr);
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+    width: 100%;
+    max-width: 100%;
+    height: 215px;
+    min-height: 215px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.category-circle {
+    position: relative;
+    width: 145px;
+    height: 145px;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-circle canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.category-list {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 15px;
+    font-size: 10.5px;
+}
+
+.category-item > span:not(.category-dot) {
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+}
+
+.category-item strong {
+    flex: 0 0 auto;
+    margin-left: 4px;
+}
+
+/* Tablet: use a larger chart panel with balanced spacing */
+/* Tablet */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .category-placeholder {
+        grid-template-columns: 110px minmax(0, 1fr);
+        column-gap: 12px;
+    }
+
+    .category-circle {
+        width: 110px;
+        height: 110px;
+    }
+
+    .category-item {
+        gap: 5px;
+        font-size: 10px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 575.98px) {
+    .category-placeholder {
+        grid-template-columns: 115px minmax(0, 1fr);
+        column-gap: 12px;
+    }
+
+    .category-circle {
+        width: 115px;
+        height: 115px;
+    }
+
+    .category-item {
+        gap: 5px;
+        font-size: 10px;
+    }
+}
+/* =========================================
+   TABLE
+   ========================================= */
+
+.dashboard-table-wrapper {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e5e9f0;
+    border-radius: 9px;
+}
+
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+.dashboard-table th {
+    padding: 12px 15px;
+    background: #f8f9fb;
+    border-bottom: 1px solid #e5e9f0;
+    color: #172033;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.dashboard-table td {
+    padding: 13px 15px;
+    border-bottom: 1px solid #eef1f5;
+     color: #344054;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.dashboard-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.dashboard-table tbody tr:hover {
+    background: #fafbfc;
+}
+
+.empty-table {
+    height: 100px;
+    color: #98a2b3 !important;
+    text-align: center !important;
+}
+/* =========================================
+   RECENT GRIEVANCES
+   ========================================= */
+
+.recent-table th {
+    color: #172033;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.recent-table td {
+    color: #344054;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* Grievance ID */
+
+.recent-table .grievance-id {
+    color: #123a7a;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Status badges */
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 76px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+
+
+@media (max-width: 767.98px) {
+
+    .dashboard-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .dashboard-panel {
+        padding: 16px;
+    }
+}
+/* =========================================
+   BOOTSTRAP GRID WIDTH CONTROL
+   ========================================= */
+
+.dashboard-kpi-grid,
+.attention-grid,
+.dashboard-chart-grid {
+    max-width: 100%;
+}
+
+.dashboard-kpi-grid > [class*="col-"],
+.attention-grid > [class*="col-"],
+.dashboard-chart-grid > [class*="col-"] {
+    min-width: 0;
+}
+
+.dashboard-panel,
+.kpi-card,
+.attention-card {
+    max-width: 100%;
+}
+
+.chart-placeholder {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+
+.dashboard-table-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+}
+/* =========================================
+   CHART PANELS - EQUAL HEIGHT
+   ========================================= */
+
+.dashboard-chart-grid > [class*="col-"] {
+    min-width: 0;
+}
+
+.dashboard-chart-grid .dashboard-panel {
+    width: 100%;
+    min-width: 0;
+}
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 767.98px) {
+    .dashboard-chart-grid > [class*="col-"] > .dashboard-panel {
+        height: auto;
+        min-height: 0;
+    }
+}
+
+/* Tablet view: Requires Attention cards */
+@media (min-width: 768px) and (max-width: 900px) {
+    .attention-card {
+        gap: 8px;
+        padding: 12px 10px;
+    }
+
+    .attention-card .attention-icon {
+        flex: 0 0 32px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .attention-card .attention-content {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .attention-card .attention-content span {
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: break-word;
+        line-height: 1.4;
+    }
+
+    .attention-card .attention-arrow {
+        flex-shrink: 0;
+    }
+}
+
+/* Tablet: give attention cards more room */
+@media (min-width: 768px) and (max-width: 900px) {
+    .attention-grid > div {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* Requires Attention - use the available row width */
+.attention-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.attention-grid > div {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+@media (min-width: 1200px) {
+    .attention-grid > div {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+/* Mobile: stack Requires Attention cards */
+@media (max-width: 767.98px) {
+    .attention-grid > .col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .attention-card {
+        width: 100%;
+        min-width: 0;
+        padding: 14px;
+        gap: 12px;
+    }
+
+    .attention-content {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .attention-content > span {
+        white-space: normal;
+        overflow-wrap: break-word;
+        line-height: 1.4;
+    }
+
+    .attention-arrow {
+        flex-shrink: 0;
+    }
+}
+
+/* Fix category legend label and count spacing */
+.dashboard-chart-grid .category-item {
+    display: grid;
+    grid-template-columns: 8px minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 8px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.dashboard-chart-grid .category-item .category-dot {
+    grid-column: 1;
+}
+
+.dashboard-chart-grid .category-item > span:not(.category-dot) {
+    grid-column: 2;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: normal;
+}
+
+.dashboard-chart-grid .category-item strong {
+    grid-column: 3;
+    justify-self: end;
+    margin-left: 8px;
+    white-space: nowrap;
+}
+
+.dashboard-chart-grid .category-placeholder {
+    column-gap: 12px;
+}
+
+.dashboard-chart-grid .category-item {
+    column-gap: 7px;
+}

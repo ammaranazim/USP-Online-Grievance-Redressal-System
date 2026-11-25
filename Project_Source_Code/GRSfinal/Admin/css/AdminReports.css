@@ -1,0 +1,549 @@
+﻿
+/* ==========================================
+   ADMIN REPORTS
+   Enhanced USP Online Grievance Redressal System
+   ========================================== */
+
+.admin-reports-page {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4px 0 24px;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+/* Page Header */
+
+.admin-reports-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.admin-reports-header h2 {
+    margin: 0 0 5px;
+    color: #123a7a;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.admin-reports-header p {
+    margin: 0;
+    color: #475467;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Main Panels */
+
+.admin-report-panel {
+    margin-bottom: 18px;
+    padding: 22px;
+    border: 1px solid #e4e7ec;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.03);
+}
+
+/* Report Type */
+
+.admin-report-section-title {
+    margin: 0 0 16px;
+    color: #172033;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.admin-report-types {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.admin-report-type-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+    min-height: 94px;
+    margin: 0;
+    padding: 15px 12px;
+    border: 1px solid #e4e7ec;
+    border-radius: 8px;
+    background: #ffffff;
+    cursor: pointer;
+    transition: border-color 0.2s ease,
+                background-color 0.2s ease;
+}
+
+.admin-report-type-option:hover {
+    border-color: #b8ceff;
+    background: #f8faff;
+}
+
+.admin-report-type-option:has(input:checked) {
+    border-color: #2f6fed;
+    background: #f3f7ff;
+}
+
+.admin-report-type-option input[type="radio"] {
+    flex: 0 0 auto;
+    margin: 3px 0 0;
+    accent-color: #2f6fed;
+}
+
+.admin-report-type-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 5px;
+}
+
+.admin-report-type-title {
+    color: #172033;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.admin-report-type-description {
+    color: #667085;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+/* Filters */
+
+.admin-report-filters-section {
+    padding-bottom: 20px;
+}
+
+.admin-report-label {
+    display: block;
+    margin-bottom: 7px;
+    color: #475467;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.admin-report-input {
+    width: 100%;
+    min-height: 42px;
+    padding: 8px 11px;
+    border: 1px solid #d0d5dd;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    box-shadow: none;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.admin-report-input:focus {
+    border-color: #2f6fed;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(47, 111, 237, 0.12);
+}
+
+.admin-report-input option {
+    color: #172033;
+}
+
+.admin-report-filters-section .form-group {
+    margin-bottom: 16px;
+}
+
+/* Filter Actions */
+
+.admin-report-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 2px;
+}
+
+.admin-report-generate-btn,
+.admin-report-reset-btn,
+.admin-report-export-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 39px;
+    padding: 9px 16px;
+    border-radius: 6px;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                color 0.2s ease;
+}
+
+.admin-report-generate-btn {
+    min-width: 155px;
+    border: 1px solid #2f6fed;
+    background: #2f6fed;
+    color: #ffffff;
+}
+
+.admin-report-generate-btn:hover,
+.admin-report-generate-btn:focus {
+    border-color: #245bd0;
+    background: #245bd0;
+    color: #ffffff;
+}
+
+.admin-report-reset-btn {
+    min-width: 90px;
+    border: 1px solid #e4e7ec;
+    background: #f2f4f7;
+    color: #475467;
+}
+
+.admin-report-reset-btn:hover,
+.admin-report-reset-btn:focus {
+    border-color: #d0d5dd;
+    background: #e4e7ec;
+    color: #172033;
+}
+
+/* Results Header */
+
+.admin-report-results-panel {
+    min-width: 0;
+}
+
+.admin-report-results-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.admin-report-results-header .admin-report-section-title {
+    margin-bottom: 5px;
+}
+
+.admin-report-results-description {
+    margin: 0;
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.admin-report-export-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.admin-report-export-btn {
+    min-height: 36px;
+    padding: 8px 12px;
+    background: #ffffff;
+}
+
+.admin-report-excel-btn {
+    border: 1px solid #12a05c;
+    color: #078348;
+}
+
+.admin-report-excel-btn:hover:not(:disabled) {
+    background: #ecfdf3;
+    color: #067647;
+}
+
+.admin-report-pdf-btn {
+    border: 1px solid #d92d20;
+    color: #b42318;
+}
+
+.admin-report-pdf-btn:hover:not(:disabled) {
+    background: #fef3f2;
+    color: #b42318;
+}
+
+.admin-report-export-btn:disabled {
+    border-color: #e4e7ec;
+    background: #f9fafb;
+    color: #98a2b3;
+    cursor: not-allowed;
+    opacity: 0.75;
+}
+
+/* Feedback */
+
+.admin-report-message {
+    display: block;
+    margin-bottom: 14px;
+    color: #475467;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.admin-report-message:empty {
+    display: none;
+}
+
+/* Empty Results */
+
+.admin-report-empty {
+    padding: 34px 18px;
+    border: 1px solid #e4e7ec;
+    border-radius: 8px;
+    background: #f8fafc;
+    text-align: center;
+}
+
+.admin-report-empty-icon {
+    margin-bottom: 12px;
+    color: #667085;
+    font-size: 32px;
+}
+
+.admin-report-empty h4 {
+    margin: 0 0 7px;
+    color: #172033;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.admin-report-empty p {
+    margin: 0;
+    color: #667085;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Results Table */
+
+.admin-report-results-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.admin-report-table {
+    width: 100%;
+    margin-bottom: 0;
+    border: 1px solid #e4e7ec;
+    color: #172033;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+}
+
+.admin-report-table th {
+    padding: 11px 12px;
+    border: 1px solid #e4e7ec;
+    background: #f2f5fa;
+    color: #344054;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.admin-report-table td {
+    padding: 11px 12px;
+    border: 1px solid #e4e7ec;
+    vertical-align: middle;
+}
+
+.admin-report-table tbody tr:hover {
+    background: #f8faff;
+}
+
+/* Responsive */
+
+@media (max-width: 991.98px) {
+    .admin-report-types {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .admin-report-panel {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .admin-reports-page {
+        padding-top: 2px;
+    }
+
+    .admin-reports-header h2 {
+        font-size: 22px;
+    }
+
+    .admin-report-panel {
+        padding: 15px 12px;
+        margin-bottom: 14px;
+    }
+
+    .admin-report-types {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .admin-report-type-option {
+        min-height: 75px;
+        padding: 12px;
+    }
+
+    .admin-report-section-title {
+        font-size: 16px;
+    }
+
+    .admin-report-actions {
+        justify-content: stretch;
+    }
+
+    .admin-report-generate-btn,
+    .admin-report-reset-btn {
+        flex: 1 1 auto;
+    }
+
+    .admin-report-results-header {
+        flex-direction: column;
+    }
+
+    .admin-report-export-actions {
+        width: 100%;
+    }
+
+    .admin-report-export-btn {
+        flex: 1 1 auto;
+    }
+
+    .admin-report-empty {
+        padding: 28px 12px;
+    }
+}
+
+/* Report validation and feedback message */
+
+.admin-report-message {
+    display: block;
+    margin: 14px 0;
+    padding: 12px 15px;
+    border: 1px solid #f0b4b4;
+    border-left: 4px solid #dc3545;
+    border-radius: 6px;
+    background-color: #fff5f5;
+    color: #b42318;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.admin-report-message:empty {
+    display: none;
+}
+.admin-report-message-success {
+    border-color: #a6e3c1;
+    border-left-color: #198754;
+    background-color: #f0fdf4;
+    color: #166534;
+}
+
+/* Report Type Section */
+.admin-report-section {
+    margin-bottom: 24px;
+}
+
+.admin-report-section-title {
+    font-family: Inter, Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #172033;
+    margin-bottom: 16px;
+}
+
+/* Single Detailed Report Card */
+.admin-report-types {
+    display: grid;
+    grid-template-columns: minmax(240px, 320px);
+    gap: 16px;
+}
+
+.admin-report-type-option {
+    display: flex;
+    align-items: flex-start;
+    min-height: 110px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #d7e0ec;
+    border-radius: 9px;
+    cursor: default;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.admin-report-type-option:hover {
+    border-color: #2f6fed;
+    box-shadow: 0 3px 12px rgba(18, 58, 122, 0.08);
+}
+
+.admin-report-type-content {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    width: 100%;
+}
+
+.admin-report-type-title {
+    font-family: Inter, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #123a7a;
+}
+
+.admin-report-type-description {
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #475467;
+}
+
+/* Filters spacing */
+.admin-report-filters-section {
+    margin-top: 4px;
+}
+
+.admin-report-filters-section .form-group {
+    margin-bottom: 20px;
+}
+
+.admin-report-label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475467;
+}
+
+/* Responsive layout */
+@media (max-width: 576px) {
+    .admin-report-types {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .admin-report-type-option {
+        min-height: auto;
+        padding: 16px;
+    }
+}

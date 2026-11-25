@@ -1,0 +1,589 @@
+﻿
+/* =========================================================
+   ALL GRIEVANCES - ADMIN
+   USP Online Grievance Redressal System
+   ========================================================= */
+
+
+/* =========================
+   PAGE
+   ========================= */
+
+.all-grievances-page {
+    width: 100%;
+    max-width: 100%;
+    padding: 4px 0 30px;
+    font-family: "Inter", Arial, sans-serif;
+    color: #172033;
+}
+
+
+/* =========================
+   PAGE HEADER
+   ========================= */
+
+.page-header {
+    margin-bottom: 20px;
+}
+
+.page-title {
+    margin: 0;
+    color: #172033;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.4px;
+}
+
+.page-subtitle {
+    margin: 5px 0 0;
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+    /* =========================================================
+   FINAL FILTER OVERRIDE
+   ========================================================= */
+
+.filter-card {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 11px;
+    background: #ffffff;
+    border: 1px solid #e4e7ec;
+    border-radius: 9px;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.04);
+}
+
+.filter-toolbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+
+.filter-search {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.filter-search .form-control {
+    width: 100%;
+    height: 38px;
+    padding: 7px 11px;
+    border: 1px solid #d0d5dd;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #344054;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    box-shadow: none;
+}
+
+.filter-action {
+    flex: 0 0 auto;
+}
+
+.btn-search {
+    height: 38px !important;
+    min-width: 74px !important;
+    padding: 0 15px !important;
+    border: 1px solid #2f6fed !important;
+    border-radius: 6px !important;
+    background: #2f6fed !important;
+    color: #ffffff !important;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 36px;
+}
+
+.btn-filter-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 38px !important;
+    min-width: 82px !important;
+    padding: 0 13px !important;
+    border: 1px solid #d0d5dd !important;
+    border-radius: 6px !important;
+    background: #ffffff !important;
+    color: #475467 !important;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+
+.advanced-filters {
+    display: none !important;
+    margin-top: 11px;
+    padding-top: 12px;
+    border-top: 1px solid #eaecf0;
+}
+
+.advanced-filters.show {
+    display: block !important;
+}
+
+.advanced-filter-inner {
+    display: flex;
+    align-items: flex-end;
+    gap: 9px;
+    width: 100%;
+}
+
+.filter-field,
+.filter-date {
+    flex: 1 1 0;
+    min-width: 120px;
+}
+
+.filter-field label,
+.filter-date label {
+    display: block;
+    margin: 0 0 5px;
+    color: #475467;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.filter-field .form-control,
+.filter-date .form-control {
+    width: 100%;
+    height: 37px;
+    padding: 6px 9px;
+    border: 1px solid #d0d5dd;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #344054;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+}
+
+.filter-actions {
+    flex: 0 0 auto;
+}
+
+.btn-clear {
+    height: 37px !important;
+    min-width: 65px !important;
+    padding: 0 13px !important;
+    border: 1px solid #d0d5dd !important;
+    border-radius: 6px !important;
+    background: #ffffff !important;
+    color: #475467 !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+
+
+/* =========================
+   FINAL RESPONSIVE FILTER
+   ========================= */
+
+@media (max-width: 767.98px) {
+
+    .filter-toolbar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .filter-search {
+        grid-column: 1 / -1;
+    }
+
+    .filter-action,
+    .btn-filter-toggle {
+        width: 100%;
+    }
+
+    .filter-action .btn-search {
+        width: 100%;
+    }
+
+    .advanced-filter-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+    }
+
+    .filter-field,
+    .filter-date,
+    .filter-actions {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .btn-clear {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .advanced-filter-inner {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================================================
+   FINAL ALL GRIEVANCES TABLE OVERRIDE
+   ========================================================= */
+
+.grievances-card {
+    width: 100% !important;
+    background: #ffffff !important;
+    border: 1px solid #e4e7ec !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.04) !important;
+    overflow: hidden !important;
+}
+
+.grievances-card .table-responsive {
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 0 10px 10px !important;
+}
+
+.table-card-header {
+    min-height: 72px !important;
+    padding: 17px 20px !important;
+    border-bottom: 1px solid #eaecf0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 15px !important;
+}
+
+.table-card-header h2 {
+    margin: 0 !important;
+    color: #172033 !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 650 !important;
+    line-height: 1.35 !important;
+}
+
+.table-card-header p {
+    margin: 4px 0 0 !important;
+    color: #667085 !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+}
+
+.record-count span {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 30px !important;
+    padding: 5px 11px !important;
+    border: 1px solid #dbe4f0 !important;
+    border-radius: 20px !important;
+    background: #f5f8fc !important;
+    color: #123a7a !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+}
+
+
+/* =========================
+   TABLE
+   ========================= */
+
+.grievances-table {
+    width: 100% !important;
+    min-width: 900px !important;
+    margin: 0 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    background: #ffffff !important;
+    font-family: "Inter", Arial, sans-serif !important;
+}
+
+.grievances-table th {
+    height: 44px !important;
+    padding: 11px 14px !important;
+    border: 0 !important;
+    border-bottom: 1px solid #eaecf0 !important;
+    background: #f8f9fb !important;
+    color:#172033 !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    letter-spacing: 0.2px !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+    vertical-align: middle !important;
+}
+
+.grievances-table td {
+    height: 58px !important;
+    padding: 10px 14px !important;
+    border: 0 !important;
+    border-bottom: 1px solid #f0f2f5 !important;
+    background: #ffffff !important;
+    color: #344054 !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    vertical-align: middle !important;
+}
+
+.grievances-table tbody tr {
+    transition: background-color 0.15s ease !important;
+}
+
+.grievances-table tbody tr:hover td {
+    background: #f9fbff !important;
+}
+
+.grievances-table tr:last-child td {
+    border-bottom: none !important;
+}
+
+
+/* =========================
+   GRIEVANCE ID
+   ========================= */
+
+.grievance-id {
+    color: #123a7a !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+}
+
+
+/* =========================
+   STUDENT
+   ========================= */
+
+.student-info {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+    min-width: 135px !important;
+}
+
+.student-name {
+    color: #172033 !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1.35 !important;
+    white-space: nowrap !important;
+}
+
+.student-reg {
+    color: #667085 !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 11px !important;
+    line-height: 1.3 !important;
+    white-space: nowrap !important;
+}
+
+
+/* =========================
+   PRIORITY
+   ========================= */
+
+.priority-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 58px !important;
+    min-height: 25px !important;
+    padding: 4px 9px !important;
+    border-radius: 14px !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+}
+
+
+/* =========================
+   STATUS
+   ========================= */
+
+.status-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 76px !important;
+    min-height: 25px !important;
+    padding: 4px 10px !important;
+    border-radius: 14px !important;
+    background: #f2f4f7 !important;
+    color: #475467 !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+}
+/* =========================
+   STATUS COLORS
+   ========================= */
+
+.status-badge.status-pending {
+    background: #fef3f2 !important;
+    color: #d92d20 !important;
+}
+
+.status-badge.status-in-process {
+    background: #eff8ff !important;
+    color: #175cd3 !important;
+}
+
+.status-badge.status-resolved {
+    background: #ecfdf3 !important;
+    color: #027a48 !important;
+}
+.status-badge.status-rejected {
+    background: #fef3f2 !important;
+    color: #b42318 !important;
+}
+
+/* =========================
+   SUBMISSION DATE
+   ========================= */
+
+.submission-date {
+    color: #475467 !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 11px !important;
+    white-space: nowrap !important;
+}
+
+
+/* =========================
+   VIEW DETAILS
+   ========================= */
+
+.view-details-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 30px !important;
+    padding: 5px 11px !important;
+    border: 1px solid #d5e1f7 !important;
+    border-radius: 6px !important;
+    background: #f5f8ff !important;
+    color: #2f6fed !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    line-height: 18px !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+}
+
+.view-details-btn:hover,
+.view-details-btn:focus {
+    background: #eaf1ff !important;
+    border-color: #b9cdf4 !important;
+    color: #123a7a !important;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+
+/* =========================
+   PAGINATION
+   ========================= */
+
+.grievances-pager {
+    padding: 12px 16px !important;
+    border-top: 1px solid #eaecf0 !important;
+    background: #ffffff !important;
+    text-align: right !important;
+}
+
+.grievances-pager td {
+    padding: 0 !important;
+    border: none !important;
+}
+
+.grievances-pager a,
+.grievances-pager span {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 30px !important;
+    height: 30px !important;
+    margin-left: 4px !important;
+    padding: 0 8px !important;
+    border: 1px solid #d0d5dd !important;
+    border-radius: 5px !important;
+    background: #ffffff !important;
+    color: #475467 !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+}
+
+.grievances-pager a:hover {
+    background: #f5f8ff !important;
+    border-color: #b9cdf4 !important;
+    color: #123a7a !important;
+}
+
+.grievances-pager span {
+    background: #123a7a !important;
+    border-color: #123a7a !important;
+    color: #ffffff !important;
+}
+
+.filter-validation-message {
+    display: block;
+    margin: 8px 2px 2px;
+    padding: 8px 10px;
+    border: 1px solid #FDA29B;
+    border-radius: 6px;
+    background: #FEF3F2;
+    color: #B42318;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   ACCESSIBILITY: KEYBOARD FOCUS
+   ========================================================= */
+
+.back-btn:focus-visible,
+.evidence-item:focus-visible {
+    outline: 3px solid #2f6fed;
+    outline-offset: 3px;
+    border-radius: 7px;
+}
+
+.btn-clear-search {
+    height: 38px !important;
+    min-width: 65px !important;
+    padding: 0 13px !important;
+    border: 1px solid #d0d5dd !important;
+    border-radius: 6px !important;
+    background: #ffffff !important;
+    color: #475467 !important;
+    font-family: "Inter", Arial, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    white-space: nowrap;
+}
+
+.btn-clear-search:hover,
+.btn-clear-search:focus {
+    background: #f9fafb !important;
+    border-color: #98a2b3 !important;
+    color: #172033 !important;
+}
