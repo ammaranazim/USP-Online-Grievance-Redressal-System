@@ -29,6 +29,7 @@ public partial class Student_SubmitGrievance : System.Web.UI.Page
 
         if (!IsPostBack)
         {
+            EnsureReferenceData(stdID);
             LoadStudentInfo();
             LoadCategories();
             LoadDepartments(0, stdID);
@@ -65,6 +66,88 @@ public partial class Student_SubmitGrievance : System.Web.UI.Page
 
                 }
             }
+        }
+    }
+
+    // Makes sure the default categories, departments and grievance types exist,
+    // so the dropdowns on this page are never empty. Only missing rows are added.
+    // The student's own department is linked to the Academia category if it is not.
+    private void EnsureReferenceData(int stdID)
+    {
+        string sql = @"
+DECLARE @acad INT, @acc INT, @exam INT;
+
+IF NOT EXISTS (SELECT 1 FROM GrievanceCategory WHERE LOWER(LTRIM(RTRIM(categoryName))) = 'academia')
+    INSERT INTO GrievanceCategory (categoryName, categoryDescription, categoryStatus)
+    VALUES (N'Academia', N'Academic grievances', N'Active');
+
+IF NOT EXISTS (SELECT 1 FROM GrievanceCategory WHERE LOWER(LTRIM(RTRIM(categoryName))) = 'accounts')
+    INSERT INTO GrievanceCategory (categoryName, categoryDescription, categoryStatus)
+    VALUES (N'Accounts', N'Fee and finance grievances', N'Active');
+
+IF NOT EXISTS (SELECT 1 FROM GrievanceCategory WHERE LOWER(LTRIM(RTRIM(categoryName))) IN ('exam & degree', 'exam/degree', 'exam and degree'))
+    INSERT INTO GrievanceCategory (categoryName, categoryDescription, categoryStatus)
+    VALUES (N'Exam & Degree', N'Examination and degree grievances', N'Active');
+
+SELECT TOP 1 @acad = categoryID FROM GrievanceCategory
+ WHERE LOWER(LTRIM(RTRIM(categoryName))) = 'academia' ORDER BY categoryID;
+SELECT TOP 1 @acc = categoryID FROM GrievanceCategory
+ WHERE LOWER(LTRIM(RTRIM(categoryName))) = 'accounts' ORDER BY categoryID;
+SELECT TOP 1 @exam = categoryID FROM GrievanceCategory
+ WHERE LOWER(LTRIM(RTRIM(categoryName))) IN ('exam & degree', 'exam/degree', 'exam and degree') ORDER BY categoryID;
+
+IF NOT EXISTS (SELECT 1 FROM Department WHERE LOWER(LTRIM(RTRIM(deptName))) = 'accounts')
+    INSERT INTO Department
+        (deptName, deptCode, deptStatus, deptDescription, deptEmail, deptContactNo, deptWH, deptLocation, categoryID)
+    VALUES
+        (N'Accounts', N'ACC', N'Active', N'Accounts office', N'accounts@example.com', N'0000000001', 8, N'Admin Block', @acc);
+
+IF NOT EXISTS (SELECT 1 FROM Department WHERE LOWER(LTRIM(RTRIM(deptName))) IN ('exam & degree', 'exam/degree', 'exam and degree'))
+    INSERT INTO Department
+        (deptName, deptCode, deptStatus, deptDescription, deptEmail, deptContactNo, deptWH, deptLocation, categoryID)
+    VALUES
+        (N'Exam & Degree', N'EXM', N'Active', N'Examination office', N'exam@example.com', N'0000000002', 8, N'Admin Block', @exam);
+
+-- The student's own department must belong to the Academia category.
+UPDATE Department SET categoryID = @acad
+ WHERE deptID = (SELECT deptID FROM StudentInfo WHERE stdID = @stdID)
+   AND categoryID <> @acad
+   AND LOWER(LTRIM(RTRIM(deptName))) NOT IN ('accounts', 'exam & degree', 'exam/degree', 'exam and degree');
+
+-- Default grievance types, only for a category that has none yet.
+IF NOT EXISTS (SELECT 1 FROM GrievanceType WHERE categoryID = @acad)
+    INSERT INTO GrievanceType (gvTypeName, gvTypeDescription, categoryID) VALUES
+        (N'Result Issue', N'Problem with a result', @acad),
+        (N'Attendance Issue', N'Problem with attendance', @acad),
+        (N'Teacher Behavior', N'Complaint about teacher behavior', @acad),
+        (N'Timetable Issue', N'Problem with class timetable', @acad);
+
+IF NOT EXISTS (SELECT 1 FROM GrievanceType WHERE categoryID = @acc)
+    INSERT INTO GrievanceType (gvTypeName, gvTypeDescription, categoryID) VALUES
+        (N'Fee Challan Issue', N'Problem with fee challan', @acc),
+        (N'Refund Issue', N'Problem with a refund', @acc),
+        (N'Scholarship Issue', N'Problem with a scholarship', @acc);
+
+IF NOT EXISTS (SELECT 1 FROM GrievanceType WHERE categoryID = @exam)
+    INSERT INTO GrievanceType (gvTypeName, gvTypeDescription, categoryID) VALUES
+        (N'Result Correction', N'Correction in a result', @exam),
+        (N'Degree Delay', N'Delay in degree issuance', @exam),
+        (N'Transcript Issue', N'Problem with transcript', @exam),
+        (N'Paper Rechecking', N'Request to recheck a paper', @exam);";
+
+        try
+        {
+            using (SqlConnection con = new SqlConnection(ConnStr))
+            using (SqlCommand cmd = new SqlCommand(sql, con))
+            {
+                cmd.Parameters.Add("@stdID", SqlDbType.Int).Value = stdID;
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+        catch (Exception)
+        {
+            // If this fails, the page still loads with whatever data already exists.
         }
     }
 
