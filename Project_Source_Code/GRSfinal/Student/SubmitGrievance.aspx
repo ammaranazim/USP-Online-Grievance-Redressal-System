@@ -278,6 +278,7 @@
     accept=".doc,.docx,.pdf,.png,.jpg"
     onchange="showSelectedFiles(this);" />
 
+                    <div id="selectedFiles" class="selected-files mt-3"></div>
 
                     <div class="info-note mt-3">
     <i class="fas fa-info-circle mr-1"></i>
@@ -454,7 +455,34 @@
 
        function showSelectedFiles(input) {
 
-           selectedFiles = Array.from(input.files);
+           var combined = selectedFiles.slice();
+
+           Array.from(input.files).forEach(function (file) {
+               var exists = combined.some(function (f) {
+                   return f.name === file.name &&
+                          f.size === file.size &&
+                          f.lastModified === file.lastModified;
+               });
+
+               if (!exists) {
+                   combined.push(file);
+               }
+           });
+
+           if (combined.length > 2) {
+               alert("You can upload a maximum of 2 supporting documents.");
+               combined = combined.slice(0, 2);
+           }
+
+           selectedFiles = combined;
+
+           var dataTransfer = new DataTransfer();
+
+           selectedFiles.forEach(function (file) {
+               dataTransfer.items.add(file);
+           });
+
+           input.files = dataTransfer.files;
 
            renderSelectedFiles();
        }

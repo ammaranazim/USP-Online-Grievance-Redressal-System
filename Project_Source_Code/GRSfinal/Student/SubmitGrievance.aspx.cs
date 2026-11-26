@@ -77,6 +77,15 @@ public partial class Student_SubmitGrievance : System.Web.UI.Page
         string sql = @"
 DECLARE @acad INT, @acc INT, @exam INT;
 
+-- The demo database names the category 'Academic'; the application expects 'Academia'.
+-- Rename it instead of creating a second category.
+IF NOT EXISTS (SELECT 1 FROM GrievanceCategory WHERE LOWER(LTRIM(RTRIM(categoryName))) = 'academia')
+   AND EXISTS (SELECT 1 FROM GrievanceCategory WHERE LOWER(LTRIM(RTRIM(categoryName))) = 'academic')
+    UPDATE GrievanceCategory SET categoryName = N'Academia'
+     WHERE categoryID = (SELECT TOP 1 categoryID FROM GrievanceCategory
+                         WHERE LOWER(LTRIM(RTRIM(categoryName))) = 'academic' ORDER BY categoryID);
+
+
 IF NOT EXISTS (SELECT 1 FROM GrievanceCategory WHERE LOWER(LTRIM(RTRIM(categoryName))) = 'academia')
     INSERT INTO GrievanceCategory (categoryName, categoryDescription, categoryStatus)
     VALUES (N'Academia', N'Academic grievances', N'Active');
