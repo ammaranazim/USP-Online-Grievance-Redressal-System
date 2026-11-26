@@ -30,11 +30,11 @@ Shared features: role selection page, forgot / reset password via email, secure 
 | `Project_Source_Code/GRSfinal/` | Website source code |
 | `Database/GRS_Testing.sql` | Ready-to-run database with demo accounts and sample data |
 
-## How to Run
+## How to Run (about 5 minutes)
 
 ### Requirements
 - Windows with Visual Studio (ASP.NET / web development workload)
-- Microsoft SQL Server (Express is fine) and SQL Server Management Studio (SSMS)
+- Microsoft SQL Server 2012 or newer (Express is fine) and SQL Server Management Studio (SSMS)
 
 ### Step 1: Download
 On GitHub click **Code > Download ZIP**, then extract it.
@@ -45,6 +45,7 @@ On GitHub click **Code > Download ZIP**, then extract it.
 3. This creates a database named `GRS` with all tables, demo accounts, and one sample grievance.
 
 > Use an instance that does not already have a database called `GRS`. The script will not overwrite an existing one.
+
 
 ### Step 3: Configure the connection
 1. Open `Project_Source_Code/GRSfinal/Web.config` in any text editor.
